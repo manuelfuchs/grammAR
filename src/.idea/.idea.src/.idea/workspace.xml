@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acd8159d-f94c-4ee0-ae2f-8ece6380b0f7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.src/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.src/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.src/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.src/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/SpellChecker/MockSpellChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/SpellChecker/MockSpellChecker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SheetHider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SheetHider.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +18,7 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/SheetHider.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Components/SpellChecker/MockSpellChecker.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lsZtcivevlaG5p0TM6zVcQYW4J" />
@@ -43,6 +47,7 @@
       <option name="presentableId" value="Default" />
       <updated>1608387977639</updated>
       <workItem from="1608387983577" duration="1591000" />
+      <workItem from="1608395675412" duration="543000" />
     </task>
     <servers />
   </component>
@@ -59,6 +64,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
