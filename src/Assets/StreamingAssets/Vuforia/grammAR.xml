@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="controller-errors" size="3.000000 3.000000" />
     <ImageTarget name="top-right" size="3.000000 3.000000" />
     <ImageTarget name="image-button-5" size="3.000000 3.000000" />
     <ImageTarget name="image-button-4" size="3.000000 3.000000" />
