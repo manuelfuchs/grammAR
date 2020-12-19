@@ -21,3 +21,5 @@ Backup of *.doc*
 *.~vsd*
 
 # End of https://www.toptal.com/developers/gitignore/api/microsoftoffice
+
+/out
