@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
-    <ImageTarget name="controller-errors" size="3.000000 3.000000" />
-    <ImageTarget name="top-right" size="3.000000 3.000000" />
-    <ImageTarget name="image-button-5" size="3.000000 3.000000" />
-    <ImageTarget name="image-button-4" size="3.000000 3.000000" />
-    <ImageTarget name="image-button-3" size="3.000000 3.000000" />
-    <ImageTarget name="image-button-2" size="3.000000 3.000000" />
-    <ImageTarget name="image-button-1" size="3.000000 3.000000" />
-    <ImageTarget name="controller" size="3.000000 3.000000" />
+    <ImageTarget name="image-button-1" size="4.000000 4.000000" />
+    <ImageTarget name="image-button-2" size="4.000000 4.000000" />
+    <ImageTarget name="image-button-3" size="4.000000 4.000000" />
+    <ImageTarget name="image-button-4" size="4.000000 4.000000" />
+    <ImageTarget name="image-button-5" size="4.000000 4.000000" />
+    <ImageTarget name="text-correct" size="4.000000 4.000000" />
+    <ImageTarget name="text-error" size="4.000000 4.000000" />
+    <ImageTarget name="top-right" size="4.000000 4.000000" />
   </Tracking>
 </QCARConfig>
