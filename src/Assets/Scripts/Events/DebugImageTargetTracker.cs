@@ -1,4 +1,4 @@
-﻿using Assets.Scripts.Components;
+﻿using Assets.Scripts.Components.Debug;
 
 namespace Assets.Scripts.Events
 {
