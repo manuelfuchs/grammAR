@@ -37,5 +37,7 @@ public class ComponentConfig
     private void ConfigureServices()
     {
         this.serviceCollection[typeof(ISpellChecker)] = new MockSpellChecker();
+        this.serviceCollection[typeof(IDebugTargetTracker)] = new DefaultTargetTracker();
+        this.serviceCollection[typeof(IDebugTargetMapper)] = new DefaultTargetMapper();
     }
 }
