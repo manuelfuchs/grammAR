@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Types;
+using System;
 
 namespace Assets.Scripts.Components.Debug
 {
@@ -6,12 +7,15 @@ namespace Assets.Scripts.Components.Debug
     {
         private DebugImageTarget? visibleTarget;
 
+        public event Action<DebugImageTarget?> OnVisibleTargetChanged;
+
         public DebugImageTarget? VisibleTarget
         {
             get => this.visibleTarget;
             set
             {
                 this.visibleTarget = value;
+                this.OnVisibleTargetChanged?.Invoke(value);
             }
         }
     }
