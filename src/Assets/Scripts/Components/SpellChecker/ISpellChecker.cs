@@ -1,10 +1,11 @@
 ﻿using Assets.Scripts.Types;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Assets.Scripts.Components
 {
     public interface ISpellChecker
     {
-        IEnumerable<SpellingMistake> GetMistakes(IEnumerable<string> text);
+        Task<IEnumerable<SpellingMistake>> GetMistakes(IEnumerable<string> text);
     }
 }

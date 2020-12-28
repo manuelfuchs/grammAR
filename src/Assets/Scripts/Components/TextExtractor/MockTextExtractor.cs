@@ -1,20 +1,31 @@
-﻿using Assets.Scripts.Components.Debug;
+﻿using System;
+using Assets.Scripts.Components.Debug;
 using Assets.Scripts.Types;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Assets.Scripts.Components
 {
     public class MockTextExtractor : ITextExtractor
     {
-        public Task<IEnumerable<string>> ExtractAsync()
+        public event Action<IEnumerable<string>> OnTextFound;
+
+        public MockTextExtractor()
         {
             var debugTargetTracker = ComponentConfig.Instance.GetService<IDebugTargetTracker>();
-            switch (debugTargetTracker.VisibleTarget)
+            debugTargetTracker.OnVisibleTargetChanged += target =>
+            {
+                var text = GetMockText(target);
+                OnTextFound?.Invoke(text);
+            };
+        }
+
+        private IEnumerable<string> GetMockText(DebugImageTarget? target)
+        {
+            switch (target)
             {
                 case DebugImageTarget.Target1:
-                    return Task.FromResult((IEnumerable<string>)new List<string>
+                    return new List<string>
                     {
                         "Anstatt immer nur zu kritisieren, legt die FPÖ",
                         "heute erstmals eine konkrete Strategie gegen",
@@ -65,9 +76,9 @@ namespace Assets.Scripts.Components
                         "Regierungsmaulkorbjudensternmaske tragen wollen,",
                         "oder halt dann in 40 Jahren nach einem erfüllten",
                         "Leben, das macht doch keinen Unterschied.“"
-                    });
+                    };
                 case DebugImageTarget.Target2:
-                    return Task.FromResult((IEnumerable<string>)new List<string>
+                    return new List<string>
                     {
                         "Österreichs Antwort auf Amazon kann sich sehen",
                         "lasen: Mit dem Kaufhaus Österreich hieven Digital-",
@@ -122,9 +133,9 @@ namespace Assets.Scripts.Components
                         "Dass es keine detaillierten Suchergebnisse gibt,",
                         "ist laut Mahrer Absicht: „Wir wollten hier das",
                         "Offline-Shoppingerlebnis eins zu eins nachbilden."
-                    });
+                    };
                 default:
-                    return Task.FromResult(Enumerable.Empty<string>());
+                    return Enumerable.Empty<string>();
             }
         }
     }

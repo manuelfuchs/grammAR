@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Assets.Scripts.Components
 {
     public interface ITextExtractor
     {
-        Task<IEnumerable<string>> ExtractAsync();
+        event Action<IEnumerable<string>> OnTextFound;
     }
 }
