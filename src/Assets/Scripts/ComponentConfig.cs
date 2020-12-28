@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Components;
+using Assets.Scripts.Components.Debug;
 using System;
 using System.Collections.Generic;
 
@@ -36,6 +37,9 @@ public class ComponentConfig
 
     private void ConfigureServices()
     {
+        this.serviceCollection[typeof(IDebugTargetTracker)] = new DefaultTargetTracker();
+        this.serviceCollection[typeof(IDebugTargetMapper)] = new DefaultTargetMapper();
+        this.serviceCollection[typeof(ITextExtractor)] = new MockTextExtractor();
         this.serviceCollection[typeof(ISpellChecker)] = new MockSpellChecker();
     }
 }

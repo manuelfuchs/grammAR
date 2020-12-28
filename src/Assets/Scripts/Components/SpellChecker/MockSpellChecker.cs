@@ -7,7 +7,7 @@ namespace Assets.Scripts.Components
 {
     public class MockSpellChecker : ISpellChecker
     {
-        private readonly IDictionary<string, SpellingMistake[]> mockedTexts = new Dictionary<string, SpellingMistake[]>();
+        private readonly IDictionary<string, SpellingMistake[]> mockedTextMistakes = new Dictionary<string, SpellingMistake[]>();
 
         public MockSpellChecker()
         {
@@ -16,18 +16,18 @@ namespace Assets.Scripts.Components
 
         public IEnumerable<SpellingMistake> GetMistakes(IEnumerable<string> text)
         {
-            return this.mockedTexts[text.First()];
+            return this.mockedTextMistakes[text.First()];
         }
 
         private void InitializeMockedTexts()
         {
-            this.mockedTexts.Add(new KeyValuePair<string, SpellingMistake[]>(
+            this.mockedTextMistakes.Add(new KeyValuePair<string, SpellingMistake[]>(
                 "Anstatt immer nur zu kritisieren, legt die FPÖ heute erstmals eine",
                 new SpellingMistake[]
                 {
 
                 }));
-            this.mockedTexts.Add(new KeyValuePair<string, SpellingMistake[]>(
+            this.mockedTextMistakes.Add(new KeyValuePair<string, SpellingMistake[]>(
                 "Österreichs Antwort auf Amazon kann sich sehen lasen: Mit dem ",
                 new[]
                 {
