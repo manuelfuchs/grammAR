@@ -2,18 +2,19 @@
 using Assets.Scripts.Components.Debug;
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class ComponentConfig
 {
     private static ComponentConfig instance = null;
 
-    private readonly IDictionary<Type, object> serviceCollection;
+    private readonly IDictionary<Type, Lazy<object>> serviceCollection;
 
     private ComponentConfig()
     {
-        this.serviceCollection = new Dictionary<Type, object>();
+        serviceCollection = new Dictionary<Type, Lazy<object>>();
 
-        this.ConfigureServices();
+        ConfigureServices();
     }
 
     public static ComponentConfig Instance
@@ -21,7 +22,10 @@ public class ComponentConfig
         get
         {
             if (instance == null)
+            {
                 instance = new ComponentConfig();
+            }
+
             return instance;
         }
     }
@@ -29,17 +33,21 @@ public class ComponentConfig
     public TService GetService<TService>()
         where TService : class
     {
-        if (this.serviceCollection.TryGetValue(typeof(TService), out var instance))
-            return (TService)instance;
+        if (serviceCollection.TryGetValue(typeof(TService), out var service))
+        {
+            return (TService) service.Value;
+        }
         else
+        {
             return null;
+        }
     }
 
     private void ConfigureServices()
     {
-        this.serviceCollection[typeof(IDebugTargetTracker)] = new DefaultTargetTracker();
-        this.serviceCollection[typeof(IDebugTargetMapper)] = new DefaultTargetMapper();
-        this.serviceCollection[typeof(ITextExtractor)] = new MockTextExtractor();
-        this.serviceCollection[typeof(ISpellChecker)] = new MockSpellChecker();
+        serviceCollection[typeof(IDebugTargetTracker)] = new Lazy<object>(() => new DefaultTargetTracker());
+        serviceCollection[typeof(IDebugTargetMapper)] = new Lazy<object>(() => new DefaultTargetMapper());
+        serviceCollection[typeof(ITextExtractor)] = new Lazy<object>(() => new MockTextExtractor());
+        serviceCollection[typeof(ISpellChecker)] = new Lazy<object>(() => new MockSpellChecker());
     }
 }

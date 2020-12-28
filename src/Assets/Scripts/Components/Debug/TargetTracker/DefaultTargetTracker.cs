@@ -11,11 +11,11 @@ namespace Assets.Scripts.Components.Debug
 
         public DebugImageTarget? VisibleTarget
         {
-            get => this.visibleTarget;
+            get => visibleTarget;
             set
             {
-                this.visibleTarget = value;
-                this.OnVisibleTargetChanged?.Invoke(value);
+                visibleTarget = value;
+                OnVisibleTargetChanged?.Invoke(value);
             }
         }
     }
