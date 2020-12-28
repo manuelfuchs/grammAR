@@ -1,15 +1,16 @@
-﻿using Assets.Scripts.Types;
+﻿using Assets.Scripts.Components.Debug;
+using Assets.Scripts.Types;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Assets.Scripts.Components.TextExtractor
+namespace Assets.Scripts.Components
 {
     public class MockTextExtractor : ITextExtractor
     {
         public Task<IEnumerable<string>> ExtractAsync()
         {
-            var debugTargetTracker = ComponentConfig.Instance.GetService<Debug.IDebugTargetTracker>();
+            var debugTargetTracker = ComponentConfig.Instance.GetService<IDebugTargetTracker>();
             switch (debugTargetTracker.VisibleTarget)
             {
                 case DebugImageTarget.Target1:
