@@ -18,6 +18,7 @@
             </e>
           </e>
           <e p="SheetHider.cs" t="Include" />
+          <e p="TextCoordinateTransformer.cs" t="Include" />
           <e p="Types" t="Include">
             <e p="SpellingMistake.cs" t="Include" />
             <e p="SpellingSeverity.cs" t="Include" />
