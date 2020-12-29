@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Assets.Scripts.Components.OverlayPositionCalculator;
 using Assets.Scripts.Components.SpellChecker;
 using Assets.Scripts.Components.TextExtractor;
 using Assets.Scripts.Types;
@@ -15,6 +16,7 @@ namespace Assets.Scripts.TextAnnotation
     {
         private ITextExtractor textExtractor;
         private ISpellChecker spellChecker;
+        private IOverlayPositionCalculator overlayPositionCalculator;
         public GameObject letterBoxPrefab;
         public GameObject parent;
         public GameObject textPrefab;
@@ -25,7 +27,7 @@ namespace Assets.Scripts.TextAnnotation
         {
             textExtractor = ComponentConfig.Instance.GetService<ITextExtractor>();
             spellChecker = ComponentConfig.Instance.GetService<ISpellChecker>();
-            Debug.Log($"Spellchecker null {spellChecker == null}");
+            overlayPositionCalculator = ComponentConfig.Instance.GetService<IOverlayPositionCalculator>();
             textExtractor.OnTextFound += async text => await HandleTextFound(text);
         }
 
@@ -65,7 +67,7 @@ namespace Assets.Scripts.TextAnnotation
 
         private void DisplaySpellingMistake(SpellingMistake spellingMistake)
         {
-            var annotationPosition = OverlayPositionCalculator.CalculateMistakeOverlayPosition(spellingMistake);
+            var annotationPosition = overlayPositionCalculator.CalculateMistakeOverlayPosition(spellingMistake);
 
             var annotationObject = Instantiate(letterBoxPrefab,
                 parent.transform.TransformPoint(annotationPosition.LocalPosition),
@@ -90,7 +92,7 @@ namespace Assets.Scripts.TextAnnotation
 
         private void DisplayCorrection(SpellingMistake spellingMistake)
         {
-            var correctionTransform = OverlayPositionCalculator.CalculateCorrectionOverlayPosition(spellingMistake);
+            var correctionTransform = overlayPositionCalculator.CalculateCorrectionOverlayPosition(spellingMistake);
             var worldPosition = parent.transform.TransformPoint(correctionTransform.LocalPosition);
             var correctionObject =
                 Instantiate(letterBoxPrefab, worldPosition, parent.transform.rotation, parent.transform);

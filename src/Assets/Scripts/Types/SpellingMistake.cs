@@ -1,39 +1,16 @@
 ﻿namespace Assets.Scripts.Types
 {
-    public class SpellingMistake
+    public class SpellingMistake : TextPosition
     {
-        public SpellingMistake(int line, int errorStart, int errorEnd, SpellingSeverity severity, string suggestedCorrection)
+        public SpellingMistake(int line, int textStart, int textEnd, SpellingSeverity severity,
+            string suggestedCorrection) : base(line, textStart, textEnd)
         {
-            this.Line = line;
-            this.ErrorStart = errorStart;
-            this.ErrorEnd = errorEnd;
             this.Severity = severity;
             this.SuggestedCorrection = suggestedCorrection;
         }
 
-        public int Line
-        {
-            get;
-        }
+        public SpellingSeverity Severity { get; }
 
-        public int ErrorStart
-        {
-            get;
-        }
-
-        public int ErrorEnd
-        {
-            get;
-        }
-
-        public SpellingSeverity Severity
-        {
-            get;
-        }
-
-        public string SuggestedCorrection
-        {
-            get;
-        }
+        public string SuggestedCorrection { get; }
     }
 }

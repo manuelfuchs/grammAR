@@ -11,6 +11,8 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="Behaviour" t="Include">
+            <e p="AudioButtonBehaviour.cs" t="Include" />
+            <e p="CurseWordBleepingButtonBehavior.cs" t="Include" />
             <e p="LanguageButtonBehaviour.cs" t="Include" />
             <e p="SettingsTextBehaviour.cs" t="Include" />
           </e>
@@ -25,6 +27,10 @@
                 <e p="DefaultTargetTracker.cs" t="Include" />
                 <e p="IDebugTargetTracker.cs" t="Include" />
               </e>
+            </e>
+            <e p="OverlayPositionCalculator" t="Include">
+              <e p="IOverlayPositionCalculator.cs" t="Include" />
+              <e p="OverlayPositionCalculator.cs" t="Include" />
             </e>
             <e p="SettingsComponent" t="Include">
               <e p="DefaultSettingsComponent.cs" t="Include" />
@@ -42,23 +48,25 @@
           <e p="Events" t="Include">
             <e p="DebugImageTargetTracker.cs" t="Include" />
           </e>
-          <e p="OverlayPositionCalculator.cs" t="Include" />
           <e p="SheetHider.cs" t="Include" />
           <e p="TextAnnotation" t="Include">
             <e p="TextAnnotatorScript.cs" t="Include" />
           </e>
-          <e p="TextCoordinateTransformer.cs" t="Include" />
           <e p="Types" t="Include">
+            <e p="CurseWord.cs" t="Include" />
+            <e p="CurseWordSeverity.cs" t="Include" />
             <e p="DebugImageTarget.cs" t="Include" />
             <e p="Language.cs" t="Include" />
             <e p="OverlayTransform.cs" t="Include" />
             <e p="SpellingMistake.cs" t="Include" />
             <e p="SpellingSeverity.cs" t="Include" />
+            <e p="TextPosition.cs" t="Include" />
           </e>
         </e>
         <e p="StreamingAssets" t="Include">
           <e p="Vuforia" t="Include">
             <e p="grammAR.xml" t="Include" />
+            <e p="grammAR_settings.xml" t="Include" />
           </e>
         </e>
       </e>
