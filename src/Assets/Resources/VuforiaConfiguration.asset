@@ -18,7 +18,7 @@ MonoBehaviour:
     delayedInitialization: 0
     cameraDeviceModeSetting: -1
     maxSimultaneousImageTargets: 4
-    maxSimultaneousObjectTargets: 1
+    maxSimultaneousObjectTargets: 4
     useDelayedLoadingObjectTargets: 0
     modelTargetRecoWhileExtendedTracked: 1
     version: 8.5.9

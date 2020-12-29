@@ -5,10 +5,12 @@ namespace Assets.Scripts.Components
 {
     public interface ISettingsComponent
     {
-        event Action OnSettingsChanged;
+        event Action<bool> OnIsAudioEnabledChanged;
+        event Action<bool> OnIsCWBEnabledChanged;
+        event Action<Language> OnLanguageChanged;
 
-        Language Language { get; set; }
         bool IsAudioEnabled { get; set; }
         bool IsCurseWordBleepingEnabled { get; set; }
+        Language Language { get; set; }
     }
 }

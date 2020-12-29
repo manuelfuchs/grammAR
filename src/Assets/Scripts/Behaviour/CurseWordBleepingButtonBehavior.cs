@@ -1,37 +1,28 @@
 ﻿using Assets.Scripts.Components;
-using Assets.Scripts.Types;
 using UnityEngine;
 using Vuforia;
 
 namespace Assets.Scripts.Behaviour
 {
-    public class LanguageButtonBehaviour : MonoBehaviour, IVirtualButtonEventHandler
+    public class CurseWordBleepingButtonBehavior : MonoBehaviour, IVirtualButtonEventHandler
     {
-        public GameObject languageButton;
+        public GameObject curseWordBleepingButton;
         public AudioClip buttonPressedAudio;
 
         private void Start()
         {
-            var virtualButtonBehaviour = this.languageButton.GetComponent<VirtualButtonBehaviour>();
+            var virtualButtonBehaviour = this.curseWordBleepingButton.GetComponent<VirtualButtonBehaviour>();
             virtualButtonBehaviour.RegisterEventHandler(this);
         }
 
         public void OnButtonPressed(VirtualButtonBehaviour vb)
         {
-            Debug.Log("Language button hit");
+            Debug.Log("CWB button hit");
             var audioSource = this.GetComponent<AudioSource>();
             audioSource.PlayOneShot(buttonPressedAudio, 0.7f);
 
             var settingsComponent = ComponentConfig.Instance.GetService<ISettingsComponent>();
-            switch (settingsComponent.Language)
-            {
-                case Language.English:
-                    settingsComponent.Language = Language.German;
-                    return;
-                case Language.German:
-                    settingsComponent.Language = Language.English;
-                    return;
-            }
+            settingsComponent.IsCurseWordBleepingEnabled = !settingsComponent.IsCurseWordBleepingEnabled;
         }
 
         public void OnButtonReleased(VirtualButtonBehaviour vb)
