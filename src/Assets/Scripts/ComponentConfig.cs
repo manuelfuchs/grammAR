@@ -56,6 +56,7 @@ namespace Assets.Scripts
             serviceCollection[typeof(ISpellChecker)] = new Lazy<object>(() => new MockSpellChecker());
 
             serviceCollection[typeof(ISettingsComponent)] = new Lazy<object>(() => new DefaultSettingsComponent());
+            serviceCollection[typeof(IAudioPlayer)] = new Lazy<object>(() => new DefaultAudioPlayer());
         }
     }
 }
