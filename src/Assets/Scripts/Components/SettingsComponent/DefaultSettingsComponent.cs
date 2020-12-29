@@ -1,13 +1,15 @@
 ﻿using Assets.Scripts.Types;
 using System;
 
-namespace Assets.Scripts.Components.SettingsComponent
+namespace Assets.Scripts.Components
 {
     public class DefaultSettingsComponent : ISettingsComponent
     {
-        private Language language;
+        private Language language = Language.German;
+        private bool isAudioEnabled = true;
+        private bool isCurseWordBleepingEnabled = false;
 
-        public event Action<Language> OnLanguageChanged;
+        public event Action OnSettingsChanged;
 
         public Language Language
         {
@@ -19,9 +21,43 @@ namespace Assets.Scripts.Components.SettingsComponent
             {
                 this.language = value;
 
-                if (this.OnLanguageChanged != null)
+                if (this.OnSettingsChanged != null)
                 {
-                    this.OnLanguageChanged.Invoke(this.language);
+                    this.OnSettingsChanged.Invoke();
+                }
+            }
+        }
+
+        public bool IsAudioEnabled
+        {
+            get
+            {
+                return this.isAudioEnabled;
+            }
+            set
+            {
+                this.isAudioEnabled = value;
+
+                if (this.OnSettingsChanged != null)
+                {
+                    this.OnSettingsChanged.Invoke();
+                }
+            }
+        }
+
+        public bool IsCurseWordBleepingEnabled
+        {
+            get
+            {
+                return this.isCurseWordBleepingEnabled;
+            }
+            set
+            {
+                this.isCurseWordBleepingEnabled = value;
+
+                if (this.OnSettingsChanged != null)
+                {
+                    this.OnSettingsChanged.Invoke();
                 }
             }
         }

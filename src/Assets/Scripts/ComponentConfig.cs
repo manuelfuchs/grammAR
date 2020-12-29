@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Assets.Scripts.Components;
 using Assets.Scripts.Components.Debug.TargetMapper;
 using Assets.Scripts.Components.Debug.TargetTracker;
 using Assets.Scripts.Components.SpellChecker;
@@ -50,8 +51,11 @@ namespace Assets.Scripts
         {
             serviceCollection[typeof(IDebugTargetTracker)] = new Lazy<object>(() => new DefaultTargetTracker());
             serviceCollection[typeof(IDebugTargetMapper)] = new Lazy<object>(() => new DefaultTargetMapper());
+
             serviceCollection[typeof(ITextExtractor)] = new Lazy<object>(() => new MockTextExtractor());
             serviceCollection[typeof(ISpellChecker)] = new Lazy<object>(() => new MockSpellChecker());
+
+            serviceCollection[typeof(ISettingsComponent)] = new Lazy<object>(() => new DefaultSettingsComponent());
         }
     }
 }

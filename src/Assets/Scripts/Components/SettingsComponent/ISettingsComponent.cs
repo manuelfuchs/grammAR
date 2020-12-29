@@ -1,12 +1,14 @@
 ﻿using System;
 using Assets.Scripts.Types;
 
-namespace Assets.Scripts.Components.SettingsComponent
+namespace Assets.Scripts.Components
 {
     public interface ISettingsComponent
     {
-        event Action<Language> OnLanguageChanged;
+        event Action OnSettingsChanged;
 
         Language Language { get; set; }
+        bool IsAudioEnabled { get; set; }
+        bool IsCurseWordBleepingEnabled { get; set; }
     }
 }
