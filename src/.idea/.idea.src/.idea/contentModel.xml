@@ -10,16 +10,48 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
+          <e p="Behaviour" t="Include">
+            <e p="LanguageButtonBehaviour.cs" t="Include" />
+            <e p="SettingsTextBehaviour.cs" t="Include" />
+          </e>
           <e p="ComponentConfig.cs" t="Include" />
           <e p="Components" t="Include">
+            <e p="Debug" t="Include">
+              <e p="TargetMapper" t="Include">
+                <e p="DefaultTargetMapper.cs" t="Include" />
+                <e p="IDebugTargetMapper.cs" t="Include" />
+              </e>
+              <e p="TargetTracker" t="Include">
+                <e p="DefaultTargetTracker.cs" t="Include" />
+                <e p="IDebugTargetTracker.cs" t="Include" />
+              </e>
+            </e>
+            <e p="SettingsComponent" t="Include">
+              <e p="DefaultSettingsComponent.cs" t="Include" />
+              <e p="ISettingsComponent.cs" t="Include" />
+            </e>
             <e p="SpellChecker" t="Include">
               <e p="ISpellChecker.cs" t="Include" />
               <e p="MockSpellChecker.cs" t="Include" />
             </e>
+            <e p="TextExtractor" t="Include">
+              <e p="ITextExtractor.cs" t="Include" />
+              <e p="MockTextExtractor.cs" t="Include" />
+            </e>
           </e>
+          <e p="Events" t="Include">
+            <e p="DebugImageTargetTracker.cs" t="Include" />
+          </e>
+          <e p="OverlayPositionCalculator.cs" t="Include" />
           <e p="SheetHider.cs" t="Include" />
+          <e p="TextAnnotation" t="Include">
+            <e p="TextAnnotatorScript.cs" t="Include" />
+          </e>
           <e p="TextCoordinateTransformer.cs" t="Include" />
           <e p="Types" t="Include">
+            <e p="DebugImageTarget.cs" t="Include" />
+            <e p="Language.cs" t="Include" />
+            <e p="OverlayTransform.cs" t="Include" />
             <e p="SpellingMistake.cs" t="Include" />
             <e p="SpellingSeverity.cs" t="Include" />
           </e>
