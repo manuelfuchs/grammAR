@@ -429,7 +429,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 'image-button-2Material
+  m_Name: 'audio_buttonMaterial
 
     13188'
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
@@ -444,7 +444,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 2f4a3881b4bb42bab364a78bcaa18fe9, type: 3}
+        m_Texture: {fileID: 2800000, guid: ad29020ab984446287e4ce9c7f6c4514, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -1571,7 +1571,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 'image-button-1Material
+  m_Name: 'language_buttonMaterial
 
     13310'
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
@@ -1586,7 +1586,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 3cfd4a0f2ce14ea8b46d327569146ed7, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3773d29ddb8c4c5f9e94c96fec14aa8f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -2053,10 +2053,10 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: bab6fa851cf5a1a4bba3cec5f191cb8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTrackableName: image-button-2
+  mTrackableName: audio_button
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/grammAR.xml
+  mDataSetPath: Vuforia/grammAR_settings.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 4
@@ -2664,10 +2664,10 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: bab6fa851cf5a1a4bba3cec5f191cb8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTrackableName: image-button-3
+  mTrackableName: curse_word_bleep_button
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/grammAR.xml
+  mDataSetPath: Vuforia/grammAR_settings.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 4
@@ -3924,10 +3924,10 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: bab6fa851cf5a1a4bba3cec5f191cb8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTrackableName: image-button-5
+  mTrackableName: settings_screen
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/grammAR.xml
+  mDataSetPath: Vuforia/grammAR_settings.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 4
@@ -4051,10 +4051,10 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: bab6fa851cf5a1a4bba3cec5f191cb8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTrackableName: image-button-1
+  mTrackableName: language_button
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/grammAR.xml
+  mDataSetPath: Vuforia/grammAR_settings.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 4
@@ -4420,7 +4420,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 'image-button-3Material
+  m_Name: 'curse_word_bleep_buttonMaterial
 
     13210'
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
@@ -4435,7 +4435,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 3edbdb219a194a7e920db9efe7cd2d11, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7aaa8113c66b492f9ec882c9800e2883, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -4703,7 +4703,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 'image-button-5Material
+  m_Name: 'settings_screenMaterial
 
     13296'
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
@@ -4718,7 +4718,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: bbfdb7d7366746b0819f81f76d88e416, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4d637c82c19941d5bd44acd50f2866df, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
