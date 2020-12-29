@@ -8,6 +8,7 @@ namespace Assets.Scripts.Behaviour
     public class LanguageButtonBehaviour : MonoBehaviour, IVirtualButtonEventHandler
     {
         public GameObject languageButton;
+        public AudioClip buttonPressedAudio;
 
         private void Start()
         {
@@ -17,7 +18,10 @@ namespace Assets.Scripts.Behaviour
 
         public void OnButtonPressed(VirtualButtonBehaviour vb)
         {
-            Debug.LogError("Language button hit");
+            Debug.Log("Language button hit");
+            var audioSource = this.GetComponent<AudioSource>();
+            audioSource.PlayOneShot(buttonPressedAudio, 0.7f);
+
             var settingsComponent = ComponentConfig.Instance.GetService<ISettingsComponent>();
             switch (settingsComponent.Language)
             {

@@ -7,6 +7,7 @@ namespace Assets.Scripts.Behaviour
     public class AudioButtonBehaviour : MonoBehaviour, IVirtualButtonEventHandler
     {
         public GameObject audioButton;
+        public AudioClip buttonPressedAudio;
 
         private void Start()
         {
@@ -16,7 +17,10 @@ namespace Assets.Scripts.Behaviour
 
         public void OnButtonPressed(VirtualButtonBehaviour vb)
         {
-            Debug.LogError("Audio button hit");
+            Debug.Log("Audio button hit");
+            var audioSource = this.GetComponent<AudioSource>();
+            audioSource.PlayOneShot(buttonPressedAudio, 0.7f);
+
             var settingsComponent = ComponentConfig.Instance.GetService<ISettingsComponent>();
             settingsComponent.IsAudioEnabled = !settingsComponent.IsAudioEnabled;
         }
