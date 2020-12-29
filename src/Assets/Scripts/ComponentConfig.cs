@@ -59,6 +59,7 @@ namespace Assets.Scripts
             serviceCollection[typeof(ISettingsComponent)] = new Lazy<object>(() => new DefaultSettingsComponent());
             serviceCollection[typeof(IOverlayPositionCalculator)] =
                 new Lazy<object>(() => new OverlayPositionCalculator());
+            serviceCollection[typeof(IAudioPlayer)] = new Lazy<object>(() => new DefaultAudioPlayer());
         }
     }
 }
