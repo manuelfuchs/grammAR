@@ -2,8 +2,7 @@
 {
     public enum SpellingSeverity
     {
-        Low,
-        Middle,
+        Minor,
         Fatal
     }
 }

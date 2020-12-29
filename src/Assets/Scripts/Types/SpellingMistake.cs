@@ -3,7 +3,13 @@
     public class SpellingMistake
     {
         public SpellingMistake(int line, int errorStart, int errorEnd, SpellingSeverity severity, string suggestedCorrection)
-            => (Line, ErrorStart, ErrorEnd, Severity, SuggestedCorrection) = (line, errorStart, errorEnd, severity, suggestedCorrection);
+        {
+            this.Line = line;
+            this.ErrorStart = errorStart;
+            this.ErrorEnd = errorEnd;
+            this.Severity = severity;
+            this.SuggestedCorrection = suggestedCorrection;
+        }
 
         public int Line
         {

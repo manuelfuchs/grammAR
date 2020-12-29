@@ -31,12 +31,12 @@ namespace Assets.Scripts.Components
                 "Österreichs Antwort auf Amazon kann sich sehen",
                 new[]
                 {
-                    new SpellingMistake(2, 1, 6, SpellingSeverity.Low, "lassen"),
+                    new SpellingMistake(2, 1, 6, SpellingSeverity.Minor, "lassen"),
                     new SpellingMistake(10, 16, 21, SpellingSeverity.Fatal, "neues"),
                     new SpellingMistake(15, 20, 26, SpellingSeverity.Fatal, "zurecht"),
-                    new SpellingMistake(31, 13, 18, SpellingSeverity.Low, "Bank"),
+                    new SpellingMistake(31, 13, 18, SpellingSeverity.Minor, "Bank"),
                     new SpellingMistake(39, 20, 25, SpellingSeverity.Fatal, "sagen"),
-                    new SpellingMistake(46, 1, 6, SpellingSeverity.Middle, "unter"),
+                    new SpellingMistake(46, 1, 6, SpellingSeverity.Minor, "unter"),
                 }));
         }
     }
