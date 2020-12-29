@@ -17,7 +17,10 @@ namespace Assets.Scripts.Behaviour
             this.UpdateSettingsText();
 
             var settingsComponent = ComponentConfig.Instance.GetService<ISettingsComponent>();
-            settingsComponent.OnSettingsChanged += UpdateSettingsText;
+
+            settingsComponent.OnIsAudioEnabledChanged += _ => UpdateSettingsText();
+            settingsComponent.OnIsCWBEnabledChanged += _ => UpdateSettingsText();
+            settingsComponent.OnLanguageChanged += _ => UpdateSettingsText();
         }
 
         private void UpdateSettingsText()

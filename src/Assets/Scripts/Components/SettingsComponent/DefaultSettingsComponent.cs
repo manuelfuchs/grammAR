@@ -9,24 +9,9 @@ namespace Assets.Scripts.Components
         private bool isAudioEnabled = true;
         private bool isCurseWordBleepingEnabled = false;
 
-        public event Action OnSettingsChanged;
-
-        public Language Language
-        {
-            get
-            {
-                return this.language;
-            }
-            set
-            {
-                this.language = value;
-
-                if (this.OnSettingsChanged != null)
-                {
-                    this.OnSettingsChanged.Invoke();
-                }
-            }
-        }
+        public event Action<bool> OnIsAudioEnabledChanged;
+        public event Action<bool> OnIsCWBEnabledChanged;
+        public event Action<Language> OnLanguageChanged;
 
         public bool IsAudioEnabled
         {
@@ -38,9 +23,9 @@ namespace Assets.Scripts.Components
             {
                 this.isAudioEnabled = value;
 
-                if (this.OnSettingsChanged != null)
+                if (this.OnIsAudioEnabledChanged != null)
                 {
-                    this.OnSettingsChanged.Invoke();
+                    this.OnIsAudioEnabledChanged.Invoke(this.isAudioEnabled);
                 }
             }
         }
@@ -55,9 +40,26 @@ namespace Assets.Scripts.Components
             {
                 this.isCurseWordBleepingEnabled = value;
 
-                if (this.OnSettingsChanged != null)
+                if (this.OnIsCWBEnabledChanged != null)
                 {
-                    this.OnSettingsChanged.Invoke();
+                    this.OnIsCWBEnabledChanged.Invoke(this.isCurseWordBleepingEnabled);
+                }
+            }
+        }
+
+        public Language Language
+        {
+            get
+            {
+                return this.language;
+            }
+            set
+            {
+                this.language = value;
+
+                if (this.OnLanguageChanged != null)
+                {
+                    this.OnLanguageChanged.Invoke(this.language);
                 }
             }
         }
