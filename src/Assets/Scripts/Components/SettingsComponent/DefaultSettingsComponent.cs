@@ -1,7 +1,7 @@
-﻿using Assets.Scripts.Types;
-using System;
+﻿using System;
+using Assets.Scripts.Types;
 
-namespace Assets.Scripts.Components
+namespace Assets.Scripts.Components.SettingsComponent
 {
     public class DefaultSettingsComponent : ISettingsComponent
     {

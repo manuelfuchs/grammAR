@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.Components.SettingsComponent;
+using UnityEngine;
 
-namespace Assets.Scripts.Components
+namespace Assets.Scripts.Components.AudioPlayer
 {
     public class DefaultAudioPlayer : IAudioPlayer
     {

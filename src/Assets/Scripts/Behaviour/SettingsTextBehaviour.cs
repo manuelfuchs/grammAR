@@ -1,4 +1,4 @@
-﻿using Assets.Scripts.Components;
+﻿using Assets.Scripts.Components.SettingsComponent;
 using UnityEngine;
 using UnityEngine.UI;
 

@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using Assets.Scripts.Components;
+using Assets.Scripts.Components.AudioPlayer;
 using Assets.Scripts.Components.Debug.TargetMapper;
 using Assets.Scripts.Components.Debug.TargetTracker;
 using Assets.Scripts.Components.OverlayPositionCalculator;
+using Assets.Scripts.Components.SettingsComponent;
 using Assets.Scripts.Components.SpellChecker;
 using Assets.Scripts.Components.TextExtractor;
 

@@ -6,9 +6,7 @@ using Assets.Scripts.Components.OverlayPositionCalculator;
 using Assets.Scripts.Components.SpellChecker;
 using Assets.Scripts.Components.TextExtractor;
 using Assets.Scripts.Types;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Assets.Scripts.TextAnnotation
 {

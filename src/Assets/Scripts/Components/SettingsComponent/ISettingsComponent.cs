@@ -1,7 +1,7 @@
 ﻿using System;
 using Assets.Scripts.Types;
 
-namespace Assets.Scripts.Components
+namespace Assets.Scripts.Components.SettingsComponent
 {
     public interface ISettingsComponent
     {

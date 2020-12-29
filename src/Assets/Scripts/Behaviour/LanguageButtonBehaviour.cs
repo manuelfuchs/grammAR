@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Components;
+﻿using Assets.Scripts.Components.AudioPlayer;
+using Assets.Scripts.Components.SettingsComponent;
 using Assets.Scripts.Types;
 using UnityEngine;
 using Vuforia;
