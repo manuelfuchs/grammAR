@@ -1,53 +1,57 @@
-﻿using Assets.Scripts.Components;
-using Assets.Scripts.Components.Debug;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using UnityEngine;
+using Assets.Scripts.Components.Debug.TargetMapper;
+using Assets.Scripts.Components.Debug.TargetTracker;
+using Assets.Scripts.Components.SpellChecker;
+using Assets.Scripts.Components.TextExtractor;
 
-public class ComponentConfig
+namespace Assets.Scripts
 {
-    private static ComponentConfig instance = null;
-
-    private readonly IDictionary<Type, Lazy<object>> serviceCollection;
-
-    private ComponentConfig()
+    public class ComponentConfig
     {
-        serviceCollection = new Dictionary<Type, Lazy<object>>();
+        private static ComponentConfig instance = null;
 
-        ConfigureServices();
-    }
+        private readonly IDictionary<Type, Lazy<object>> serviceCollection;
 
-    public static ComponentConfig Instance
-    {
-        get
+        private ComponentConfig()
         {
-            if (instance == null)
+            serviceCollection = new Dictionary<Type, Lazy<object>>();
+
+            ConfigureServices();
+        }
+
+        public static ComponentConfig Instance
+        {
+            get
             {
-                instance = new ComponentConfig();
+                if (instance == null)
+                {
+                    instance = new ComponentConfig();
+                }
+
+                return instance;
             }
-
-            return instance;
         }
-    }
 
-    public TService GetService<TService>()
-        where TService : class
-    {
-        if (serviceCollection.TryGetValue(typeof(TService), out var service))
+        public TService GetService<TService>()
+            where TService : class
         {
-            return (TService) service.Value;
+            if (serviceCollection.TryGetValue(typeof(TService), out var service))
+            {
+                return (TService) service.Value;
+            }
+            else
+            {
+                return null;
+            }
         }
-        else
-        {
-            return null;
-        }
-    }
 
-    private void ConfigureServices()
-    {
-        serviceCollection[typeof(IDebugTargetTracker)] = new Lazy<object>(() => new DefaultTargetTracker());
-        serviceCollection[typeof(IDebugTargetMapper)] = new Lazy<object>(() => new DefaultTargetMapper());
-        serviceCollection[typeof(ITextExtractor)] = new Lazy<object>(() => new MockTextExtractor());
-        serviceCollection[typeof(ISpellChecker)] = new Lazy<object>(() => new MockSpellChecker());
+        private void ConfigureServices()
+        {
+            serviceCollection[typeof(IDebugTargetTracker)] = new Lazy<object>(() => new DefaultTargetTracker());
+            serviceCollection[typeof(IDebugTargetMapper)] = new Lazy<object>(() => new DefaultTargetMapper());
+            serviceCollection[typeof(ITextExtractor)] = new Lazy<object>(() => new MockTextExtractor());
+            serviceCollection[typeof(ISpellChecker)] = new Lazy<object>(() => new MockSpellChecker());
+        }
     }
 }

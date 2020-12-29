@@ -1,58 +1,67 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Assets.Scripts.Components;
+using Assets.Scripts.Components.SpellChecker;
+using Assets.Scripts.Components.TextExtractor;
+using Assets.Scripts.Types;
 using UnityEngine;
 
-public class TextAnnotatorScript : MonoBehaviour
+namespace Assets.Scripts.TextAnnotation
 {
-    private ITextExtractor _textExtractor;
-    private ISpellChecker _spellChecker;
-    public GameObject prefab;
-    public GameObject parent;
-
-    // Start is called before the first frame update
-    void Start()
+    public class TextAnnotatorScript : MonoBehaviour
     {
-        _textExtractor = ComponentConfig.Instance.GetService<ITextExtractor>();
-        _spellChecker = ComponentConfig.Instance.GetService<ISpellChecker>();
-        Debug.Log($"Spellchecker null {_spellChecker == null}");
-        _textExtractor.OnTextFound += async text => await HandleTextFound(text);
-    }
+        private ITextExtractor textExtractor;
+        private ISpellChecker spellChecker;
+        public GameObject prefab;
+        public GameObject parent;
+        private ConcurrentBag<GameObject> storedAnnotations;
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
-    private async Task HandleTextFound(IEnumerable<string> text)
-    {
-        if (text == null)
+        // Start is called before the first frame update
+        void Start()
         {
-            return;
-        }
-        var textList = text.ToList();
-        if (!textList.Any())
-        {
-            return;
+            textExtractor = ComponentConfig.Instance.GetService<ITextExtractor>();
+            spellChecker = ComponentConfig.Instance.GetService<ISpellChecker>();
+            Debug.Log($"Spellchecker null {spellChecker == null}");
+            textExtractor.OnTextFound += async text => await HandleTextFound(text);
         }
 
-        
-        var spellingMistakes = await _spellChecker.GetMistakes(textList);
-
-        foreach (var spellingMistake in spellingMistakes)
+        // Update is called once per frame
+        void Update()
         {
-            var annotationPosition = AnnotationPositionCalculator.CalcOverlayPosition(parent, spellingMistake);
-            DisplayAnnotation(annotationPosition);
         }
-    }
 
-    private void DisplayAnnotation(AnnotationPosition annotationPosition)
-    {
-        var annotationObject = Instantiate(prefab, parent.transform.TransformPoint(annotationPosition.LocalPosition),
-            Quaternion.identity,
-            parent.transform);
-        annotationObject.transform.localScale = annotationPosition.LocalScale;
-        annotationObject.GetComponent<Renderer>().material = Resources.Load<Material>("Materials/ErrorAnnotation");
+        private async Task HandleTextFound(IEnumerable<string> text)
+        {
+            if (text == null)
+            {
+                return;
+            }
+
+            var textList = text.ToList();
+            if (!textList.Any())
+            {
+                return;
+            }
+
+
+            var spellingMistakes = await spellChecker.GetMistakes(textList);
+
+            foreach (var spellingMistake in spellingMistakes)
+            {
+                var annotationPosition = AnnotationPositionCalculator.CalcOverlayPosition(parent, spellingMistake);
+                DisplayAnnotation(annotationPosition);
+            }
+        }
+
+        private void DisplayAnnotation(AnnotationPosition annotationPosition)
+        {
+            var annotationObject = Instantiate(prefab,
+                parent.transform.TransformPoint(annotationPosition.LocalPosition),
+                Quaternion.identity,
+                parent.transform);
+            annotationObject.transform.localScale = annotationPosition.LocalScale;
+            annotationObject.GetComponent<Renderer>().material = Resources.Load<Material>("Materials/ErrorAnnotation");
+        }
     }
 }

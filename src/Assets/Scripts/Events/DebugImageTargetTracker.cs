@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Components.Debug;
+﻿using Assets.Scripts.Components.Debug.TargetMapper;
+using Assets.Scripts.Components.Debug.TargetTracker;
 
 namespace Assets.Scripts.Events
 {

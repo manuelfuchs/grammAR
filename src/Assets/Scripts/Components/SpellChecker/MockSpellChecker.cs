@@ -1,9 +1,9 @@
-﻿using Assets.Scripts.Types;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Assets.Scripts.Types;
 
-namespace Assets.Scripts.Components
+namespace Assets.Scripts.Components.SpellChecker
 {
     public class MockSpellChecker : ISpellChecker
     {

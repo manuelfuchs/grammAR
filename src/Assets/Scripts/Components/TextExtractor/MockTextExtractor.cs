@@ -1,10 +1,10 @@
 ﻿using System;
-using Assets.Scripts.Components.Debug;
-using Assets.Scripts.Types;
 using System.Collections.Generic;
 using System.Linq;
+using Assets.Scripts.Components.Debug.TargetTracker;
+using Assets.Scripts.Types;
 
-namespace Assets.Scripts.Components
+namespace Assets.Scripts.Components.TextExtractor
 {
     public class MockTextExtractor : ITextExtractor
     {

@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 
-public class AnnotationPosition
+namespace Assets.Scripts.Types
 {
-    public Vector3 LocalPosition { get; set; }
-    public Vector3 LocalScale { get; set; }
+    public class AnnotationPosition
+    {
+        public Vector3 LocalPosition { get; set; }
+        public Vector3 LocalScale { get; set; }
+    }
 }

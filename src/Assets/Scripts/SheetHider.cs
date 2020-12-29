@@ -1,18 +1,21 @@
-﻿using Assets.Scripts.Components;
+﻿using Assets.Scripts.Components.SpellChecker;
 using UnityEngine;
 
-public class SheetHider : MonoBehaviour
+namespace Assets.Scripts
 {
-    // Start is called before the first frame update
-    void Start()
+    public class SheetHider : MonoBehaviour
     {
-        var spellChecker = ComponentConfig.Instance.GetService<ISpellChecker>();
-        Debug.LogWarning($"Loaded {spellChecker.GetType().FullName}");
-    }
+        // Start is called before the first frame update
+        void Start()
+        {
+            var spellChecker = ComponentConfig.Instance.GetService<ISpellChecker>();
+            Debug.LogWarning($"Loaded {spellChecker.GetType().FullName}");
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        GetComponent<Renderer>().enabled = false;
+        // Update is called once per frame
+        void Update()
+        {
+            GetComponent<Renderer>().enabled = false;
+        }
     }
 }

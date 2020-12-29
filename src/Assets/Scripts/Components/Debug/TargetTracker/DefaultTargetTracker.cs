@@ -1,7 +1,7 @@
-﻿using Assets.Scripts.Types;
-using System;
+﻿using System;
+using Assets.Scripts.Types;
 
-namespace Assets.Scripts.Components.Debug
+namespace Assets.Scripts.Components.Debug.TargetTracker
 {
     public class DefaultTargetTracker : IDebugTargetTracker
     {

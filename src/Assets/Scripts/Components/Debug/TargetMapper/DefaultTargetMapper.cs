@@ -1,6 +1,6 @@
 ﻿using Assets.Scripts.Types;
 
-namespace Assets.Scripts.Components.Debug
+namespace Assets.Scripts.Components.Debug.TargetMapper
 {
     public class DefaultTargetMapper : IDebugTargetMapper
     {
