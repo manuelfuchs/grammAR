@@ -20,9 +20,7 @@
           <e p="Components" t="Include">
             <e p="AudioPlayer" t="Include">
               <e p="DefaultAudioPlayer.cs" t="Include" />
-              <e p="DefaultAudioPlayer.cs.meta" t="Include" />
               <e p="IAudioPlayer.cs" t="Include" />
-              <e p="IAudioPlayer.cs.meta" t="Include" />
             </e>
             <e p="Debug" t="Include">
               <e p="TargetMapper" t="Include">
