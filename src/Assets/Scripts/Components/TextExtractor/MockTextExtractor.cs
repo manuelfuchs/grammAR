@@ -24,7 +24,7 @@ namespace Assets.Scripts.Components.TextExtractor
         {
             switch (target)
             {
-                case DebugImageTarget.Target1:
+                case DebugImageTarget.GermanNoErrors:
                     return new List<string>
                     {
                         "Anstatt immer nur zu kritisieren, legt die FPÖ",
@@ -77,7 +77,7 @@ namespace Assets.Scripts.Components.TextExtractor
                         "oder halt dann in 40 Jahren nach einem erfüllten",
                         "Leben, das macht doch keinen Unterschied.“"
                     };
-                case DebugImageTarget.Target2:
+                case DebugImageTarget.GermanErrors:
                     return new List<string>
                     {
                         "Österreichs Antwort auf Amazon kann sich sehen",
@@ -133,6 +133,33 @@ namespace Assets.Scripts.Components.TextExtractor
                         "Dass es keine detaillierten Suchergebnisse gibt,",
                         "ist laut Mahrer Absicht: „Wir wollten hier das",
                         "Offline-Shoppingerlebnis eins zu eins nachbilden."
+                    };
+                case DebugImageTarget.GermanCurseWords:
+                    return new[]
+                    {
+                        "Genau davor diesem Scheiß wurde gewarnt! Nach dem",
+                        "Heiligen Abend folgt nun die Ernüchterung. Das",
+                        "Christkind wurde heute positiv auf Corona",
+                        "getestet. 8,9 Millionen Menschen, die gestern",
+                        "Abend noch mit ihm Kontakt hatten, müssen zehn",
+                        "Tage lang in Quarantäne.",
+                        "",
+                        "NORDPOL / WIEN – Eine ernüchternde WhatsApp-",
+                        "Nachricht versaut heute Vormittag Millionen",
+                        "Österreichern die Weihnachtsstimmung: \"Hey, du",
+                        "idiot, vlt hast du’s ned gemerkt aber ich war bei",
+                        "dir daheim. Naja bad news haha, ich hab gestern",
+                        "ned nur Geschenke gebracht. Solltest dich testen",
+                        "lassen, sorry, liegrü Christkind.\"",
+                        "",
+                        "Symptome",
+                        "Erste Symptome zeigten sich erst heute am frühen",
+                        "Morgen, als das Christkind Lust bekam, zur",
+                        "Entspannung Weihnachtsdeko von Interio",
+                        "aufzustellen, ein Räucherstäbchen anzuzünden und",
+                        "das Gabalier-Weihnachtsalbum einzulegen: \"Der",
+                        "fehlende Geschmackssinn hat mich skeptisch",
+                        "gemacht.\"",
                     };
                 default:
                     return Enumerable.Empty<string>();

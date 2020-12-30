@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Assets.Scripts.Components.AudioPlayer;
+using Assets.Scripts.Components.CurseWordFilter;
 using Assets.Scripts.Components.Debug.TargetMapper;
 using Assets.Scripts.Components.Debug.TargetTracker;
 using Assets.Scripts.Components.OverlayPositionCalculator;
@@ -61,6 +62,7 @@ namespace Assets.Scripts
             serviceCollection[typeof(IOverlayPositionCalculator)] =
                 new Lazy<object>(() => new OverlayPositionCalculator());
             serviceCollection[typeof(IAudioPlayer)] = new Lazy<object>(() => new DefaultAudioPlayer());
+            serviceCollection[typeof(ICurseWordFilter)] = new Lazy<object>(() => new DefaultCurseWordFilter());
         }
     }
 }

@@ -1,7 +1,15 @@
-﻿namespace Assets.Scripts.Types
+﻿using JetBrains.Annotations;
+
+namespace Assets.Scripts.Types
 {
     public class SpellingMistake : TextPosition
     {
+        public SpellingMistake(int line, int textStart, int textEnd, SpellingSeverity severity) : base(line, textStart,
+            textEnd)
+        {
+            Severity = severity;
+        }
+
         public SpellingMistake(int line, int textStart, int textEnd, SpellingSeverity severity,
             string suggestedCorrection) : base(line, textStart, textEnd)
         {
@@ -11,6 +19,6 @@
 
         public SpellingSeverity Severity { get; }
 
-        public string SuggestedCorrection { get; }
+        [CanBeNull] public string SuggestedCorrection { get; }
     }
 }

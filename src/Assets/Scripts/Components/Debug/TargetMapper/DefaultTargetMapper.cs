@@ -9,9 +9,17 @@ namespace Assets.Scripts.Components.Debug.TargetMapper
             switch (name)
             {
                 case "CorrectTextTarget":
-                    return DebugImageTarget.Target1;
+                    return DebugImageTarget.GermanNoErrors;
                 case "ErrorTextTarget":
-                    return DebugImageTarget.Target2;
+                    return DebugImageTarget.GermanErrors;
+                case "GermanCurseWordTarget":
+                    return DebugImageTarget.GermanCurseWords;
+                case "EnglishErrorTarget":
+                    return DebugImageTarget.EnglishErrors;
+                case "EnglishCurseWordTarget":
+                    return DebugImageTarget.EnglishCurseWords;
+                case "EnglishNoErrorTarget":
+                    return DebugImageTarget.EnglishNoErrors;
                 default:
                     return null;
             }

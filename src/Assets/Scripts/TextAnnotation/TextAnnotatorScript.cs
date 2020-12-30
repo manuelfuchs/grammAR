@@ -99,17 +99,25 @@ namespace Assets.Scripts.TextAnnotation
             correctionObject.GetComponent<Renderer>().material = Resources.Load<Material>("Materials/Red");
             this.storedAnnotations.Push(correctionObject);
 
-            DisplayCorrectionText(correctionObject, spellingMistake);
+            if (spellingMistake.Severity == SpellingSeverity.Fatal && spellingMistake.SuggestedCorrection != null)
+            {
+                DisplayCorrectionText(correctionObject, spellingMistake.SuggestedCorrection);
+            }
         }
 
-        private void DisplayCorrectionText(GameObject correctionObject, SpellingMistake spellingMistake)
+        private void DisplayCorrectionText(GameObject correctionObject, string correction)
         {
             var correctionText = Instantiate(textPrefab, correctionObject.transform);
 
             correctionText.transform.position = correctionObject.transform.position;
-            correctionText.transform.localScale = new Vector3(1, 4, spellingMistake.SuggestedCorrection.Length);
-            correctionText.GetComponent<TextMesh>().text = spellingMistake.SuggestedCorrection;
+            correctionText.transform.localScale = new Vector3(1, 4, correction.Length);
+            correctionText.GetComponent<TextMesh>().text = correction;
             this.storedAnnotations.Push(correctionText);
+        }
+
+        private void DisplayCurseWordFilter(CurseWord curseWord)
+        {
+            
         }
     }
 }

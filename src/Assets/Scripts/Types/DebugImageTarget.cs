@@ -2,7 +2,11 @@
 {
     public enum DebugImageTarget
     {
-        Target1,
-        Target2
+        GermanNoErrors,
+        GermanErrors,
+        GermanCurseWords,
+        EnglishNoErrors,
+        EnglishErrors,
+        EnglishCurseWords
     }
 }

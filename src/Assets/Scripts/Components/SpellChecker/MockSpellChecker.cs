@@ -38,6 +38,16 @@ namespace Assets.Scripts.Components.SpellChecker
                     new SpellingMistake(39, 20, 25, SpellingSeverity.Fatal, "sagen"),
                     new SpellingMistake(46, 1, 6, SpellingSeverity.Minor, "unter"),
                 }));
+
+            mockedTextMistakes.Add(new KeyValuePair<string, IEnumerable<SpellingMistake>>(
+                "Auspicious tidings have come our way, OGN readers.",
+                new[]
+                {
+                    new SpellingMistake(7, 1, 10, SpellingSeverity.Fatal, "DualSense"),
+                    new SpellingMistake(8, 14, 20, SpellingSeverity.Fatal, "leaves"),
+                    new SpellingMistake(14, 40, 45, SpellingSeverity.Fatal),
+                    new SpellingMistake(21, 20, 29, SpellingSeverity.Fatal, "DualSense"),
+                }));
         }
     }
 }
