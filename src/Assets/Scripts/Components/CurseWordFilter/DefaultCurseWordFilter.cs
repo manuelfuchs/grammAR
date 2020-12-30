@@ -21,10 +21,10 @@ namespace Assets.Scripts.Components.CurseWordFilter
                 {
                     if (lineStr.ToLower().Contains(curseWord.ToLower()))
                     {
-                        var startIndex = lineStr.IndexOf(curseWord, StringComparison.Ordinal);
+                        var startIndex = lineStr.IndexOf(curseWord, StringComparison.OrdinalIgnoreCase);
                         foundCurseWords.Add(
                             new CurseWord(line,
-                                startIndex + 1, 
+                                startIndex + 1,
                                 startIndex + 1 + curseWord.Length,
                                 CurseWordSeverity.Minor));
                     }

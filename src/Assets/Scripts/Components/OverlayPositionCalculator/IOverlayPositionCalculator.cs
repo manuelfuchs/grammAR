@@ -4,7 +4,7 @@ namespace Assets.Scripts.Components.OverlayPositionCalculator
 {
     public interface IOverlayPositionCalculator
     {
-        OverlayTransform CalculateMistakeOverlayPosition(SpellingMistake spellingMistake);
+        OverlayTransform CalculateOverlayPosition(TextPosition textPosition);
         OverlayTransform CalculateCorrectionOverlayPosition(SpellingMistake spellingMistake);
     }
 }

@@ -12,7 +12,7 @@ namespace Assets.Scripts.Components.Debug.TargetMapper
                     return DebugImageTarget.GermanNoErrors;
                 case "ErrorTextTarget":
                     return DebugImageTarget.GermanErrors;
-                case "GermanCurseWordTarget":
+                case "GermanCurseWordsTarget":
                     return DebugImageTarget.GermanCurseWords;
                 case "EnglishErrorTarget":
                     return DebugImageTarget.EnglishErrors;

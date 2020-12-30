@@ -12,11 +12,11 @@ namespace Assets.Scripts.Components.OverlayPositionCalculator
         private const float DefaultYPos = 0.1f;
         private const float DefaultYScale = 1f;
 
-        public OverlayTransform CalculateMistakeOverlayPosition(SpellingMistake spellingMistake)
+        public OverlayTransform CalculateOverlayPosition(TextPosition textPosition)
         {
-            var letters = spellingMistake.TextEnd - spellingMistake.TextStart;
-            var xPos = XStartingPoint + LetterWidth * 10 * (spellingMistake.TextStart - 1 + letters / 2);
-            var zPos = ZStartingPoint - LetterHeight * 10 * (spellingMistake.Line - 1);
+            var letters = textPosition.TextEnd - textPosition.TextStart;
+            var xPos = XStartingPoint + LetterWidth * 10 * (textPosition.TextStart - 1 + letters / 2);
+            var zPos = ZStartingPoint - LetterHeight * 10 * (textPosition.Line - 1);
 
             var localPos = new Vector3(xPos, DefaultYPos, zPos);
             var localScale = new Vector3(LetterWidth * letters, DefaultYScale, LetterHeight);
@@ -30,7 +30,8 @@ namespace Assets.Scripts.Components.OverlayPositionCalculator
 
         public OverlayTransform CalculateCorrectionOverlayPosition(SpellingMistake spellingMistake)
         {
-            var annotationPosition = CalculateMistakeOverlayPosition(spellingMistake).LocalPosition;
+            if (spellingMistake.SuggestedCorrection == null) return null;
+            var annotationPosition = CalculateOverlayPosition(spellingMistake).LocalPosition;
             var correctionPosition = new OverlayTransform
             {
                 LocalPosition = new Vector3(
@@ -39,7 +40,7 @@ namespace Assets.Scripts.Components.OverlayPositionCalculator
                     annotationPosition.z + LetterHeight + 0.2f
                 ),
                 LocalScale = new Vector3(
-                    spellingMistake.SuggestedCorrection.Length * LetterWidth, DefaultYScale, LetterHeight)
+                    (spellingMistake.SuggestedCorrection.Length) * LetterWidth, DefaultYScale, LetterHeight)
             };
 
             return correctionPosition;

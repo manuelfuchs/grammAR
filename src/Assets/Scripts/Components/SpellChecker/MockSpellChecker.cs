@@ -17,7 +17,14 @@ namespace Assets.Scripts.Components.SpellChecker
 
         public Task<IEnumerable<SpellingMistake>> GetMistakes(IEnumerable<string> text)
         {
-            return Task.FromResult(mockedTextMistakes[text.First()]);
+            if (mockedTextMistakes.TryGetValue(text.First(), out var mistakes))
+            {
+                return Task.FromResult(mistakes);
+            }
+            else
+            {
+                return Task.FromResult(Enumerable.Empty<SpellingMistake>());
+            }
         }
 
         private void InitializeMockedTexts()
