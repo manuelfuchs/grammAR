@@ -66,9 +66,9 @@ namespace Assets.Scripts.Components.SpellChecker
                 "EAGAN, MN—Intimidated yet intrigued as he",
                 new[]
                 {
-                    new SpellingMistake(line: 8, textStart: 45, textEnd: 51, SpellingSeverity.Fatal, "palms"),
-                    new SpellingMistake(line: 4, textStart: 11, textEnd: 19, SpellingSeverity.Minor, "Thursday"),
-                    new SpellingMistake(line: 9, textStart: 1, textEnd: 9, SpellingSeverity.Fatal),
+                    new SpellingMistake(8, 45, 51, SpellingSeverity.Fatal, "palms"),
+                    new SpellingMistake(4, 11, 19, SpellingSeverity.Minor, "Thursday"),
+                    new SpellingMistake(9, 1, 9, SpellingSeverity.Fatal),
                 }));
         }
 

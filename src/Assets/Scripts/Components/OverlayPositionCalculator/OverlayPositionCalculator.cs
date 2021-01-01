@@ -5,17 +5,17 @@ namespace Assets.Scripts.Components.OverlayPositionCalculator
 {
     public class OverlayPositionCalculator : IOverlayPositionCalculator
     {
-        private const float LetterHeight = 0.0164f;
-        private const float LetterWidth = 0.01135f;
-        private const float XStartingPoint = -2.837f;
+        private const float LetterHeight = 0.0167f;
+        private const float LetterWidth = 0.01157254901960784313725490196078f;
+        private const float XStartingPoint = -2.85f;
         private const float ZStartingPoint = 3.887f;
-        private const float DefaultYPos = 0.1f;
+        private const float DefaultYPos = 0;
         private const float DefaultYScale = 1f;
 
         public OverlayTransform CalculateOverlayPosition(TextPosition textPosition)
         {
             var letters = textPosition.TextEnd - textPosition.TextStart;
-            var xPos = XStartingPoint + LetterWidth * 10 * (textPosition.TextStart - 1 + letters / 2);
+            var xPos = XStartingPoint + LetterWidth * 10 * (textPosition.TextStart - 1 + (letters - 1) / (float) 2);
             var zPos = ZStartingPoint - LetterHeight * 10 * (textPosition.Line - 1);
 
             var localPos = new Vector3(xPos, DefaultYPos, zPos);
@@ -49,7 +49,7 @@ namespace Assets.Scripts.Components.OverlayPositionCalculator
             {
                 LocalPosition = new Vector3(
                     annotationPosition.x +
-                    LetterWidth * 10 * ((float)(spellingMistake.TextEnd - spellingMistake.TextStart) / 2),
+                    LetterWidth * 10 * ((float) (spellingMistake.TextEnd - spellingMistake.TextStart) / 2),
                     annotationPosition.y,
                     annotationPosition.z + LetterHeight + 0.15f
                 ),
