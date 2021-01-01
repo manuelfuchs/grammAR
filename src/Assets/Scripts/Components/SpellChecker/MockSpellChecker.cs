@@ -23,8 +23,10 @@ namespace Assets.Scripts.Components.SpellChecker
 
         private void ExtractSpellingMistakes(IEnumerable<string> text)
         {
-            if (text.Any()
-                && mockedTextMistakes.TryGetValue(text.First(), out var mistakes))
+            var textList = text.ToList();
+            
+            if (textList.Any()
+                && mockedTextMistakes.TryGetValue(textList.First(), out var mistakes))
             {
                 if(this.OnMistakesFound != null)
                 {
