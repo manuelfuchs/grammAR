@@ -1,6 +1,6 @@
 ﻿using System.Collections.Concurrent;
 using System.Collections.Generic;
-using Assets.Scripts.Components.CurseWordFilter;
+using Assets.Scripts.Components.CurseWordChecker;
 using Assets.Scripts.Components.OverlayPositionCalculator;
 using Assets.Scripts.Components.SettingsComponent;
 using Assets.Scripts.Components.SpellChecker;
@@ -20,7 +20,7 @@ namespace Assets.Scripts.Behaviour
         private ISettingsComponent settingsComponent;
         private ITextExtractor textExtractor;
         private ISpellChecker spellChecker;
-        private ICurseWordFilter curseWordFilter;
+        private ICurseWordChecker curseWordChecker;
 
         private readonly ConcurrentStack<GameObject> renderedMistakeAnnotations = new ConcurrentStack<GameObject>();
         private readonly ConcurrentStack<GameObject> renderedCurseWordAnnotations = new ConcurrentStack<GameObject>();
@@ -31,10 +31,10 @@ namespace Assets.Scripts.Behaviour
             this.settingsComponent = ComponentConfig.Instance.GetService<ISettingsComponent>();
             this.textExtractor = ComponentConfig.Instance.GetService<ITextExtractor>();
             this.spellChecker = ComponentConfig.Instance.GetService<ISpellChecker>();
-            this.curseWordFilter = ComponentConfig.Instance.GetService<ICurseWordFilter>();
+            this.curseWordChecker = ComponentConfig.Instance.GetService<ICurseWordChecker>();
 
             this.spellChecker.OnMistakesFound += UpdateMistakeAnnotations;
-            this.curseWordFilter.OnCurseWordsFound += UpdateCurseWordAnnotations;
+            this.curseWordChecker.OnCurseWordsFound += UpdateCurseWordAnnotations;
             this.textExtractor.OnTextLost += () =>
             {
                 ClearCurseWords();
