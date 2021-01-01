@@ -28,6 +28,25 @@ namespace Assets.Scripts.Components.OverlayPositionCalculator
             };
         }
 
+        public OverlayTransform CalculateCurseWordOverlay(CurseWord curseWord, bool showFirstLetter = true)
+        {
+            if (showFirstLetter)
+            {
+                return CalculateOverlayPosition(new TextPosition(curseWord.Line, curseWord.TextStart + 1,
+                    curseWord.TextEnd));
+            }
+            else
+            {
+                return CalculateOverlayPosition(curseWord);
+            }
+        }
+
+        public OverlayTransform CalculateOverlayPosition(CurseWord curseWord)
+        {
+            UnityEngine.Debug.Log("IN CURSE WORD");
+            return this.CalculateOverlayPosition((TextPosition) curseWord);
+        }
+
         public OverlayTransform CalculateCorrectionOverlayPosition(SpellingMistake spellingMistake)
         {
             if (spellingMistake.SuggestedCorrection == null) return null;

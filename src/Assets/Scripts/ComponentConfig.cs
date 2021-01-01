@@ -6,6 +6,7 @@ using Assets.Scripts.Components.Debug.TargetMapper;
 using Assets.Scripts.Components.Debug.TargetTracker;
 using Assets.Scripts.Components.OverlayPositionCalculator;
 using Assets.Scripts.Components.SettingsComponent;
+using Assets.Scripts.Components.SettingsPersistence;
 using Assets.Scripts.Components.SpellChecker;
 using Assets.Scripts.Components.TextExtractor;
 
@@ -50,6 +51,11 @@ namespace Assets.Scripts
             }
         }
 
+        public void RegisterService<TService>(object component)
+        {
+            serviceCollection[typeof(TService)] = new Lazy<object>(() => component);
+        }
+
         private void ConfigureServices()
         {
             serviceCollection[typeof(IDebugTargetTracker)] = new Lazy<object>(() => new DefaultTargetTracker());
@@ -63,6 +69,7 @@ namespace Assets.Scripts
                 new Lazy<object>(() => new OverlayPositionCalculator());
             serviceCollection[typeof(IAudioPlayer)] = new Lazy<object>(() => new DefaultAudioPlayer());
             serviceCollection[typeof(ICurseWordChecker)] = new Lazy<object>(() => new MockCurseWordChecker());
+            serviceCollection[typeof(ISettingsPersistence)] = new Lazy<object>(() => new SettingsPersistence());
         }
     }
 }

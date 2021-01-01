@@ -4,10 +4,11 @@ using Assets.Scripts.Components.CurseWordFilter;
 using Assets.Scripts.Components.OverlayPositionCalculator;
 using Assets.Scripts.Components.SettingsComponent;
 using Assets.Scripts.Components.SpellChecker;
+using Assets.Scripts.Components.TextExtractor;
 using Assets.Scripts.Types;
 using UnityEngine;
 
-namespace Assets.Scripts.TextAnnotation
+namespace Assets.Scripts.Behaviour
 {
     public class TextAnnotationBehaviour : MonoBehaviour
     {
@@ -15,31 +16,55 @@ namespace Assets.Scripts.TextAnnotation
         public GameObject parent;
         public GameObject textPrefab;
 
-        private readonly IOverlayPositionCalculator overlayPositionCalculator;
-        private readonly ISettingsComponent settingsComponent;
+        private IOverlayPositionCalculator overlayPositionCalculator;
+        private ISettingsComponent settingsComponent;
+        private ITextExtractor textExtractor;
+        private ISpellChecker spellChecker;
+        private ICurseWordFilter curseWordFilter;
 
         private readonly ConcurrentStack<GameObject> renderedMistakeAnnotations = new ConcurrentStack<GameObject>();
         private readonly ConcurrentStack<GameObject> renderedCurseWordAnnotations = new ConcurrentStack<GameObject>();
 
-        public TextAnnotationBehaviour()
+        public void Start()
         {
             this.overlayPositionCalculator = ComponentConfig.Instance.GetService<IOverlayPositionCalculator>();
             this.settingsComponent = ComponentConfig.Instance.GetService<ISettingsComponent>();
+            this.textExtractor = ComponentConfig.Instance.GetService<ITextExtractor>();
+            this.spellChecker = ComponentConfig.Instance.GetService<ISpellChecker>();
+            this.curseWordFilter = ComponentConfig.Instance.GetService<ICurseWordFilter>();
 
-            var spellChecker = ComponentConfig.Instance.GetService<ISpellChecker>();
-            var curseWordFilter = ComponentConfig.Instance.GetService<ICurseWordFilter>();
+            this.spellChecker.OnMistakesFound += UpdateMistakeAnnotations;
+            this.curseWordFilter.OnCurseWordsFound += UpdateCurseWordAnnotations;
+            this.textExtractor.OnTextLost += () =>
+            {
+                ClearCurseWords();
+                ClearMistakeAnnotations();
+            };
+        }
 
-            spellChecker.OnMistakesFound += mistakes => UpdateMistakeAnnotations(mistakes);
-            curseWordFilter.OnCurseWordsFound += curseWords => UpdateCurseWordAnnotations(curseWords);
+        private void ClearMistakeAnnotations()
+        {
+            foreach (var annotation in this.renderedMistakeAnnotations)
+            {
+                Destroy(annotation);
+            }
+
+            this.renderedMistakeAnnotations.Clear();
+        }
+
+        private void ClearCurseWords()
+        {
+            foreach (var annotation in this.renderedCurseWordAnnotations)
+            {
+                Destroy(annotation);
+            }
+
+            this.renderedMistakeAnnotations.Clear();
         }
 
         private void UpdateMistakeAnnotations(IEnumerable<SpellingMistake> mistakes)
         {
-            foreach (var annotation in this.renderedMistakeAnnotations)
-            {
-                UnityEngine.GameObject.Destroy(annotation);
-            }
-            this.renderedMistakeAnnotations.Clear();
+            ClearMistakeAnnotations();
 
             if (mistakes != null)
             {
@@ -52,11 +77,7 @@ namespace Assets.Scripts.TextAnnotation
 
         private void UpdateCurseWordAnnotations(IEnumerable<CurseWord> curseWords)
         {
-            foreach (var annotation in this.renderedCurseWordAnnotations)
-            {
-                UnityEngine.GameObject.Destroy(annotation);
-            }
-            this.renderedMistakeAnnotations.Clear();
+            ClearCurseWords();
 
             if (curseWords != null
                 && this.settingsComponent.IsCurseWordBleepingEnabled)
@@ -86,7 +107,7 @@ namespace Assets.Scripts.TextAnnotation
                     Resources.Load<Material>("Materials/WarningAnnotation");
             }
             else if (spellingMistake.Severity == SpellingSeverity.Fatal
-                 && spellingMistake.SuggestedCorrection != null)
+                     && spellingMistake.SuggestedCorrection != null)
             {
                 annotationObject.GetComponent<Renderer>().material =
                     Resources.Load<Material>("Materials/ErrorAnnotation");
@@ -123,13 +144,13 @@ namespace Assets.Scripts.TextAnnotation
 
         private void DisplayCurseWordFilter(CurseWord curseWord)
         {
-            var curseWordTransform = overlayPositionCalculator.CalculateOverlayPosition(curseWord);
+            var curseWordTransform = overlayPositionCalculator.CalculateCurseWordOverlay(curseWord);
             var worldPosition = parent.transform.TransformPoint(curseWordTransform.LocalPosition);
             var curseWordObject =
                 Instantiate(letterBoxPrefab, worldPosition, parent.transform.rotation, parent.transform);
             curseWordObject.transform.localScale = curseWordTransform.LocalScale;
             curseWordObject.GetComponent<Renderer>().material = Resources.Load<Material>("Materials/Red");
-            this.renderedMistakeAnnotations.Push(curseWordObject);
+            this.renderedCurseWordAnnotations.Push(curseWordObject);
         }
     }
 }
