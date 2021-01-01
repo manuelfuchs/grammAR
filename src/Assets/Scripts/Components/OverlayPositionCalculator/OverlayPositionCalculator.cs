@@ -41,12 +41,6 @@ namespace Assets.Scripts.Components.OverlayPositionCalculator
             }
         }
 
-        public OverlayTransform CalculateOverlayPosition(CurseWord curseWord)
-        {
-            UnityEngine.Debug.Log("IN CURSE WORD");
-            return this.CalculateOverlayPosition((TextPosition) curseWord);
-        }
-
         public OverlayTransform CalculateCorrectionOverlayPosition(SpellingMistake spellingMistake)
         {
             if (spellingMistake.SuggestedCorrection == null) return null;
@@ -54,9 +48,10 @@ namespace Assets.Scripts.Components.OverlayPositionCalculator
             var correctionPosition = new OverlayTransform
             {
                 LocalPosition = new Vector3(
-                    annotationPosition.x + LetterWidth * 10 * (spellingMistake.TextEnd - spellingMistake.TextStart),
+                    annotationPosition.x +
+                    LetterWidth * 10 * ((float)(spellingMistake.TextEnd - spellingMistake.TextStart) / 2),
                     annotationPosition.y,
-                    annotationPosition.z + LetterHeight + 0.2f
+                    annotationPosition.z + LetterHeight + 0.15f
                 ),
                 LocalScale = new Vector3(
                     (spellingMistake.SuggestedCorrection.Length) * LetterWidth, DefaultYScale, LetterHeight)

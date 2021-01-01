@@ -7,6 +7,7 @@ using Assets.Scripts.Components.SpellChecker;
 using Assets.Scripts.Components.TextExtractor;
 using Assets.Scripts.Types;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Assets.Scripts.Behaviour
 {
@@ -40,6 +41,14 @@ namespace Assets.Scripts.Behaviour
                 ClearCurseWords();
                 ClearMistakeAnnotations();
             };
+
+            settingsComponent.OnIsCWBEnabledChanged += state =>
+            {
+                if (!state)
+                {
+                    ClearCurseWords();
+                }
+            };
         }
 
         private void ClearMistakeAnnotations()
@@ -59,7 +68,7 @@ namespace Assets.Scripts.Behaviour
                 Destroy(annotation);
             }
 
-            this.renderedMistakeAnnotations.Clear();
+            this.renderedCurseWordAnnotations.Clear();
         }
 
         private void UpdateMistakeAnnotations(IEnumerable<SpellingMistake> mistakes)
@@ -127,7 +136,17 @@ namespace Assets.Scripts.Behaviour
                     Instantiate(letterBoxPrefab, worldPosition, parent.transform.rotation, parent.transform);
 
                 correctionObject.transform.localScale = correctionTransform.LocalScale;
-                correctionObject.GetComponent<Renderer>().material = Resources.Load<Material>("Materials/Red");
+                switch (spellingMistake.Severity)
+                {
+                    case SpellingSeverity.Minor:
+                        correctionObject.GetComponent<Renderer>().material =
+                            Resources.Load<Material>("Materials/MinorCorrection");
+                        break;
+                    case SpellingSeverity.Fatal:
+                        correctionObject.GetComponent<Renderer>().material = Resources.Load<Material>("Materials/Red");
+                        break;
+                }
+
                 this.renderedMistakeAnnotations.Push(correctionObject);
 
                 DisplayCorrectionText(correctionObject, spellingMistake.SuggestedCorrection);
@@ -135,10 +154,10 @@ namespace Assets.Scripts.Behaviour
 
             void DisplayCorrectionText(GameObject correctionObject, string correction)
             {
-                var correctionText = Instantiate(textPrefab, correctionObject.transform);
+                var correctionText = Instantiate(textPrefab, parent.transform);
 
                 correctionText.transform.position = correctionObject.transform.position;
-                correctionText.transform.localScale = new Vector3(0.8f, 4, correction.Length);
+                correctionText.transform.localScale = new Vector3(0.07f, 0.05f, correction.Length);
                 correctionText.GetComponent<TextMesh>().text = correction;
                 this.renderedMistakeAnnotations.Push(correctionText);
             }
