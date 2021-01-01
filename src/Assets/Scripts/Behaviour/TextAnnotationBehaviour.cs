@@ -35,7 +35,7 @@ namespace Assets.Scripts.Behaviour
             this.curseWordChecker = ComponentConfig.Instance.GetService<ICurseWordChecker>();
 
             this.spellChecker.OnMistakesFound += UpdateMistakeAnnotations;
-            this.curseWordChecker.OnCurseWordsFound += UpdateCurseWordAnnotations;
+            this.curseWordChecker.OnCurseWordsExtracted += UpdateCurseWordAnnotations;
             this.textExtractor.OnTextLost += () =>
             {
                 ClearCurseWords();

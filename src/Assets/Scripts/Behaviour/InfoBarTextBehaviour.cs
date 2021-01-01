@@ -31,7 +31,7 @@ public class InfoBarTextBehaviour : MonoBehaviour
                 this.RealignInfoTexts();
             };
 
-        curseWordChecker.OnCurseWordsFound +=
+        curseWordChecker.OnCurseWordsExtracted +=
             curseWords =>
             {
                 this.UpdateCurseWordInfoText(curseWords);

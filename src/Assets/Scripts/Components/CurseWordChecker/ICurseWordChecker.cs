@@ -6,6 +6,6 @@ namespace Assets.Scripts.Components.CurseWordChecker
 {
     public interface ICurseWordChecker
     {
-        event Action<IEnumerable<CurseWord>> OnCurseWordsFound;
+        event Action<IEnumerable<CurseWord>> OnCurseWordsExtracted;
     }
 }

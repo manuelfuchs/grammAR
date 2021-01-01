@@ -20,7 +20,7 @@ namespace Assets.Scripts.Components.CurseWordChecker
             textExtractor.OnTextFound += ExtractCurseWords;
         }
 
-        public event Action<IEnumerable<CurseWord>> OnCurseWordsFound;
+        public event Action<IEnumerable<CurseWord>> OnCurseWordsExtracted;
 
         private void ExtractCurseWords(IEnumerable<string> text)
         {
@@ -55,10 +55,7 @@ namespace Assets.Scripts.Components.CurseWordChecker
                     line++;
                 }
 
-                if (foundCurseWords.Any())
-                {
-                    this.OnCurseWordsFound?.Invoke(foundCurseWords);
-                }
+                this.OnCurseWordsExtracted?.Invoke(foundCurseWords);
             }
         }
 
