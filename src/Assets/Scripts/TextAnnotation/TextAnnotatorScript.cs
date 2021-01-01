@@ -127,7 +127,7 @@ namespace Assets.Scripts.TextAnnotation
 
         private void DisplayCurseWordFilter(CurseWord curseWord)
         {
-            var curseWordTransform = overlayPositionCalculator.CalculateCurseWordOverlay(curseWord);
+            var curseWordTransform = overlayPositionCalculator.CalculateOverlayPosition(curseWord);
             var worldPosition = parent.transform.TransformPoint(curseWordTransform.LocalPosition);
             var curseWordObject =
                 Instantiate(letterBoxPrefab, worldPosition, parent.transform.rotation, parent.transform);

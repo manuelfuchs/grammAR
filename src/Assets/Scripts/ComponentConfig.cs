@@ -68,7 +68,7 @@ namespace Assets.Scripts
             serviceCollection[typeof(IOverlayPositionCalculator)] =
                 new Lazy<object>(() => new OverlayPositionCalculator());
             serviceCollection[typeof(IAudioPlayer)] = new Lazy<object>(() => new DefaultAudioPlayer());
-            serviceCollection[typeof(ICurseWordFilter)] = new Lazy<object>(() => new DefaultCurseWordFilter());
+            serviceCollection[typeof(ICurseWordFilter)] = new Lazy<object>(() => new MockCurseWordFilter());
             serviceCollection[typeof(ISettingsPersistence)] = new Lazy<object>(() => new SettingsPersistence());
         }
     }

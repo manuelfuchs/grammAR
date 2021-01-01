@@ -34,8 +34,8 @@ namespace Assets.Scripts.Components.TextExtractor
                     return debugTexts.GermanCurseWords;
                 case DebugImageTarget.EnglishErrors:
                     return debugTexts.EnglishErrors;
-                case DebugImageTarget.EnglishCurseWords:
-                    return debugTexts.EnglishCurseWords;
+                case DebugImageTarget.EnglishErrorsAndCurseWordsTarget:
+                    return debugTexts.EnglishErrorsAndCurseWordsTarget;
                 default:
                     return Enumerable.Empty<string>();
             }

@@ -7,6 +7,7 @@
         GermanCurseWords,
         EnglishNoErrors,
         EnglishErrors,
-        EnglishCurseWords
+        EnglishCurseWords,
+        EnglishErrorsAndCurseWordsTarget
     }
 }
