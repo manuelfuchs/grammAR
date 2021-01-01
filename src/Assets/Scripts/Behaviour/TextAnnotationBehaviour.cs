@@ -12,7 +12,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.TextAnnotation
 {
-    public class TextAnnotatorScript : MonoBehaviour
+    public class TextAnnotationBehaviour : MonoBehaviour
     {
         private ITextExtractor textExtractor;
         private ISpellChecker spellChecker;
@@ -59,7 +59,6 @@ namespace Assets.Scripts.TextAnnotation
             {
                 return;
             }
-
 
             var spellingMistakes = await spellChecker.GetMistakes(textList);
 
