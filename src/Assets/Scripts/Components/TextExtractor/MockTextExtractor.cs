@@ -9,14 +9,22 @@ namespace Assets.Scripts.Components.TextExtractor
     public class MockTextExtractor : ITextExtractor
     {
         public event Action<IEnumerable<string>> OnTextFound;
+        public event Action OnTextLost;
 
         public MockTextExtractor()
         {
             var debugTargetTracker = ComponentConfig.Instance.GetService<IDebugTargetTracker>();
             debugTargetTracker.OnVisibleTargetChanged += target =>
             {
-                var text = GetMockText(target);
-                OnTextFound?.Invoke(text);
+                if (target == null)
+                {
+                    OnTextLost?.Invoke();
+                }
+                else
+                {
+                    var text = GetMockText(target);
+                    OnTextFound?.Invoke(text);
+                }
             };
         }
 
