@@ -106,12 +106,14 @@ namespace Assets.Scripts.Behaviour
                 annotationObject.GetComponent<Renderer>().material =
                     Resources.Load<Material>("Materials/WarningAnnotation");
             }
-            else if (spellingMistake.Severity == SpellingSeverity.Fatal
-                     && spellingMistake.SuggestedCorrection != null)
+            else if (spellingMistake.Severity == SpellingSeverity.Fatal)
             {
                 annotationObject.GetComponent<Renderer>().material =
                     Resources.Load<Material>("Materials/ErrorAnnotation");
+            }
 
+            if (spellingMistake.SuggestedCorrection != null)
+            {
                 DisplayCorrection();
             }
 
