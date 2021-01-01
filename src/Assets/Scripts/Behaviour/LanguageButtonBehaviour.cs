@@ -19,8 +19,6 @@ namespace Assets.Scripts.Behaviour
 
         public void OnButtonPressed(VirtualButtonBehaviour vb)
         {
-            Debug.Log("Language button pressed");
-
             var audioPlayer = ComponentConfig.Instance.GetService<IAudioPlayer>();
             var audioSource = this.GetComponent<AudioSource>();
             audioPlayer.PlayAudioClip(audioSource, this.buttonPressedAudio, 0.7f);

@@ -18,8 +18,6 @@ namespace Assets.Scripts.Behaviour
 
         public void OnButtonPressed(VirtualButtonBehaviour vb)
         {
-            Debug.Log("Audio button pressed");
-
             var settingsComponent = ComponentConfig.Instance.GetService<ISettingsComponent>();
             settingsComponent.IsAudioEnabled = !settingsComponent.IsAudioEnabled;
 

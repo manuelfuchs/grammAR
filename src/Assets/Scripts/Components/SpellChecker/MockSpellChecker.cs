@@ -26,7 +26,10 @@ namespace Assets.Scripts.Components.SpellChecker
             if (text.Any()
                 && mockedTextMistakes.TryGetValue(text.First(), out var mistakes))
             {
-                this.OnMistakesFound?.Invoke(mistakes);
+                if(this.OnMistakesFound != null)
+                {
+                    this.OnMistakesFound.Invoke(mistakes);
+                }
             }
         }
 

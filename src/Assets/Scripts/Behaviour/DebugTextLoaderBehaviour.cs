@@ -13,5 +13,10 @@ namespace Assets.Scripts.Behaviour
             var debugTexts = JsonConvert.DeserializeObject<DebugTexts>(debugTextFile.text);
             ComponentConfig.Instance.RegisterService<DebugTexts>(debugTexts);
         }
+
+        void Update()
+        {
+
+        }
     }
 }

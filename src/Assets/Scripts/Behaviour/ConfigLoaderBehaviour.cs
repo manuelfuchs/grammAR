@@ -14,5 +14,10 @@ namespace Assets.Scripts.Behaviour
             var config = JsonConvert.DeserializeObject<Configuration>(configFile.text);
             ComponentConfig.Instance.RegisterService<Configuration>(config);
         }
+
+        void Update()
+        {
+
+        }
     }
 }
