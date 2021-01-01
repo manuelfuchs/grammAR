@@ -6,37 +6,40 @@ using Assets.Scripts.Components.AudioPlayer;
 using Assets.Scripts.Components.SpellChecker;
 using UnityEngine;
 
-public class AudioFeedbackBehaviour : MonoBehaviour
+namespace Assets.Scripts.Behaviour
 {
-    private ISpellChecker spellChecker;
-    private IAudioPlayer audioPlayer;
-    public AudioClip onSucessClip;
-    public AudioClip onErrorClip;
-
-
-    // Start is called before the first frame update
-    void Start()
+    public class AudioFeedbackBehaviour : MonoBehaviour
     {
-        spellChecker = ComponentConfig.Instance.GetService<ISpellChecker>();
-        audioPlayer = ComponentConfig.Instance.GetService<IAudioPlayer>();
+        private ISpellChecker spellChecker;
+        private IAudioPlayer audioPlayer;
+        public AudioClip onSucessClip;
+        public AudioClip onErrorClip;
 
-        spellChecker.OnMistakesFound += mistakes =>
+
+        // Start is called before the first frame update
+        void Start()
         {
-            var audioSource = this.GetComponent<AudioSource>();
+            spellChecker = ComponentConfig.Instance.GetService<ISpellChecker>();
+            audioPlayer = ComponentConfig.Instance.GetService<IAudioPlayer>();
 
-            if (mistakes.Any())
+            spellChecker.OnMistakesFound += mistakes =>
             {
-                audioPlayer.PlayAudioClip(audioSource, onErrorClip, 0.7f);
-            }
-            else
-            {
-                audioPlayer.PlayAudioClip(audioSource, onSucessClip, 0.7f);
-            }
-        };
-    }
+                var audioSource = this.GetComponent<AudioSource>();
 
-    // Update is called once per frame
-    void Update()
-    {
+                if (mistakes.Any())
+                {
+                    audioPlayer.PlayAudioClip(audioSource, onErrorClip, 0.7f);
+                }
+                else
+                {
+                    audioPlayer.PlayAudioClip(audioSource, onSucessClip, 0.7f);
+                }
+            };
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+        }
     }
 }
