@@ -5,6 +5,7 @@ using Assets.Scripts.Components.OverlayPositionCalculator;
 using Assets.Scripts.Components.SettingsComponent;
 using Assets.Scripts.Components.SpellChecker;
 using Assets.Scripts.Components.TextExtractor;
+using Assets.Scripts.Extensions;
 using Assets.Scripts.Types;
 using UnityEngine;
 using UnityEngine.UI;
@@ -148,19 +149,19 @@ namespace Assets.Scripts.Behaviour
                 }
 
                 this.renderedMistakeAnnotations.Push(correctionObject);
-
-                DisplayCorrectionText(correctionObject, spellingMistake.SuggestedCorrection);
+                DisplayOverlayText(correctionObject, spellingMistake.SuggestedCorrection, Color.white);
             }
+        }
 
-            void DisplayCorrectionText(GameObject correctionObject, string correction)
-            {
-                var correctionText = Instantiate(textPrefab, parent.transform);
+        private void DisplayOverlayText(GameObject correctionObject, string text, Color color)
+        {
+            var correctionText = Instantiate(textPrefab, parent.transform);
 
-                correctionText.transform.position = correctionObject.transform.position;
-                correctionText.transform.localScale = new Vector3(0.07f, 0.05f, correction.Length);
-                correctionText.GetComponent<TextMesh>().text = correction;
-                this.renderedMistakeAnnotations.Push(correctionText);
-            }
+            correctionText.transform.position = correctionObject.transform.position;
+            correctionText.transform.localScale = new Vector3(0.07f, 0.05f, text.Length);
+            correctionText.GetComponent<TextMesh>().text = text;
+            correctionText.GetComponent<TextMesh>().color = color;
+            this.renderedMistakeAnnotations.Push(correctionText);
         }
 
         private void DisplayCurseWordFilter(CurseWord curseWord)
@@ -170,8 +171,9 @@ namespace Assets.Scripts.Behaviour
             var curseWordObject =
                 Instantiate(letterBoxPrefab, worldPosition, parent.transform.rotation, parent.transform);
             curseWordObject.transform.localScale = curseWordTransform.LocalScale;
-            curseWordObject.GetComponent<Renderer>().material = Resources.Load<Material>("Materials/Red");
+            curseWordObject.GetComponent<Renderer>().material = Resources.Load<Material>("Materials/White");
             this.renderedCurseWordAnnotations.Push(curseWordObject);
+            DisplayOverlayText(curseWordObject, "*".Repeat(curseWord.TextEnd - curseWord.TextStart - 1), Color.black);
         }
     }
 }
