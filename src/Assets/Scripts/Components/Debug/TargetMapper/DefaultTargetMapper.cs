@@ -18,6 +18,8 @@ namespace Assets.Scripts.Components.Debug.TargetMapper
                     return DebugImageTarget.EnglishErrors;
                 case "EnglishCurseWordTarget":
                     return DebugImageTarget.EnglishCurseWords;
+                case "EnglishErrorAndCurseWordsTarget":
+                    return DebugImageTarget.EnglishErrorsAndCurseWordsTarget;
                 case "EnglishNoErrorTarget":
                     return DebugImageTarget.EnglishNoErrors;
                 default:

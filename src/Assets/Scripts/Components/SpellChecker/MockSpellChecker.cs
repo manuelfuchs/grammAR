@@ -1,6 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+using Assets.Scripts.Components.TextExtractor;
 using Assets.Scripts.Types;
 
 namespace Assets.Scripts.Components.SpellChecker
@@ -12,20 +13,24 @@ namespace Assets.Scripts.Components.SpellChecker
 
         public MockSpellChecker()
         {
+            var textExtractor = ComponentConfig.Instance.GetService<ITextExtractor>();
+            textExtractor.OnTextFound += ExtractSpellingMistakes;
+
             InitializeMockedTexts();
         }
 
-        public Task<IEnumerable<SpellingMistake>> GetMistakes(IEnumerable<string> text)
+        public event Action<IEnumerable<SpellingMistake>> OnMistakesFound;
+
+        private void ExtractSpellingMistakes(IEnumerable<string> text)
         {
-            if (mockedTextMistakes.TryGetValue(text.First(), out var mistakes))
+            if (text.Any()
+                && mockedTextMistakes.TryGetValue(text.First(), out var mistakes))
             {
-                return Task.FromResult(mistakes);
-            }
-            else
-            {
-                return Task.FromResult(Enumerable.Empty<SpellingMistake>());
+                this.OnMistakesFound?.Invoke(mistakes);
             }
         }
+
+        #region Spelling mistakes Initialization
 
         private void InitializeMockedTexts()
         {
@@ -34,6 +39,7 @@ namespace Assets.Scripts.Components.SpellChecker
                 new SpellingMistake[]
                 {
                 }));
+
             mockedTextMistakes.Add(new KeyValuePair<string, IEnumerable<SpellingMistake>>(
                 "Österreichs Antwort auf Amazon kann sich sehen",
                 new[]
@@ -55,6 +61,17 @@ namespace Assets.Scripts.Components.SpellChecker
                     new SpellingMistake(14, 40, 45, SpellingSeverity.Fatal),
                     new SpellingMistake(21, 20, 29, SpellingSeverity.Fatal, "DualSense"),
                 }));
+
+            mockedTextMistakes.Add(new KeyValuePair<string, IEnumerable<SpellingMistake>>(
+                "EAGAN, MN—Intimidated yet intrigued as he",
+                new[]
+                {
+                    new SpellingMistake(line: 8, textStart: 45, textEnd: 51, SpellingSeverity.Fatal, "palms"),
+                    new SpellingMistake(line: 4, textStart: 11, textEnd: 19, SpellingSeverity.Minor, "Thursday"),
+                    new SpellingMistake(line: 9, textStart: 1, textEnd: 9, SpellingSeverity.Fatal),
+                }));
         }
+
+        #endregion
     }
 }

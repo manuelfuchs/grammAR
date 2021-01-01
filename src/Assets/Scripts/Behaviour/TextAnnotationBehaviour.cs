@@ -1,12 +1,9 @@
 ﻿using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Assets.Scripts.Components.CurseWordFilter;
 using Assets.Scripts.Components.OverlayPositionCalculator;
 using Assets.Scripts.Components.SettingsComponent;
 using Assets.Scripts.Components.SpellChecker;
-using Assets.Scripts.Components.TextExtractor;
 using Assets.Scripts.Types;
 using UnityEngine;
 
@@ -14,64 +11,60 @@ namespace Assets.Scripts.TextAnnotation
 {
     public class TextAnnotationBehaviour : MonoBehaviour
     {
-        private ITextExtractor textExtractor;
-        private ISpellChecker spellChecker;
-        private IOverlayPositionCalculator overlayPositionCalculator;
-        private ICurseWordFilter curseWordFilter;
-        private ISettingsComponent settingsComponent;
         public GameObject letterBoxPrefab;
         public GameObject parent;
         public GameObject textPrefab;
-        private readonly ConcurrentStack<GameObject> storedAnnotations = new ConcurrentStack<GameObject>();
 
-        // Start is called before the first frame update
-        void Start()
+        private readonly IOverlayPositionCalculator overlayPositionCalculator;
+        private readonly ISettingsComponent settingsComponent;
+
+        private readonly ConcurrentStack<GameObject> renderedMistakeAnnotations = new ConcurrentStack<GameObject>();
+        private readonly ConcurrentStack<GameObject> renderedCurseWordAnnotations = new ConcurrentStack<GameObject>();
+
+        public TextAnnotationBehaviour()
         {
-            textExtractor = ComponentConfig.Instance.GetService<ITextExtractor>();
-            spellChecker = ComponentConfig.Instance.GetService<ISpellChecker>();
-            overlayPositionCalculator = ComponentConfig.Instance.GetService<IOverlayPositionCalculator>();
-            curseWordFilter = ComponentConfig.Instance.GetService<ICurseWordFilter>();
-            settingsComponent = ComponentConfig.Instance.GetService<ISettingsComponent>();
-            textExtractor.OnTextFound += async text => await HandleTextFound(text);
+            this.overlayPositionCalculator = ComponentConfig.Instance.GetService<IOverlayPositionCalculator>();
+            this.settingsComponent = ComponentConfig.Instance.GetService<ISettingsComponent>();
+
+            var spellChecker = ComponentConfig.Instance.GetService<ISpellChecker>();
+            var curseWordFilter = ComponentConfig.Instance.GetService<ICurseWordFilter>();
+
+            spellChecker.OnMistakesFound += mistakes => UpdateMistakeAnnotations(mistakes);
+            curseWordFilter.OnCurseWordsFound += curseWords => UpdateCurseWordAnnotations(curseWords);
         }
 
-        // Update is called once per frame
-        void Update()
+        private void UpdateMistakeAnnotations(IEnumerable<SpellingMistake> mistakes)
         {
+            foreach (var annotation in this.renderedMistakeAnnotations)
+            {
+                UnityEngine.GameObject.Destroy(annotation);
+            }
+            this.renderedMistakeAnnotations.Clear();
+
+            if (mistakes != null)
+            {
+                foreach (var mistake in mistakes)
+                {
+                    this.DisplaySpellingMistake(mistake);
+                }
+            }
         }
 
-        private async Task HandleTextFound(IEnumerable<string> text)
+        private void UpdateCurseWordAnnotations(IEnumerable<CurseWord> curseWords)
         {
-            foreach (var annotation in this.storedAnnotations)
+            foreach (var annotation in this.renderedCurseWordAnnotations)
             {
-                Destroy(annotation);
+                UnityEngine.GameObject.Destroy(annotation);
             }
+            this.renderedMistakeAnnotations.Clear();
 
-            this.storedAnnotations.Clear();
-
-            if (text == null)
+            if (curseWords != null
+                && this.settingsComponent.IsCurseWordBleepingEnabled)
             {
-                return;
-            }
-
-            var textList = text.ToList();
-            if (!textList.Any())
-            {
-                return;
-            }
-
-            var spellingMistakes = await spellChecker.GetMistakes(textList);
-
-            foreach (var spellingMistake in spellingMistakes)
-            {
-                DisplaySpellingMistake(spellingMistake);
-            }
-
-            //TODO check with settings
-            var curseWords = curseWordFilter.FindCurseWords(textList, settingsComponent.Language);
-            foreach (var curseWord in curseWords)
-            {
-                DisplayCurseWordFilter(curseWord);
+                foreach (var curseWord in curseWords)
+                {
+                    this.DisplayCurseWordFilter(curseWord);
+                }
             }
         }
 
@@ -79,10 +72,12 @@ namespace Assets.Scripts.TextAnnotation
         {
             var annotationPosition = overlayPositionCalculator.CalculateOverlayPosition(spellingMistake);
 
-            var annotationObject = Instantiate(letterBoxPrefab,
+            var annotationObject = Instantiate(
+                letterBoxPrefab,
                 parent.transform.TransformPoint(annotationPosition.LocalPosition),
                 parent.transform.rotation,
                 parent.transform);
+
             annotationObject.transform.localScale = annotationPosition.LocalScale;
 
             if (spellingMistake.Severity == SpellingSeverity.Minor)
@@ -90,38 +85,40 @@ namespace Assets.Scripts.TextAnnotation
                 annotationObject.GetComponent<Renderer>().material =
                     Resources.Load<Material>("Materials/WarningAnnotation");
             }
-            else if (spellingMistake.Severity == SpellingSeverity.Fatal && spellingMistake.SuggestedCorrection != null)
+            else if (spellingMistake.Severity == SpellingSeverity.Fatal
+                 && spellingMistake.SuggestedCorrection != null)
             {
                 annotationObject.GetComponent<Renderer>().material =
                     Resources.Load<Material>("Materials/ErrorAnnotation");
-                DisplayCorrection(spellingMistake);
+
+                DisplayCorrection();
             }
 
-            this.storedAnnotations.Push(annotationObject);
-        }
+            this.renderedMistakeAnnotations.Push(annotationObject);
 
-        private void DisplayCorrection(SpellingMistake spellingMistake)
-        {
-            var correctionTransform = overlayPositionCalculator.CalculateCorrectionOverlayPosition(spellingMistake);
-            var worldPosition = parent.transform.TransformPoint(correctionTransform.LocalPosition);
-            var correctionObject =
-                Instantiate(letterBoxPrefab, worldPosition, parent.transform.rotation, parent.transform);
+            void DisplayCorrection()
+            {
+                var correctionTransform = overlayPositionCalculator.CalculateCorrectionOverlayPosition(spellingMistake);
+                var worldPosition = parent.transform.TransformPoint(correctionTransform.LocalPosition);
+                var correctionObject =
+                    Instantiate(letterBoxPrefab, worldPosition, parent.transform.rotation, parent.transform);
 
-            correctionObject.transform.localScale = correctionTransform.LocalScale;
-            correctionObject.GetComponent<Renderer>().material = Resources.Load<Material>("Materials/Red");
-            this.storedAnnotations.Push(correctionObject);
+                correctionObject.transform.localScale = correctionTransform.LocalScale;
+                correctionObject.GetComponent<Renderer>().material = Resources.Load<Material>("Materials/Red");
+                this.renderedMistakeAnnotations.Push(correctionObject);
 
-            DisplayCorrectionText(correctionObject, spellingMistake.SuggestedCorrection);
-        }
+                DisplayCorrectionText(correctionObject, spellingMistake.SuggestedCorrection);
+            }
 
-        private void DisplayCorrectionText(GameObject correctionObject, string correction)
-        {
-            var correctionText = Instantiate(textPrefab, correctionObject.transform);
+            void DisplayCorrectionText(GameObject correctionObject, string correction)
+            {
+                var correctionText = Instantiate(textPrefab, correctionObject.transform);
 
-            correctionText.transform.position = correctionObject.transform.position;
-            correctionText.transform.localScale = new Vector3(0.8f, 4, correction.Length);
-            correctionText.GetComponent<TextMesh>().text = correction;
-            this.storedAnnotations.Push(correctionText);
+                correctionText.transform.position = correctionObject.transform.position;
+                correctionText.transform.localScale = new Vector3(0.8f, 4, correction.Length);
+                correctionText.GetComponent<TextMesh>().text = correction;
+                this.renderedMistakeAnnotations.Push(correctionText);
+            }
         }
 
         private void DisplayCurseWordFilter(CurseWord curseWord)
@@ -132,7 +129,7 @@ namespace Assets.Scripts.TextAnnotation
                 Instantiate(letterBoxPrefab, worldPosition, parent.transform.rotation, parent.transform);
             curseWordObject.transform.localScale = curseWordTransform.LocalScale;
             curseWordObject.GetComponent<Renderer>().material = Resources.Load<Material>("Materials/Red");
-            this.storedAnnotations.Push(curseWordObject);
+            this.renderedMistakeAnnotations.Push(curseWordObject);
         }
     }
 }

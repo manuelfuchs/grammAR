@@ -213,18 +213,18 @@ namespace Assets.Scripts.Components.TextExtractor
                         "marks the boundary of this ancient land. He says",
                         "the locals reclaimed their bodies.",
                     };
-                case DebugImageTarget.EnglishCurseWords:
+                case DebugImageTarget.EnglishErrorsAndCurseWordsTarget:
                     return new[]
                     {
                         "EAGAN, MN—Intimidated yet intrigued as he",
                         "contemplated the thicc ass two-pound, 3,500-",
                         "calorie peppermint treat, local man Mark Carroll",
-                        "confirmed Thursday he was completely fucking",
+                        "confirmed Thursdey he was completely fucking",
                         "overwhelmed by the logistics of eating an",
                         "oversized candy cane he had received in a holiday",
                         "gift basket. “Look at this damn thing—I mean,",
-                        "where do you even start?” said Carroll, his palms",
-                        "reportedly sticky and covered in plastic just from",
+                        "where do you even start?” said Carroll, his palmms",
+                        "rertedly sticky and covered in plastic just from",
                         "unwrapping the enormous hooked confection, which",
                         "he reasoned was too messy to set down now but also",
                         "far too large to finish in one sitting. “I can’t",
