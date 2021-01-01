@@ -1,5 +1,6 @@
 namespace Assets.Scripts.Types
 {
+    [System.Serializable]
     public class TextPosition
     {
         public TextPosition(int line, int textStart, int textEnd)

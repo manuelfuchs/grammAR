@@ -2,6 +2,7 @@
 
 namespace Assets.Scripts.Types
 {
+    [System.Serializable]
     public class SpellingMistake : TextPosition
     {
         public SpellingMistake(int line, int textStart, int textEnd, SpellingSeverity severity) : base(line, textStart,
