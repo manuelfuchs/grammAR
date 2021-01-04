@@ -67,8 +67,14 @@
 %% allow for this line if you want the electronic option to work properly
 \vgtcinsertpkg
 
-%% In preprint mode you may define your own headline.
+%% In preprint mode you may define your own headline. If not, the default IEEE copyright message will appear in preprint mode.
 %\preprinttext{To appear in an IEEE VGTC sponsored conference.}
+
+%% This adds a link to the version of the paper on IEEEXplore
+%% Uncomment this line when you produce a preprint version of the article 
+%% after the article receives a DOI for the paper from IEEE
+%\ieeedoi{xx.xxxx/TVCG.201x.xxxxxxx}
+
 
 %% Paper title.
 
@@ -155,7 +161,7 @@ delenit augue duis dolore te feugait nulla facilisi.%
 %% \section{Introduction} %for journal use above \firstsection{..} instead
 This template is for papers of VGTC-sponsored conferences which are \emph{\textbf{not}} published in a special issue of TVCG.
 
-\section{NOT Using the Style Template}
+\section{Using the Style Template}
 
 \begin{itemize}
 \item If you receive compilation errors along the lines of ``\texttt{Package ifpdf Error: Name clash, \textbackslash ifpdf is already defined}'' then please add a new line ``\texttt{\textbackslash let\textbackslash ifpdf\textbackslash relax}'' right after the ``\texttt{\textbackslash documentclass[journal]\{vgtc\}}'' call. Note that your error is due to packages you use that define ``\texttt{\textbackslash ifpdf}'' which is obsolete (the result is that \texttt{\textbackslash ifpdf} is defined twice); these packages should be changed to use ifpdf package instead.

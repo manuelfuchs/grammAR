@@ -1,7 +1,7 @@
 %!PS-Adobe-2.0
-%%Creator: dvips(k) 5.999 Copyright 2019 Radical Eye Software
+%%Creator: dvips(k) 2020.1 Copyright 2020 Radical Eye Software
 %%Title: template.dvi
-%%CreationDate: Fri Jan  1 21:19:40 2021
+%%CreationDate: Mon Jan  4 10:06:24 2021
 %%Pages: 3
 %%PageOrder: Ascend
 %%BoundingBox: 0 0 612 792
@@ -14,7 +14,7 @@
 %DVIPSCommandLine: dvips -t letter -Pdownload35 -Ppdf -G0 template.dvi
 %+ -o template.ps
 %DVIPSParameters: dpi=8000
-%DVIPSSource:  TeX output 2021.01.01:2219
+%DVIPSSource:  TeX output 2021.01.04:1106
 %%BeginProcSet: tex.pro 0 0
 %!
 /TeXDict 300 dict def TeXDict begin/N{def}def/B{bind def}N/S{exch}N/X{S
@@ -81,152 +81,6 @@ TeXDict begin
   setlinewidth 0 setlinecap stroke grestore
 } bind def
 end
-
-%%EndProcSet
-%%BeginProcSet: 8r.enc 0 0
-% File 8r.enc  TeX Base 1 Encoding  Revision 2.0  2002-10-30
-%
-% @@psencodingfile@{
-%   author    = "S. Rahtz, P. MacKay, Alan Jeffrey, B. Horn, K. Berry,
-%                W. Schmidt, P. Lehman",
-%   version   = "2.0",
-%   date      = "27nov06",
-%   filename  = "8r.enc",
-%   email     = "tex-fonts@@tug.org",
-%   docstring = "This is the encoding vector for Type1 and TrueType
-%                fonts to be used with TeX.  This file is part of the
-%                PSNFSS bundle, version 9"
-% @}
-% 
-% The idea is to have all the characters normally included in Type 1 fonts
-% available for typesetting. This is effectively the characters in Adobe
-% Standard encoding, ISO Latin 1, Windows ANSI including the euro symbol,
-% MacRoman, and some extra characters from Lucida.
-% 
-% Character code assignments were made as follows:
-% 
-% (1) the Windows ANSI characters are almost all in their Windows ANSI
-% positions, because some Windows users cannot easily reencode the
-% fonts, and it makes no difference on other systems. The only Windows
-% ANSI characters not available are those that make no sense for
-% typesetting -- rubout (127 decimal), nobreakspace (160), softhyphen
-% (173). quotesingle and grave are moved just because it's such an
-% irritation not having them in TeX positions.
-% 
-% (2) Remaining characters are assigned arbitrarily to the lower part
-% of the range, avoiding 0, 10 and 13 in case we meet dumb software.
-% 
-% (3) Y&Y Lucida Bright includes some extra text characters; in the
-% hopes that other PostScript fonts, perhaps created for public
-% consumption, will include them, they are included starting at 0x12.
-% These are /dotlessj /ff /ffi /ffl.
-% 
-% (4) hyphen appears twice for compatibility with both ASCII and Windows.
-%
-% (5) /Euro was assigned to 128, as in Windows ANSI
-%
-% (6) Missing characters from MacRoman encoding incorporated as follows:
-%
-%     PostScript      MacRoman        TeXBase1
-%     --------------  --------------  --------------
-%     /notequal       173             0x16
-%     /infinity       176             0x17
-%     /lessequal      178             0x18
-%     /greaterequal   179             0x19
-%     /partialdiff    182             0x1A
-%     /summation      183             0x1B
-%     /product        184             0x1C
-%     /pi             185             0x1D
-%     /integral       186             0x81
-%     /Omega          189             0x8D
-%     /radical        195             0x8E
-%     /approxequal    197             0x8F
-%     /Delta          198             0x9D
-%     /lozenge        215             0x9E
-%
-/TeXBase1Encoding [
-% 0x00
- /.notdef /dotaccent /fi /fl
- /fraction /hungarumlaut /Lslash /lslash
- /ogonek /ring /.notdef /breve
- /minus /.notdef /Zcaron /zcaron
-% 0x10
- /caron /dotlessi /dotlessj /ff
- /ffi /ffl /notequal /infinity
- /lessequal /greaterequal /partialdiff /summation
- /product /pi /grave /quotesingle
-% 0x20
- /space /exclam /quotedbl /numbersign
- /dollar /percent /ampersand /quoteright
- /parenleft /parenright /asterisk /plus
- /comma /hyphen /period /slash
-% 0x30
- /zero /one /two /three
- /four /five /six /seven
- /eight /nine /colon /semicolon
- /less /equal /greater /question
-% 0x40
- /at /A /B /C
- /D /E /F /G
- /H /I /J /K
- /L /M /N /O
-% 0x50
- /P /Q /R /S
- /T /U /V /W
- /X /Y /Z /bracketleft
- /backslash /bracketright /asciicircum /underscore
-% 0x60
- /quoteleft /a /b /c
- /d /e /f /g
- /h /i /j /k
- /l /m /n /o
-% 0x70
- /p /q /r /s
- /t /u /v /w
- /x /y /z /braceleft
- /bar /braceright /asciitilde /.notdef
-% 0x80
- /Euro /integral /quotesinglbase /florin
- /quotedblbase /ellipsis /dagger /daggerdbl
- /circumflex /perthousand /Scaron /guilsinglleft
- /OE /Omega /radical /approxequal
-% 0x90
- /.notdef /.notdef /.notdef /quotedblleft
- /quotedblright /bullet /endash /emdash
- /tilde /trademark /scaron /guilsinglright
- /oe /Delta /lozenge /Ydieresis
-% 0xA0
- /.notdef /exclamdown /cent /sterling
- /currency /yen /brokenbar /section
- /dieresis /copyright /ordfeminine /guillemotleft
- /logicalnot /hyphen /registered /macron
-% 0xB0
- /degree /plusminus /twosuperior /threesuperior
- /acute /mu /paragraph /periodcentered
- /cedilla /onesuperior /ordmasculine /guillemotright
- /onequarter /onehalf /threequarters /questiondown
-% 0xC0
- /Agrave /Aacute /Acircumflex /Atilde
- /Adieresis /Aring /AE /Ccedilla
- /Egrave /Eacute /Ecircumflex /Edieresis
- /Igrave /Iacute /Icircumflex /Idieresis
-% 0xD0
- /Eth /Ntilde /Ograve /Oacute
- /Ocircumflex /Otilde /Odieresis /multiply
- /Oslash /Ugrave /Uacute /Ucircumflex
- /Udieresis /Yacute /Thorn /germandbls
-% 0xE0
- /agrave /aacute /acircumflex /atilde
- /adieresis /aring /ae /ccedilla
- /egrave /eacute /ecircumflex /edieresis
- /igrave /iacute /icircumflex /idieresis
-% 0xF0
- /eth /ntilde /ograve /oacute
- /ocircumflex /otilde /odieresis /divide
- /oslash /ugrave /uacute /ucircumflex
- /udieresis /yacute /thorn /ydieresis
-] def
-
 
 %%EndProcSet
 %%BeginProcSet: l3backend-dvips.pro 0 0
@@ -634,6 +488,152 @@ false setglobal
 %% End of file `l3backend-dvips.pro'.
 
 %%EndProcSet
+%%BeginProcSet: 8r.enc 0 0
+% File 8r.enc  TeX Base 1 Encoding  Revision 2.0  2002-10-30
+%
+% @@psencodingfile@{
+%   author    = "S. Rahtz, P. MacKay, Alan Jeffrey, B. Horn, K. Berry,
+%                W. Schmidt, P. Lehman",
+%   version   = "2.0",
+%   date      = "27nov06",
+%   filename  = "8r.enc",
+%   email     = "tex-fonts@@tug.org",
+%   docstring = "This is the encoding vector for Type1 and TrueType
+%                fonts to be used with TeX.  This file is part of the
+%                PSNFSS bundle, version 9"
+% @}
+% 
+% The idea is to have all the characters normally included in Type 1 fonts
+% available for typesetting. This is effectively the characters in Adobe
+% Standard encoding, ISO Latin 1, Windows ANSI including the euro symbol,
+% MacRoman, and some extra characters from Lucida.
+% 
+% Character code assignments were made as follows:
+% 
+% (1) the Windows ANSI characters are almost all in their Windows ANSI
+% positions, because some Windows users cannot easily reencode the
+% fonts, and it makes no difference on other systems. The only Windows
+% ANSI characters not available are those that make no sense for
+% typesetting -- rubout (127 decimal), nobreakspace (160), softhyphen
+% (173). quotesingle and grave are moved just because it's such an
+% irritation not having them in TeX positions.
+% 
+% (2) Remaining characters are assigned arbitrarily to the lower part
+% of the range, avoiding 0, 10 and 13 in case we meet dumb software.
+% 
+% (3) Y&Y Lucida Bright includes some extra text characters; in the
+% hopes that other PostScript fonts, perhaps created for public
+% consumption, will include them, they are included starting at 0x12.
+% These are /dotlessj /ff /ffi /ffl.
+% 
+% (4) hyphen appears twice for compatibility with both ASCII and Windows.
+%
+% (5) /Euro was assigned to 128, as in Windows ANSI
+%
+% (6) Missing characters from MacRoman encoding incorporated as follows:
+%
+%     PostScript      MacRoman        TeXBase1
+%     --------------  --------------  --------------
+%     /notequal       173             0x16
+%     /infinity       176             0x17
+%     /lessequal      178             0x18
+%     /greaterequal   179             0x19
+%     /partialdiff    182             0x1A
+%     /summation      183             0x1B
+%     /product        184             0x1C
+%     /pi             185             0x1D
+%     /integral       186             0x81
+%     /Omega          189             0x8D
+%     /radical        195             0x8E
+%     /approxequal    197             0x8F
+%     /Delta          198             0x9D
+%     /lozenge        215             0x9E
+%
+/TeXBase1Encoding [
+% 0x00
+ /.notdef /dotaccent /fi /fl
+ /fraction /hungarumlaut /Lslash /lslash
+ /ogonek /ring /.notdef /breve
+ /minus /.notdef /Zcaron /zcaron
+% 0x10
+ /caron /dotlessi /dotlessj /ff
+ /ffi /ffl /notequal /infinity
+ /lessequal /greaterequal /partialdiff /summation
+ /product /pi /grave /quotesingle
+% 0x20
+ /space /exclam /quotedbl /numbersign
+ /dollar /percent /ampersand /quoteright
+ /parenleft /parenright /asterisk /plus
+ /comma /hyphen /period /slash
+% 0x30
+ /zero /one /two /three
+ /four /five /six /seven
+ /eight /nine /colon /semicolon
+ /less /equal /greater /question
+% 0x40
+ /at /A /B /C
+ /D /E /F /G
+ /H /I /J /K
+ /L /M /N /O
+% 0x50
+ /P /Q /R /S
+ /T /U /V /W
+ /X /Y /Z /bracketleft
+ /backslash /bracketright /asciicircum /underscore
+% 0x60
+ /quoteleft /a /b /c
+ /d /e /f /g
+ /h /i /j /k
+ /l /m /n /o
+% 0x70
+ /p /q /r /s
+ /t /u /v /w
+ /x /y /z /braceleft
+ /bar /braceright /asciitilde /.notdef
+% 0x80
+ /Euro /integral /quotesinglbase /florin
+ /quotedblbase /ellipsis /dagger /daggerdbl
+ /circumflex /perthousand /Scaron /guilsinglleft
+ /OE /Omega /radical /approxequal
+% 0x90
+ /.notdef /.notdef /.notdef /quotedblleft
+ /quotedblright /bullet /endash /emdash
+ /tilde /trademark /scaron /guilsinglright
+ /oe /Delta /lozenge /Ydieresis
+% 0xA0
+ /.notdef /exclamdown /cent /sterling
+ /currency /yen /brokenbar /section
+ /dieresis /copyright /ordfeminine /guillemotleft
+ /logicalnot /hyphen /registered /macron
+% 0xB0
+ /degree /plusminus /twosuperior /threesuperior
+ /acute /mu /paragraph /periodcentered
+ /cedilla /onesuperior /ordmasculine /guillemotright
+ /onequarter /onehalf /threequarters /questiondown
+% 0xC0
+ /Agrave /Aacute /Acircumflex /Atilde
+ /Adieresis /Aring /AE /Ccedilla
+ /Egrave /Eacute /Ecircumflex /Edieresis
+ /Igrave /Iacute /Icircumflex /Idieresis
+% 0xD0
+ /Eth /Ntilde /Ograve /Oacute
+ /Ocircumflex /Otilde /Odieresis /multiply
+ /Oslash /Ugrave /Uacute /Ucircumflex
+ /Udieresis /Yacute /Thorn /germandbls
+% 0xE0
+ /agrave /aacute /acircumflex /atilde
+ /adieresis /aring /ae /ccedilla
+ /egrave /eacute /ecircumflex /edieresis
+ /igrave /iacute /icircumflex /idieresis
+% 0xF0
+ /eth /ntilde /ograve /oacute
+ /ocircumflex /otilde /odieresis /divide
+ /oslash /ugrave /uacute /ucircumflex
+ /udieresis /yacute /thorn /ydieresis
+] def
+
+
+%%EndProcSet
 %%BeginProcSet: texps.pro 0 0
 %!
 TeXDict begin/rf{findfont dup length 1 add dict begin{1 index/FID ne 2
@@ -698,6 +698,55 @@ currentpoint/SaveY X N 1 setlinecap newpath}N/st{stroke SaveX SaveY
 moveto}N/fil{fill SaveX SaveY moveto}N/ellipse{/endangle X/startangle X
 /yrad X/xrad X/savematrix matrix currentmatrix N TR xrad yrad scale 0 0
 1 startangle endangle arc savematrix setmatrix}N end
+
+%%EndProcSet
+%%BeginProcSet: color.pro 0 0
+%!
+TeXDict begin/setcmykcolor where{pop}{/setcmykcolor{dup 10 eq{pop
+setrgbcolor}{1 sub 4 1 roll 3{3 index add neg dup 0 lt{pop 0}if 3 1 roll
+}repeat setrgbcolor pop}ifelse}B}ifelse/TeXcolorcmyk{setcmykcolor}def
+/TeXcolorrgb{setrgbcolor}def/TeXcolorgrey{setgray}def/TeXcolorgray{
+setgray}def/TeXcolorhsb{sethsbcolor}def/currentcmykcolor where{pop}{
+/currentcmykcolor{currentrgbcolor 10}B}ifelse/DC{exch dup userdict exch
+known{pop pop}{X}ifelse}B/GreenYellow{0.15 0 0.69 0 setcmykcolor}DC
+/Yellow{0 0 1 0 setcmykcolor}DC/Goldenrod{0 0.10 0.84 0 setcmykcolor}DC
+/Dandelion{0 0.29 0.84 0 setcmykcolor}DC/Apricot{0 0.32 0.52 0
+setcmykcolor}DC/Peach{0 0.50 0.70 0 setcmykcolor}DC/Melon{0 0.46 0.50 0
+setcmykcolor}DC/YellowOrange{0 0.42 1 0 setcmykcolor}DC/Orange{0 0.61
+0.87 0 setcmykcolor}DC/BurntOrange{0 0.51 1 0 setcmykcolor}DC
+/Bittersweet{0 0.75 1 0.24 setcmykcolor}DC/RedOrange{0 0.77 0.87 0
+setcmykcolor}DC/Mahogany{0 0.85 0.87 0.35 setcmykcolor}DC/Maroon{0 0.87
+0.68 0.32 setcmykcolor}DC/BrickRed{0 0.89 0.94 0.28 setcmykcolor}DC/Red{
+0 1 1 0 setcmykcolor}DC/OrangeRed{0 1 0.50 0 setcmykcolor}DC/RubineRed{
+0 1 0.13 0 setcmykcolor}DC/WildStrawberry{0 0.96 0.39 0 setcmykcolor}DC
+/Salmon{0 0.53 0.38 0 setcmykcolor}DC/CarnationPink{0 0.63 0 0
+setcmykcolor}DC/Magenta{0 1 0 0 setcmykcolor}DC/VioletRed{0 0.81 0 0
+setcmykcolor}DC/Rhodamine{0 0.82 0 0 setcmykcolor}DC/Mulberry{0.34 0.90
+0 0.02 setcmykcolor}DC/RedViolet{0.07 0.90 0 0.34 setcmykcolor}DC
+/Fuchsia{0.47 0.91 0 0.08 setcmykcolor}DC/Lavender{0 0.48 0 0
+setcmykcolor}DC/Thistle{0.12 0.59 0 0 setcmykcolor}DC/Orchid{0.32 0.64 0
+0 setcmykcolor}DC/DarkOrchid{0.40 0.80 0.20 0 setcmykcolor}DC/Purple{
+0.45 0.86 0 0 setcmykcolor}DC/Plum{0.50 1 0 0 setcmykcolor}DC/Violet{
+0.79 0.88 0 0 setcmykcolor}DC/RoyalPurple{0.75 0.90 0 0 setcmykcolor}DC
+/BlueViolet{0.86 0.91 0 0.04 setcmykcolor}DC/Periwinkle{0.57 0.55 0 0
+setcmykcolor}DC/CadetBlue{0.62 0.57 0.23 0 setcmykcolor}DC
+/CornflowerBlue{0.65 0.13 0 0 setcmykcolor}DC/MidnightBlue{0.98 0.13 0
+0.43 setcmykcolor}DC/NavyBlue{0.94 0.54 0 0 setcmykcolor}DC/RoyalBlue{1
+0.50 0 0 setcmykcolor}DC/Blue{1 1 0 0 setcmykcolor}DC/Cerulean{0.94 0.11
+0 0 setcmykcolor}DC/Cyan{1 0 0 0 setcmykcolor}DC/ProcessBlue{0.96 0 0 0
+setcmykcolor}DC/SkyBlue{0.62 0 0.12 0 setcmykcolor}DC/Turquoise{0.85 0
+0.20 0 setcmykcolor}DC/TealBlue{0.86 0 0.34 0.02 setcmykcolor}DC
+/Aquamarine{0.82 0 0.30 0 setcmykcolor}DC/BlueGreen{0.85 0 0.33 0
+setcmykcolor}DC/Emerald{1 0 0.50 0 setcmykcolor}DC/JungleGreen{0.99 0
+0.52 0 setcmykcolor}DC/SeaGreen{0.69 0 0.50 0 setcmykcolor}DC/Green{1 0
+1 0 setcmykcolor}DC/ForestGreen{0.91 0 0.88 0.12 setcmykcolor}DC
+/PineGreen{0.92 0 0.59 0.25 setcmykcolor}DC/LimeGreen{0.50 0 1 0
+setcmykcolor}DC/YellowGreen{0.44 0 0.74 0 setcmykcolor}DC/SpringGreen{
+0.26 0 0.76 0 setcmykcolor}DC/OliveGreen{0.64 0 0.95 0.40 setcmykcolor}
+DC/RawSienna{0 0.72 1 0.45 setcmykcolor}DC/Sepia{0 0.83 1 0.70
+setcmykcolor}DC/Brown{0 0.81 1 0.60 setcmykcolor}DC/Tan{0.14 0.42 0.56 0
+setcmykcolor}DC/Gray{0 0 0 0.50 setcmykcolor}DC/Black{0 0 0 1
+setcmykcolor}DC/White{0 0 0 0 setcmykcolor}DC end
 
 %%EndProcSet
 TeXDict begin @defspecial
@@ -3702,18 +3751,17 @@ rf /Fq 145[512 6[512 512 102[{}3 996.264 /CMSY9 rf /Fr
 249 2[332 332 332 3[498 32[554 2[{ TeXBase1Encoding ReEncodeFont }73
 996.264 /NimbusRomNo9L-Regu rf /Fv 133[498 4[609 1[554
 388 1[609 609 1[886 277 2[277 3[554 609 554 1[554 11[719
-609 665 719 2[775 719 830 609 2[277 719 2[665 1[719 719
-719 10[554 554 554 554 554 554 2[277 46[{
- TeXBase1Encoding ReEncodeFont }34 996.264 /NimbusSanL-Bold
-rf /Fw 166[532 532 752 1[575 487 532 575 1[532 620 575
-664 487 575 1[222 575 620 487 532 575 575 575 575 65[{
- TeXBase1Encoding ReEncodeFont }22 797.011 /NimbusSanL-Bold
-rf /Fx 105[492 27[443 443 1[639 443 492 246 443 295 1[492
-492 492 738 197 443 1[197 492 492 246 492 492 443 492
-492 3[246 1[246 3[836 591 1[541 591 639 4[738 3[246 1[689
-541 591 3[591 6[246 492 2[492 492 2[492 492 492 246 246
-1[246 44[{ TeXBase1Encoding ReEncodeFont }47 885.568
-/NimbusSanL-Regu rf /Fy 120[410 410 91[410 42[{
+609 665 719 4[830 609 2[277 719 2[665 1[719 719 719 10[554
+554 554 554 554 554 2[277 46[{ TeXBase1Encoding ReEncodeFont }32
+996.264 /NimbusSanL-Bold rf /Fw 166[532 532 752 1[575
+487 532 575 1[532 620 575 664 487 575 1[222 575 620 487
+532 575 575 575 575 65[{ TeXBase1Encoding ReEncodeFont }22
+797.011 /NimbusSanL-Bold rf /Fx 105[492 27[443 443 1[639
+443 492 246 443 295 1[492 492 492 738 197 443 1[197 492
+492 246 492 492 443 492 492 3[246 1[246 3[836 591 1[541
+591 639 4[738 3[246 1[689 541 591 3[591 6[246 492 2[492
+492 2[492 492 492 246 246 1[246 44[{ TeXBase1Encoding ReEncodeFont }47
+885.568 /NimbusSanL-Regu rf /Fy 120[410 410 91[410 42[{
  TeXBase1Encoding ReEncodeFont }3 819.15 /NimbusRomNo9L-Regu
 rf /Fz 134[553 1[799 553 1[308 1[369 2[615 1[922 246
 2[246 615 2[615 615 2[615 13[738 799 4[922 5[861 1[738
@@ -3751,131 +3799,133 @@ SDict begin H.R end
  -2111 -5711 a -2111 -5711
 a
 SDict begin [/View [/XYZ H.V]/Dest (page.1) cvn /DEST pdfmark end
- -2111 -5711 a 11950 288 a FA(Global)443 b(Illumination)h(f)-32
-b(or)443 b(Fun)g(and)g(Pr)-32 b(o\002t)9520 2723 y Fz(Ro)f(y)309
-b(G.)f(Biv)14777 2503 y Fy(*)8180 4052 y Fx(Starb)-18
-b(uc)g(ks)247 b(Research)21635 2723 y Fz(Ed)308 b(Gr)17
-b(imle)-22 b(y)27103 2322 y Fy(\206)20170 4052 y Fx(Gr)13
-b(imle)-18 b(y)246 b(Widgets)-13 b(,)247 b(Inc.)34443
-2723 y Fz(Mar)44 b(tha)308 b(Ste)-22 b(w)-17 b(ar)44
-b(t)41996 2322 y Fy(\207)32816 3775 y Fx(Mar)35 b(tha)247
-b(Ste)-18 b(w)-13 b(ar)35 b(t)248 b(Enter)27 b(pr)13
-b(ises)34406 4826 y(Microsoft)246 b(Research)-2000 7948
-y
+ -2111 -5711 a 0 TeXcolorgray Black 0 TeXcolorgray 0
+TeXcolorgray 0 TeXcolorgray 11950 288 a FA(Global)443
+b(Illumination)h(f)-32 b(or)443 b(Fun)g(and)g(Pr)-32
+b(o\002t)9520 2723 y Fz(Ro)f(y)309 b(G.)f(Biv)14777 2503
+y Fy(*)8180 4052 y Fx(Starb)-18 b(uc)g(ks)247 b(Research)21635
+2723 y Fz(Ed)308 b(Gr)17 b(imle)-22 b(y)27103 2322 y
+Fy(\206)20170 4052 y Fx(Gr)13 b(imle)-18 b(y)246 b(Widgets)-13
+b(,)247 b(Inc.)34443 2723 y Fz(Mar)44 b(tha)308 b(Ste)-22
+b(w)-17 b(ar)44 b(t)41996 2322 y Fy(\207)32816 3775 y
+Fx(Mar)35 b(tha)247 b(Ste)-18 b(w)-13 b(ar)35 b(t)248
+b(Enter)27 b(pr)13 b(ises)34406 4826 y(Microsoft)246
+b(Research)p Black 0 TeXcolorgray -2000 7948 a
 SDict begin [/Count 0/Dest (section.2) cvn/Title (Introduction) /OUT
 pdfmark end
- -2000 7948 a -2000 7948 a
-SDict begin [/Count 0/Dest (section.3) cvn/Title (NOT Using the Style Template)
+ -2000
+7948 a -2000 7948 a
+SDict begin [/Count 0/Dest (section.3) cvn/Title (Using the Style Template)
 /OUT pdfmark end
  -2000 7948 a -2000 7948 a
 SDict begin [/Count 0/Dest (section.4) cvn/Title (Bibliography Instructions)
 /OUT pdfmark end
-
--2000 7948 a -2000 7948 a
+ -2000 7948
+a -2000 7948 a
 SDict begin [/Count 0/Dest (section.5) cvn/Title (Example Section)
 /OUT pdfmark end
  -2000 7948 a -2000 7948 a
 SDict begin [/Count 2/Dest (section.6) cvn/Title (Exposition) /OUT
 pdfmark end
- -2000
-7948 a -2000 7948 a
+ -2000 7948 a
+-2000 7948 a
 SDict begin [/Count 0/Dest (subsection.8) cvn/Title (Lorem ipsum) /OUT
 pdfmark end
  -2000 7948 a -2000 7948 a
 SDict begin [/Count 2/Dest (subsection.10) cvn/Title (Mezcal Head)
 /OUT pdfmark end
- -2000 7948
-a -2000 7948 a
+ -2000 7948 a -2000
+7948 a
 SDict begin [/Count -0/Dest (subsubsection.11) cvn/Title (Duis Autem)
 /OUT pdfmark end
  -2000 7948 a -2000 7948 a
 SDict begin [/Count -0/Dest (subsubsection.13) cvn/Title (Ejector Seat Reservation)
 /OUT pdfmark end
- -2000 7948 a
--2000 7948 a
+ -2000 7948 a -2000 7948
+a
 SDict begin [/Count 0/Dest (section.18) cvn/Title (Conclusion) /OUT
 pdfmark end
  -2000 7948 a -2000 7948 a
 SDict begin [/PageMode /UseNone/Page 1/View [/Fit] /DOCVIEW pdfmark
 end
- -2000 7948 a -2000
-7948 a
+ -2000 7948 a -2000 7948 a
 SDict begin [ {Catalog}<<>> /PUT pdfmark end
- -2000 7948 a -2000 7948 a
+
+-2000 7948 a -2000 7948 a
 SDict begin H.S end
- -2000 7948 a -2000 7948
-a
-SDict begin 10 H.A end
  -2000 7948 a -2000 7948 a
+SDict begin 10 H.A end
+ -2000
+7948 a -2000 7948 a
 SDict begin [/View [/XYZ H.V]/Dest (Doc-Start) cvn /DEST pdfmark end
  -2000 7948 a -2000 9055 a
 SDict begin H.S end
-
--2000 9055 a -2000 9055 a
+ -2000 9055
+a -2000 9055 a
 SDict begin 10 H.A end
  -2000 9055 a -2000 9055 a
 SDict begin [/View [/XYZ H.V]/Dest (section*.1) cvn /DEST pdfmark end
- -2000
-9055 a 25 w Fv(A)50 b Fw(B)g(S)g(T)g(R)g(A)18 b(C)50
-b(T)-2000 10565 y Fu(Duis)264 b(autem)h(v)-15 b(el)265
-b(eum)f(iriure)g(dolor)g(in)h(hendrerit)f(in)g(vulputate)h(v)-15
-b(elit)265 b(esse)-2000 11672 y(molestie)194 b(consequat,)206
-b(v)-15 b(el)194 b(illum)f(dolore)h(eu)g(feugiat)g(nulla)g(f)-10
-b(acilisis)193 b(at)h(v)-15 b(ero)-2000 12779 y(eros)254
-b(et)g(accumsan)i(et)e(iusto)g(odio)g(dignissim)g(qui)g(blandit)h
-(praesent)g(lupta-)-2000 13886 y(tum)285 b(zzril)f(delenit)h(augue)h
-(duis)e(dolore)h(te)f(feug)-5 b(ait)285 b(nulla)g(f)-10
-b(acilisi.)415 b(Lorem)-2000 14993 y(ipsum)374 b(dolor)g(sit)f(amet,)
-406 b(consectetuer)375 b(adipiscing)f(elit,)406 b(sed)374
-b(diam)g(non-)-2000 16100 y(ummy)228 b(nibh)f(euismod)h(tincidunt)f(ut)
-h(laoreet)f(dolore)h(magna)g(aliquam)g(erat)-2025 17207
-y(v)-20 b(olutpat.)309 b(Ut)246 b(wisi)f(enim)h(ad)g(minim)g(v)-15
-b(eniam,)248 b(quis)d(nostrud)h(e)-15 b(x)g(erci)246
-b(tation)-2000 18314 y(ullamcorper)285 b(suscipit)f(lobortis)f(nisl)h
-(ut)g(aliquip)g(e)-15 b(x)285 b(ea)g(commodo)g(conse-)-2000
-19421 y(quat.)303 b(Duis)230 b(autem)g(v)-15 b(el)231
-b(eum)f(iriure)g(dolor)f(in)h(hendrerit)h(in)e(vulputate)i(v)-15
-b(elit)-2000 20528 y(esse)203 b(molestie)h(consequat,)213
-b(v)-15 b(el)204 b(illum)f(dolore)h(eu)g(feugiat)g(nulla)g(f)-10
-b(acilisis)202 b(at)-2025 21635 y(v)-15 b(ero)297 b(eros)g(et)g
-(accumsan)i(et)e(iusto)g(odio)g(dignissim)f(qui)i(blandit)f(praesent)
--2000 22742 y(luptatum)250 b(zzril)f(delenit)h(augue)g(duis)f(dolore)g
-(te)h(feug)-5 b(ait)249 b(nulla)h(f)-10 b(acilisi.)-2000
-24427 y Ft(Index)242 b(T)-92 b(erms:)610 b Fu(Human-centered)243
-b(computing\227V)-60 b(isualization\227V)g(isu-)-2000
-25534 y(alization)641 b(techniques\227T)-35 b(reemaps;)837
-b(Human-centered)642 b(computing\227)-2036 26641 y(V)-60
-b(isualization\227V)g(isualization)252 b(design)d(and)h(e)-25
-b(v)g(aluation)250 b(methods)-2000 27854 y
+ -2000 9055 a
+25 w Fv(A)50 b Fw(B)g(S)g(T)g(R)g(A)18 b(C)50 b(T)-2000
+10565 y Fu(Duis)264 b(autem)h(v)-15 b(el)265 b(eum)f(iriure)g(dolor)g
+(in)h(hendrerit)f(in)g(vulputate)h(v)-15 b(elit)265 b(esse)-2000
+11672 y(molestie)194 b(consequat,)206 b(v)-15 b(el)194
+b(illum)f(dolore)h(eu)g(feugiat)g(nulla)g(f)-10 b(acilisis)193
+b(at)h(v)-15 b(ero)-2000 12779 y(eros)254 b(et)g(accumsan)i(et)e(iusto)
+g(odio)g(dignissim)g(qui)g(blandit)h(praesent)g(lupta-)-2000
+13886 y(tum)285 b(zzril)f(delenit)h(augue)h(duis)e(dolore)h(te)f(feug)
+-5 b(ait)285 b(nulla)g(f)-10 b(acilisi.)415 b(Lorem)-2000
+14993 y(ipsum)374 b(dolor)g(sit)f(amet,)406 b(consectetuer)375
+b(adipiscing)f(elit,)406 b(sed)374 b(diam)g(non-)-2000
+16100 y(ummy)228 b(nibh)f(euismod)h(tincidunt)f(ut)h(laoreet)f(dolore)h
+(magna)g(aliquam)g(erat)-2025 17207 y(v)-20 b(olutpat.)309
+b(Ut)246 b(wisi)f(enim)h(ad)g(minim)g(v)-15 b(eniam,)248
+b(quis)d(nostrud)h(e)-15 b(x)g(erci)246 b(tation)-2000
+18314 y(ullamcorper)285 b(suscipit)f(lobortis)f(nisl)h(ut)g(aliquip)g
+(e)-15 b(x)285 b(ea)g(commodo)g(conse-)-2000 19421 y(quat.)303
+b(Duis)230 b(autem)g(v)-15 b(el)231 b(eum)f(iriure)g(dolor)f(in)h
+(hendrerit)h(in)e(vulputate)i(v)-15 b(elit)-2000 20528
+y(esse)203 b(molestie)h(consequat,)213 b(v)-15 b(el)204
+b(illum)f(dolore)h(eu)g(feugiat)g(nulla)g(f)-10 b(acilisis)202
+b(at)-2025 21635 y(v)-15 b(ero)297 b(eros)g(et)g(accumsan)i(et)e(iusto)
+g(odio)g(dignissim)f(qui)i(blandit)f(praesent)-2000 22742
+y(luptatum)250 b(zzril)f(delenit)h(augue)g(duis)f(dolore)g(te)h(feug)-5
+b(ait)249 b(nulla)h(f)-10 b(acilisi.)-2000 24427 y Ft(Index)242
+b(T)-92 b(erms:)610 b Fu(Human-centered)243 b(computing\227V)-60
+b(isualization\227V)g(isu-)-2000 25534 y(alization)641
+b(techniques\227T)-35 b(reemaps;)837 b(Human-centered)642
+b(computing\227)-2036 26641 y(V)-60 b(isualization\227V)g(isualization)
+252 b(design)d(and)h(e)-25 b(v)g(aluation)250 b(methods)-2000
+27854 y
 SDict begin H.S end
- -2000 27854
-a -2000 27854 a
-SDict begin 10 H.A end
  -2000 27854 a -2000 27854 a
-SDict begin [/View [/XYZ H.V]/Dest (section.2) cvn /DEST pdfmark end
- -2000 27854
-a -1975 28770 a Fv(1)1046 b(I)50 b Fw(N)g(T)g(R)34 b(O)50
-b(D)g(U)g(C)g(T)g(I)g(O)g(N)-2031 30280 y Fu(This)247
-b(template)i(is)f(for)f(papers)i(of)e(V)-15 b(GTC-sponsored)248
-b(conferences)h(which)-2000 31387 y(are)g Fs(not)k Fu(published)c(in)g
-(a)h(special)f(issue)g(of)g(TVCG.)-2000 32600 y
-SDict begin H.S end
- -2000
-32600 a -2000 32600 a
 SDict begin 10 H.A end
+ -2000 27854 a -2000
+27854 a
+SDict begin [/View [/XYZ H.V]/Dest (section.2) cvn /DEST pdfmark end
+ -2000 27854 a -1975 28770 a Fv(1)1046 b(I)50
+b Fw(N)g(T)g(R)34 b(O)50 b(D)g(U)g(C)g(T)g(I)g(O)g(N)-2031
+30280 y Fu(This)247 b(template)i(is)f(for)f(papers)i(of)e(V)-15
+b(GTC-sponsored)248 b(conferences)h(which)-2000 31387
+y(are)g Fs(not)k Fu(published)c(in)g(a)h(special)f(issue)g(of)g(TVCG.)
+-2000 32600 y
+SDict begin H.S end
  -2000 32600 a -2000 32600 a
+SDict begin 10 H.A end
+ -2000 32600
+a -2000 32600 a
 SDict begin [/View [/XYZ H.V]/Dest (section.3) cvn /DEST pdfmark end
- -2000
-32600 a -1975 33516 a Fv(2)1046 b(N)50 b(O)10 b(T)327
+ -2000 32600 a -1975 33516 a Fv(2)1046
 b(U)50 b Fw(S)g(I)g(N)g(G)324 b(T)50 b(H)g(E)324 b Fv(S)50
 b Fw(T)g(Y)g(L)g(E)322 b Fv(T)50 b Fw(E)g(M)g(P)g(L)g(A)-22
-b(T)50 b(E)-688 35026 y Fu(\225)553 b(If)237 b(you)g(recei)-25
-b(v)-15 b(e)238 b(compilation)h(errors)d(along)i(the)f(lines)g(of)g
-(\223)p Fr(Package)214 36133 y(ifpdf)523 b(Error:)1046
-b(Name)524 b(clash,)f Fq(n)p Fr(ifpdf)g(is)g(already)214
-37240 y(defined)p Fu(\224)300 b(then)g(please)g(add)g(a)g(ne)-25
-b(w)300 b(line)g(\223)p Fq(n)p Fr(let)p Fq(n)p Fr(ifpdf)p
-Fq(n)p Fr(relax)p Fu(\224)214 38347 y(right)500 b(after)g(the)h(\223)p
+b(T)50 b(E)p 0 TeXcolorgray -688 35026 a Fu(\225)p 0
+TeXcolorgray 553 w(If)237 b(you)g(recei)-25 b(v)-15 b(e)238
+b(compilation)h(errors)d(along)i(the)f(lines)g(of)g(\223)p
+Fr(Package)214 36133 y(ifpdf)523 b(Error:)1046 b(Name)524
+b(clash,)f Fq(n)p Fr(ifpdf)g(is)g(already)214 37240 y(defined)p
+Fu(\224)300 b(then)g(please)g(add)g(a)g(ne)-25 b(w)300
+b(line)g(\223)p Fq(n)p Fr(let)p Fq(n)p Fr(ifpdf)p Fq(n)p
+Fr(relax)p Fu(\224)214 38347 y(right)500 b(after)g(the)h(\223)p
 Fq(n)p Fr(documentclass[journal])p Fq(f)p Fr(vgtc)p Fq(g)p
 Fu(\224)g(call.)214 39454 y(Note)363 b(that)f(your)h(error)f(is)f(due)i
 (to)f(packages)i(you)e(use)g(that)h(de\002ne)81 40561
@@ -3883,59 +3933,63 @@ y(\223)p Fq(n)p Fr(ifpdf)17 b Fu(\224)491 b(which)g(is)f(obsolete)h
 (\(the)f(result)g(is)f(that)i Fq(n)p Fr(ifpdf)507 b Fu(is)214
 41668 y(de\002ned)234 b(twice\);)239 b(these)233 b(packages)i(should)e
 (be)g(changed)i(to)e(use)g(ifpdf)214 42775 y(package)251
-b(instead.)-688 44866 y(\225)553 b(The)770 b(style)f(uses)g(the)h(h)-5
-b(yperref)770 b(package,)901 b(thus)769 b(turns)g(ref-)214
-45973 y(erences)744 b(into)f(internal)g(links.)1791 b(W)-80
-b(e)744 b(thus)e(recommend)j(to)214 47080 y(mak)-10 b(e)906
-b(use)g(of)g(the)g(\223)p Fq(n)p Fr(autoref)p Fq(f)p
-Fr(reference)p Fq(g)p Fu(\224)g(call)g(\(in-)214 48187
-y(stead)649 b(of)g(\223)p Fr(Figure~)p Fq(n)p Fr(ref)p
-Fq(f)p Fr(reference)p Fq(g)p Fu(\224)i(or)e(similar\))f(since)81
-49294 y(\223)p Fq(n)p Fr(autoref)p Fq(f)p Fr(reference)p
+b(instead.)p 0 TeXcolorgray -688 44866 a(\225)p 0 TeXcolorgray
+553 w(The)770 b(style)f(uses)g(the)h(h)-5 b(yperref)770
+b(package,)901 b(thus)769 b(turns)g(ref-)214 45973 y(erences)744
+b(into)f(internal)g(links.)1791 b(W)-80 b(e)744 b(thus)e(recommend)j
+(to)214 47080 y(mak)-10 b(e)906 b(use)g(of)g(the)g(\223)p
+Fq(n)p Fr(autoref)p Fq(f)p Fr(reference)p Fq(g)p Fu(\224)g(call)g
+(\(in-)214 48187 y(stead)649 b(of)g(\223)p Fr(Figure~)p
+Fq(n)p Fr(ref)p Fq(f)p Fr(reference)p Fq(g)p Fu(\224)i(or)e(similar\))f
+(since)81 49294 y(\223)p Fq(n)p Fr(autoref)p Fq(f)p Fr(reference)p
 Fq(g)p Fu(\224)615 b(turns)e(the)h(entire)g(reference)g(into)214
 50401 y(an)338 b(internal)g(link,)361 b(not)338 b(just)f(the)h(number)
 -55 b(.)576 b(Examples:)20481 50617 y
 SDict begin H.S end
- 20481 50617 a -216
-x Fu(Fig.)338 b(1)22895 49722 y
+ 20481 50617 a 0
+TeXcolorgray -216 x Fu(Fig.)338 b(1)p 0 TeXcolorgray
+22895 49722 a
 SDict begin H.R end
- 22895 49722 a 22895 50401
-a
+ 22895 49722 a 22895 50401 a
 SDict begin [/Color [1 0 0]/H /I/Border [0 0 0]BorderArrayPatch/Subtype
 /Link/Dest (figure.12) cvn H.B /ANN pdfmark end
- 22895 50401 a 338 w Fu(and)183 51519 y
+ 22895 50401
+a 338 w Fu(and)183 51519 y
 SDict begin H.S end
- 183 51519 a
--11 x Fu(T)-80 b(able)250 b(1)3119 50829 y
+ 183 51519 a 0 TeXcolorgray
+-11 x Fu(T)-80 b(able)250 b(1)p 0 TeXcolorgray 3119 50829
+a
 SDict begin H.R end
- 3119 50829
-a 3119 51508 a
+ 3119 50829 a 3119 51508 a
 SDict begin [/Color [1 0 0]/H /I/Border [0 0 0]BorderArrayPatch/Subtype
 /Link/Dest (table.9) cvn H.B /ANN pdfmark end
- 3119 51508 a Fu(.)-688 53600 y(\225)553
-b(The)650 b(style)g(automatically)h(looks)f(for)f(image)i(\002les)e
-(with)h(the)214 54707 y(correct)861 b(e)-15 b(xtension)861
-b(\(eps)f(for)g(re)-15 b(gular)861 b(L)16963 54559 y
-Fp(A)17373 54707 y Fu(T)17816 54931 y(E)18300 54707 y(X;)1166
-b(pdf,)1014 b(png,)214 55814 y(and)860 b(jpg)f(for)g(pdfL)8243
-55666 y Fp(A)8653 55814 y Fu(T)9096 56038 y(E)9580 55814
-y(X\),)1012 b(in)859 b(a)h(set)f(of)g(gi)-25 b(v)-15
-b(en)861 b(subfold-)214 56921 y(ers)664 b(\(\002gures/,)768
-b(pictures/,)g(images/\).)1555 b(It)664 b(is)g(thus)h(suf)-25
-b(\002cient)214 58028 y(to)588 b(use)g(\223)p Fq(n)p
-Fr(includegraphics)p Fq(f)p Fr(CypressView)p Fq(g)p Fu(\224)h
-(\(instead)f(of)81 59135 y(\223)p Fq(n)p Fr(includegraphics)p
-Fq(f)p Fr(pictures/CypressView.jpg)p Fq(g)p Fu(\224\).)-688
-61226 y(\225)553 b(F)-15 b(or)2361 b(adding)g(h)-5 b(yperlinks)2361
-b(and)h(DOIs)f(to)214 62333 y(the)2034 b(list)e(of)h(references,)2480
-b(you)2034 b(can)g(use)81 63440 y(\223)p Fq(n)p Fr(bibliographystyle)p
+ 3119 51508 a Fu(.)p 0 TeXcolorgray
+-688 53600 a(\225)p 0 TeXcolorgray 553 w(The)650 b(style)g
+(automatically)h(looks)f(for)f(image)i(\002les)e(with)h(the)214
+54707 y(correct)861 b(e)-15 b(xtension)861 b(\(eps)f(for)g(re)-15
+b(gular)861 b(L)16963 54559 y Fp(A)17373 54707 y Fu(T)17816
+54931 y(E)18300 54707 y(X;)1166 b(pdf,)1014 b(png,)214
+55814 y(and)860 b(jpg)f(for)g(pdfL)8243 55666 y Fp(A)8653
+55814 y Fu(T)9096 56038 y(E)9580 55814 y(X\),)1012 b(in)859
+b(a)h(set)f(of)g(gi)-25 b(v)-15 b(en)861 b(subfold-)214
+56921 y(ers)664 b(\(\002gures/,)768 b(pictures/,)g(images/\).)1555
+b(It)664 b(is)g(thus)h(suf)-25 b(\002cient)214 58028
+y(to)588 b(use)g(\223)p Fq(n)p Fr(includegraphics)p Fq(f)p
+Fr(CypressView)p Fq(g)p Fu(\224)h(\(instead)f(of)81 59135
+y(\223)p Fq(n)p Fr(includegraphics)p Fq(f)p Fr
+(pictures/CypressView.jpg)p Fq(g)p Fu(\224\).)p 0 TeXcolorgray
+-688 61226 a(\225)p 0 TeXcolorgray 553 w(F)-15 b(or)2361
+b(adding)g(h)-5 b(yperlinks)2361 b(and)h(DOIs)f(to)214
+62333 y(the)2034 b(list)e(of)h(references,)2480 b(you)2034
+b(can)g(use)81 63440 y(\223)p Fq(n)p Fr(bibliographystyle)p
 Fq(f)p Fr(abbrv-doi-hyperref-narrow)p Fq(g)p Fu(\224)p
-6000 64497 12003 45 v -793 65346 a Fo(*)-406 65521 y
-Fn(e-mail:)275 b(ro)-9 b(y)-58 b(.g.bi)-22 b(v@aol.com)-793
+0 TeXcolorgray 6000 64497 12003 45 v -793 65346 a Fo(*)-406
+65521 y Fn(e-mail:)275 b(ro)-9 b(y)-58 b(.g.bi)-22 b(v@aol.com)-793
 66281 y Fo(\206)-406 66603 y Fn(e-mail:)275 b(ed.grimle)-13
 b(y@aol.com)-793 67363 y Fo(\207)-406 67685 y Fn(e-mail:)275
-b(martha.ste)-22 b(w)-9 b(art@marthaste)-22 b(w)-9 b(art.com)29509
-9055 y Fu(\(instead)414 b(of)g(\223)p Fq(n)p Fr(bibliographystyle)p
+b(martha.ste)-22 b(w)-9 b(art@marthaste)-22 b(w)-9 b(art.com)p
+0 TeXcolorgray 0 TeXcolorgray 0 TeXcolorgray 29509 9055
+a Fu(\(instead)414 b(of)g(\223)p Fq(n)p Fr(bibliographystyle)p
 Fq(f)p Fr(abbrv)p Fq(g)p Fu(\224\).)803 b(It)413 b(uses)h(the)29542
 10162 y(doi)490 b(and)f(url)g(\002elds)g(in)g(a)g(bibT)41387
 10386 y(E)41871 10162 y(X)h(entry)f(and)h(turns)e(the)i(entire)29542
@@ -3982,17 +4036,18 @@ b(on)f(your)29542 33186 y(L)29792 33038 y Fp(A)30202
 b(It)489 b(is)f(part)h(of)g(the)43696 33402 y
 SDict begin H.S end
  43696 33402
-a -216 x Fu(\223paratype\224)i(package)51762 32507 y
+a 0 TeXcolorgray -216 x Fu(\223paratype\224)i(package)p
+0 TeXcolorgray 51762 32507 a
 SDict begin H.R end
-
-51762 32507 a 51762 33186 a
+ 51762 32507 a 51762 33186
+a
 SDict begin [/H /I/Border [0 0 0]BorderArrayPatch/Color [0 1 1]/Action
 <</Subtype/URI/URI(https://www.ctan.org/pkg/paratype)>>/Subtype /Link
 H.B /ANN pdfmark end
- 51762 33186 a Fu(,)550 b(and)29542
-34293 y(man)-15 b(y)405 b(distrib)-20 b(utions)403 b(\(such)h(as)g
-(MikT)-70 b(eX\))404 b(ha)-20 b(v)-15 b(e)405 b(it)e(automatically)
-29542 35400 y(installed.)335 b(If)258 b(you)g(do)g(not)g(ha)-20
+ 51762 33186 a Fu(,)550 b(and)29542 34293 y(man)-15
+b(y)405 b(distrib)-20 b(utions)403 b(\(such)h(as)g(MikT)-70
+b(eX\))404 b(ha)-20 b(v)-15 b(e)405 b(it)e(automatically)29542
+35400 y(installed.)335 b(If)258 b(you)g(do)g(not)g(ha)-20
 b(v)-15 b(e)259 b(this)e(package)i(yet)f(and)h(w)-10
 b(ant)258 b(to)g(use)29542 36507 y(a)237 b(\223)p Fr(-narrow)p
 Fu(\224)h(bibliograph)-5 b(y)237 b(style)g(then)g(use)f(your)h(L)48275
@@ -4020,213 +4075,235 @@ SDict begin 10 H.A end
 SDict begin [/View [/XYZ H.V]/Dest (section.4) cvn /DEST pdfmark end
  27328 47734 a 27353 48643
 a Fv(3)1046 b(B)50 b Fw(I)g(B)g(L)g(I)g(O)g(G)g(R)g(A)g(P)g(H)g(Y)320
-b Fv(I)50 b Fw(N)g(S)g(T)g(R)34 b(U)50 b(C)g(T)g(I)g(O)g(N)g(S)28640
-50140 y Fu(\225)553 b(Sort)279 b(all)g(bibliographic)h(entries)e
-(alphabetically)j(b)-20 b(ut)279 b(the)h(last)e(name)29542
-51247 y(of)303 b(the)g(\002rst)e(author)-55 b(.)470 b(This)302
-b(L)39580 51099 y Fp(A)39990 51247 y Fu(T)40433 51472
-y(E)40917 51247 y(X/bibT)43629 51472 y(E)44113 51247
-y(X)h(template)h(tak)-10 b(es)303 b(care)g(of)29542 52354
-y(this)249 b(sorting)g(automatically)-65 b(.)28640 54417
-y(\225)553 b(Mer)-18 b(ge)343 b(multiple)f(references)g(into)h(one;)388
+b Fv(I)50 b Fw(N)g(S)g(T)g(R)34 b(U)50 b(C)g(T)g(I)g(O)g(N)g(S)p
+0 TeXcolorgray 28640 50140 a Fu(\225)p 0 TeXcolorgray
+553 w(Sort)279 b(all)g(bibliographic)h(entries)e(alphabetically)j(b)-20
+b(ut)279 b(the)h(last)e(name)29542 51247 y(of)303 b(the)g(\002rst)e
+(author)-55 b(.)470 b(This)302 b(L)39580 51099 y Fp(A)39990
+51247 y Fu(T)40433 51472 y(E)40917 51247 y(X/bibT)43629
+51472 y(E)44113 51247 y(X)h(template)h(tak)-10 b(es)303
+b(care)g(of)29542 52354 y(this)249 b(sorting)g(automatically)-65
+b(.)p 0 TeXcolorgray 28640 54417 a(\225)p 0 TeXcolorgray
+553 w(Mer)-18 b(ge)343 b(multiple)f(references)g(into)h(one;)388
 b(e.)167 b(g.,)365 b(use)342 b([)48781 54431 y
 SDict begin H.S end
  48781
-54431 a -14 x Fu(3)49279 53737 y
+54431 a 0 TeXcolorgray -14 x Fu(3)p 0 TeXcolorgray 49279
+53737 a
 SDict begin H.R end
- 49279 53737 a 49279
-54417 a
+ 49279 53737 a 49279 54417 a
 SDict begin [/Color [0 1 0]/H /I/Border [0 0 0]BorderArrayPatch/Subtype
 /Link/Dest (cite.Kitware:2003) cvn H.B /ANN pdfmark end
- 49279 54417 a Fu(,)49720 54431 y
+ 49279 54417 a Fu(,)49720
+54431 y
 SDict begin H.S end
- 49720 54431
-a -14 x Fu(5)50218 53737 y
+ 49720 54431 a 0 TeXcolorgray -14 x Fu(5)p 0 TeXcolorgray
+50218 53737 a
 SDict begin H.R end
- 50218 53737 a 50218 54417
-a
+ 50218 53737 a 50218 54417 a
 SDict begin [/Color [0 1 0]/H /I/Border [0 0 0]BorderArrayPatch/Subtype
 /Link/Dest (cite.Max:1995:OMF) cvn H.B /ANN pdfmark end
- 50218 54417 a Fu(])f(\(not)h([)53170 54431 y
+ 50218 54417
+a Fu(])f(\(not)h([)53170 54431 y
 SDict begin H.S end
- 53170
-54431 a -14 x Fu(3)53668 53737 y
+ 53170 54431 a 0 TeXcolorgray
+-14 x Fu(3)p 0 TeXcolorgray 53668 53737 a
 SDict begin H.R end
- 53668 53737 a 53668
-54417 a
+ 53668 53737
+a 53668 54417 a
 SDict begin [/Color [0 1 0]/H /I/Border [0 0 0]BorderArrayPatch/Subtype
 /Link/Dest (cite.Kitware:2003) cvn H.B /ANN pdfmark end
- 53668 54417 a Fu(])29542 55524 y([)29874 55538
-y
+ 53668 54417 a Fu(])29542 55524 y([)29874
+55538 y
 SDict begin H.S end
- 29874 55538 a -14 x Fu(5)30372 54844 y
+ 29874 55538 a 0 TeXcolorgray -14 x Fu(5)p 0 TeXcolorgray
+30372 54844 a
 SDict begin H.R end
- 30372 54844
-a 30372 55524 a
+ 30372 54844 a 30372 55524 a
 SDict begin [/Color [0 1 0]/H /I/Border [0 0 0]BorderArrayPatch/Subtype
 /Link/Dest (cite.Max:1995:OMF) cvn H.B /ANN pdfmark end
- 30372 55524 a Fu(]\).)660 b(W)-40 b(ithin)367
-b(each)g(set)f(of)g(multiple)h(references,)396 b(the)366
-b(references)29542 56631 y(should)288 b(be)g(sorted)f(in)g(ascending)i
-(order)-55 b(.)424 b(This)286 b(L)46799 56483 y Fp(A)47209
-56631 y Fu(T)47652 56855 y(E)48136 56631 y(X/bibT)50848
-56855 y(E)51333 56631 y(X)h(tem-)29542 57738 y(plate)264
-b(tak)-10 b(es)263 b(care)g(of)g(both)g(the)g(mer)-18
-b(ging)263 b(and)g(the)g(sorting)g(automati-)29542 58845
-y(cally)-65 b(.)28640 60907 y(\225)553 b(V)-111 b(erify)208
+ 30372 55524
+a Fu(]\).)660 b(W)-40 b(ithin)367 b(each)g(set)f(of)g(multiple)h
+(references,)396 b(the)366 b(references)29542 56631 y(should)288
+b(be)g(sorted)f(in)g(ascending)i(order)-55 b(.)424 b(This)286
+b(L)46799 56483 y Fp(A)47209 56631 y Fu(T)47652 56855
+y(E)48136 56631 y(X/bibT)50848 56855 y(E)51333 56631
+y(X)h(tem-)29542 57738 y(plate)264 b(tak)-10 b(es)263
+b(care)g(of)g(both)g(the)g(mer)-18 b(ging)263 b(and)g(the)g(sorting)g
+(automati-)29542 58845 y(cally)-65 b(.)p 0 TeXcolorgray
+28640 60907 a(\225)p 0 TeXcolorgray 553 w(V)-111 b(erify)208
 b(all)f(data)g(obtained)h(from)f(digital)g(libraries,)215
 b(e)-25 b(v)-15 b(en)208 b(A)-40 b(CM')-55 b(s)206 b(DL)29542
 62014 y(and)250 b(IEEE)e(Xplore)i(etc.)f(are)h(sometimes)f(wrong)g(or)g
-(incomplete.)28640 64076 y(\225)553 b(Do)376 b(not)f(trust)f
-(bibliographic)i(data)f(from)g(other)g(services)g(such)g(as)29542
-65183 y(Mendele)-15 b(y)-65 b(.com,)475 b(Google)429
-b(Scholar)-40 b(,)473 b(or)428 b(similar;)517 b(these)429
-b(are)f(e)-25 b(v)-15 b(en)29542 66290 y(more)250 b(lik)-10
-b(ely)249 b(to)g(be)h(incorrect)g(or)f(incomplete.)28640
-68353 y(\225)553 b(Articles)249 b(in)h(journal\227items)f(to)g
-(include:)30926 70415 y Ft(\226)554 b Fu(author)249 b(names)30926
-72000 y Ft(\226)554 b Fu(title)p eop end
+(incomplete.)p 0 TeXcolorgray 28640 64076 a(\225)p 0
+TeXcolorgray 553 w(Do)376 b(not)f(trust)f(bibliographic)i(data)f(from)g
+(other)g(services)g(such)g(as)29542 65183 y(Mendele)-15
+b(y)-65 b(.com,)475 b(Google)429 b(Scholar)-40 b(,)473
+b(or)428 b(similar;)517 b(these)429 b(are)f(e)-25 b(v)-15
+b(en)29542 66290 y(more)250 b(lik)-10 b(ely)249 b(to)g(be)h(incorrect)g
+(or)f(incomplete.)p 0 TeXcolorgray 28640 68353 a(\225)p
+0 TeXcolorgray 553 w(Articles)g(in)h(journal\227items)f(to)g(include:)p
+0 TeXcolorgray 30926 70415 a Ft(\226)p 0 TeXcolorgray
+554 w Fu(author)g(names)p 0 TeXcolorgray 30926 72000
+a Ft(\226)p 0 TeXcolorgray 554 w Fu(title)p 0 TeXcolorgray
+0 TeXcolorgray eop end
 %%Page: 2 2
-TeXDict begin 2 1 bop 0 0 a
+TeXDict begin 2 1 bop 0 TeXcolorgray 0 0 a
 SDict begin /product where{pop product(Distiller)search{pop pop pop
 version(.)search{exch pop exch pop(3011)eq{gsave newpath 0 0 moveto
 closepath clip/Courier findfont 10 scalefont setfont 72 72 moveto(.)show
 grestore}if}{pop}ifelse}{pop}ifelse}if end
- 0 0 a -2111 -5711 a
+ 0 0 a -2111
+-5711 a
 SDict begin H.S end
- -2111
--5711 a -2111 -5711 a
-SDict begin H.R end
  -2111 -5711 a -2111 -5711 a
+SDict begin H.R end
+ -2111 -5711 a -2111
+-5711 a
 SDict begin [/View [/XYZ H.V]/Dest (page.2) cvn /DEST pdfmark end
- -2111
--5711 a 1598 -893 a Ft(\226)553 b Fu(journal)250 b(name)1598
-624 y Ft(\226)553 b Fu(year)1598 2140 y Ft(\226)g Fu(v)-20
-b(olume)1598 3657 y Ft(\226)553 b Fu(number)1598 5173
-y Ft(\226)g Fu(month)328 b(of)g(publication)h(as)e(v)-25
+ -2111 -5711 a 0 TeXcolorgray 0 TeXcolorgray 0
+TeXcolorgray 1598 -893 a Ft(\226)p 0 TeXcolorgray 553
+w Fu(journal)250 b(name)p 0 TeXcolorgray 1598 624 a Ft(\226)p
+0 TeXcolorgray 553 w Fu(year)p 0 TeXcolorgray 1598 2140
+a Ft(\226)p 0 TeXcolorgray 553 w Fu(v)-20 b(olume)p 0
+TeXcolorgray 1598 3657 a Ft(\226)p 0 TeXcolorgray 553
+w Fu(number)p 0 TeXcolorgray 1598 5173 a Ft(\226)p 0
+TeXcolorgray 553 w Fu(month)328 b(of)g(publication)h(as)e(v)-25
 b(ariable)329 b(name)f(\(i.)166 b(e.,)348 b Fq(f)p Fu(jan)p
 Fq(g)328 b Fu(for)2630 6280 y(January)-65 b(,)414 b(etc.;)447
 b(month)381 b(ranges)f(using)h Fq(f)p Fu(jan)g(#)p Fq(f)p
 Fu(/)p Fq(g)p Fu(#)f(feb)p Fq(g)h Fu(or)2649 7387 y Fq(f)p
 Fu(jan)250 b(#)p Fq(f)p Fu(--)p Fq(g)p Fu(#)e(feb)p Fq(g)p
-Fu(\))-688 9347 y(\225)553 b(use)456 b(journal)h(names)g(in)f(proper)h
-(style:)723 b(correct:)h(\223IEEE)456 b(T)-35 b(rans-)214
-10453 y(actions)329 b(on)h(V)-60 b(isualization)330 b(and)g(Computer)f
-(Graphics\224,)351 b(incorrect:)81 11560 y(\223V)-60
-b(isualization)473 b(and)f(Computer)f(Graphics,)528 b(IEEE)470
-b(T)-35 b(ransactions)214 12667 y(on\224)-688 14627 y(\225)553
-b(P)-15 b(apers)249 b(in)g(proceedings\227items)h(to)f(include:)1598
-16586 y Ft(\226)553 b Fu(author)250 b(names)1598 18103
-y Ft(\226)553 b Fu(title)1598 19619 y Ft(\226)g Fu(abbre)-25
+Fu(\))p 0 TeXcolorgray -688 9347 a(\225)p 0 TeXcolorgray
+553 w(use)456 b(journal)h(names)g(in)f(proper)h(style:)723
+b(correct:)h(\223IEEE)456 b(T)-35 b(rans-)214 10453 y(actions)329
+b(on)h(V)-60 b(isualization)330 b(and)g(Computer)f(Graphics\224,)351
+b(incorrect:)81 11560 y(\223V)-60 b(isualization)473
+b(and)f(Computer)f(Graphics,)528 b(IEEE)470 b(T)-35 b(ransactions)214
+12667 y(on\224)p 0 TeXcolorgray -688 14627 a(\225)p 0
+TeXcolorgray 553 w(P)-15 b(apers)249 b(in)g(proceedings\227items)h(to)f
+(include:)p 0 TeXcolorgray 1598 16586 a Ft(\226)p 0 TeXcolorgray
+553 w Fu(author)h(names)p 0 TeXcolorgray 1598 18103 a
+Ft(\226)p 0 TeXcolorgray 553 w Fu(title)p 0 TeXcolorgray
+1598 19619 a Ft(\226)p 0 TeXcolorgray 553 w Fu(abbre)-25
 b(viated)1053 b(proceedings)f(name:)1915 b(e.)166 b(g.,)1252
 b(\223Proc.)p Fq(n)2649 20726 y Fu(CONF)p 5366 20726
 299 45 v 359 w(A)-40 b(CR)g(ONYNM\224)713 b(without)g(the)f(year;)945
 b(e)-15 b(xample:)2517 21833 y(\223Proc.)p Fq(n)364 b
 Fu(CHI\224,)g(\223Proc.)p Fq(n)h Fu(3DUI\224,)g(\223Proc.)p
 Fq(n)g Fu(Eurographics\224,)2517 22940 y(\223Proc.)p
-Fq(n)249 b Fu(EuroV)-60 b(is\224)1598 24457 y Ft(\226)553
-b Fu(year)1598 25973 y Ft(\226)g Fu(publisher)1598 27490
-y Ft(\226)g Fu(to)-25 b(wn)193 b(with)g(country)g(of)g(publisher)f
-(\(the)h(to)-25 b(wn)193 b(can)g(be)g(abbre)-25 b(vi-)2649
-28597 y(ated)232 b(for)e(well-kno)-25 b(wn)232 b(to)-25
-b(wns)231 b(such)g(as)f(Ne)-25 b(w)232 b(Y)-110 b(ork)231
-b(or)g(Berlin\))-688 30556 y(\225)553 b(article/paper)673
-b(title)g(con)-40 b(v)-15 b(ention:)1156 b(refrain)672
-b(from)g(using)g(curly)214 31663 y(brack)-10 b(ets,)267
-b(e)-15 b(xcept)265 b(for)e(acron)-15 b(yms/proper)264
+Fq(n)249 b Fu(EuroV)-60 b(is\224)p 0 TeXcolorgray 1598
+24457 a Ft(\226)p 0 TeXcolorgray 553 w Fu(year)p 0 TeXcolorgray
+1598 25973 a Ft(\226)p 0 TeXcolorgray 553 w Fu(publisher)p
+0 TeXcolorgray 1598 27490 a Ft(\226)p 0 TeXcolorgray
+553 w Fu(to)-25 b(wn)193 b(with)g(country)g(of)g(publisher)f(\(the)h
+(to)-25 b(wn)193 b(can)g(be)g(abbre)-25 b(vi-)2649 28597
+y(ated)232 b(for)e(well-kno)-25 b(wn)232 b(to)-25 b(wns)231
+b(such)g(as)f(Ne)-25 b(w)232 b(Y)-110 b(ork)231 b(or)g(Berlin\))p
+0 TeXcolorgray -688 30556 a(\225)p 0 TeXcolorgray 553
+w(article/paper)673 b(title)g(con)-40 b(v)-15 b(ention:)1156
+b(refrain)672 b(from)g(using)g(curly)214 31663 y(brack)-10
+b(ets,)267 b(e)-15 b(xcept)265 b(for)e(acron)-15 b(yms/proper)264
 b(names/w)-10 b(ords)263 b(follo)-25 b(wing)214 32770
-y(dashes/question)249 b(marks)g(etc.;)h(e)-15 b(xample:)1598
-34729 y Ft(\226)553 b Fu(paper)195 b(\223Marching)g(Cubes:)281
-b(A)195 b(High)f(Resolution)g(3D)h(Surf)-10 b(ace)2649
-35836 y(Construction)249 b(Algorithm\224)1598 37353 y
-Ft(\226)553 b Fu(should)376 b(be)h(entered)g(as)f(\223)p
-Fq(f)p Fu(M)p Fq(g)p Fu(arching)h Fq(f)p Fu(C)p Fq(g)p
-Fu(ubes:)563 b(A)376 b(High)2649 38460 y(Resolution)f
-Fq(f)p Fu(3D)p Fq(g)h Fu(Surf)-10 b(ace)376 b(Construction)f
-(Algorithm\224)h(or)2517 39567 y(\223)p Fq(f)p Fu(M)p
-Fq(g)p Fu(arching)229 b Fq(f)p Fu(C)p Fq(g)p Fu(ubes:)298
-b(A)229 b(high)f(resolution)h Fq(f)p Fu(3D)p Fq(g)f Fu(surf)-10
-b(ace)2649 40674 y(construction)250 b(algorithm\224)1598
-42190 y Ft(\226)553 b Fu(will)279 b(be)h(typeset)f(as)g(\223Marching)g
+y(dashes/question)249 b(marks)g(etc.;)h(e)-15 b(xample:)p
+0 TeXcolorgray 1598 34729 a Ft(\226)p 0 TeXcolorgray
+553 w Fu(paper)195 b(\223Marching)g(Cubes:)281 b(A)195
+b(High)f(Resolution)g(3D)h(Surf)-10 b(ace)2649 35836
+y(Construction)249 b(Algorithm\224)p 0 TeXcolorgray 1598
+37353 a Ft(\226)p 0 TeXcolorgray 553 w Fu(should)376
+b(be)h(entered)g(as)f(\223)p Fq(f)p Fu(M)p Fq(g)p Fu(arching)h
+Fq(f)p Fu(C)p Fq(g)p Fu(ubes:)563 b(A)376 b(High)2649
+38460 y(Resolution)f Fq(f)p Fu(3D)p Fq(g)h Fu(Surf)-10
+b(ace)376 b(Construction)f(Algorithm\224)h(or)2517 39567
+y(\223)p Fq(f)p Fu(M)p Fq(g)p Fu(arching)229 b Fq(f)p
+Fu(C)p Fq(g)p Fu(ubes:)298 b(A)229 b(high)f(resolution)h
+Fq(f)p Fu(3D)p Fq(g)f Fu(surf)-10 b(ace)2649 40674 y(construction)250
+b(algorithm\224)p 0 TeXcolorgray 1598 42190 a Ft(\226)p
+0 TeXcolorgray 553 w Fu(will)279 b(be)h(typeset)f(as)g(\223Marching)g
 (Cubes:)368 b(A)279 b(high)h(resolution)2649 43297 y(3D)250
-b(surf)-10 b(ace)249 b(construction)h(algorithm\224)-688
-45257 y(\225)553 b(for)249 b(all)g(entries)1598 47216
-y Ft(\226)553 b Fu(DOI)267 b(can)h(be)f(entered)g(in)g(the)g(DOI)g
+b(surf)-10 b(ace)249 b(construction)h(algorithm\224)p
+0 TeXcolorgray -688 45257 a(\225)p 0 TeXcolorgray 553
+w(for)f(all)g(entries)p 0 TeXcolorgray 1598 47216 a Ft(\226)p
+0 TeXcolorgray 553 w Fu(DOI)267 b(can)h(be)f(entered)g(in)g(the)g(DOI)g
 (\002eld)g(as)f(plain)h(DOI)g(num-)2649 48323 y(ber)250
 b(or)e(as)h(DOI)h(url;)f(alternati)-25 b(v)-15 b(e:)310
-b(a)249 b(url)g(in)g(the)h(URL)e(\002eld)1598 49840 y
-Ft(\226)553 b Fu(pro)-15 b(vide)250 b(full)f(page)h(ranges)f(AA--BB)
--688 51799 y(\225)553 b(when)247 b(citing)g(references,)h(do)f(not)g
-(use)f(the)i(reference)f(as)g(a)g(sentence)214 52906
-y(object;)260 b(e.)166 b(g.,)258 b(wrong:)323 b(\223In)256
+b(a)249 b(url)g(in)g(the)h(URL)e(\002eld)p 0 TeXcolorgray
+1598 49840 a Ft(\226)p 0 TeXcolorgray 553 w Fu(pro)-15
+b(vide)250 b(full)f(page)h(ranges)f(AA--BB)p 0 TeXcolorgray
+-688 51799 a(\225)p 0 TeXcolorgray 553 w(when)e(citing)g(references,)h
+(do)f(not)g(use)f(the)i(reference)f(as)g(a)g(sentence)214
+52906 y(object;)260 b(e.)166 b(g.,)258 b(wrong:)323 b(\223In)256
 b([)10301 52906 y
 SDict begin H.S end
- 10301 52906 a Fu(4)10799 52227 y
+ 10301 52906 a 0 TeXcolorgray Fu(4)p
+0 TeXcolorgray 10799 52227 a
 SDict begin H.R end
- 10799
-52227 a 10799 52906 a
+ 10799 52227 a 10799 52906
+a
 SDict begin [/Color [0 1 0]/H /I/Border [0 0 0]BorderArrayPatch/Subtype
 /Link/Dest (cite.Lorensen:1987:MCA) cvn H.B /ANN pdfmark end
- 10799 52906 a Fu(])f(the)h(authors)g(describe)g
-(.)149 b(.)g(.)g(\224,)260 b(correct:)81 54013 y(\223Lorensen)250
+ 10799 52906 a Fu(])f(the)h(authors)g(describe)g(.)149
+b(.)g(.)g(\224,)260 b(correct:)81 54013 y(\223Lorensen)250
 b(and)g(Cline)e([)8907 54013 y
 SDict begin H.S end
- 8907 54013 a Fu(4)9405
-53333 y
+ 8907 54013 a 0 TeXcolorgray
+Fu(4)p 0 TeXcolorgray 9405 53333 a
 SDict begin H.R end
- 9405 53333 a 9405 54013 a
+ 9405 53333 a 9405
+54013 a
 SDict begin [/Color [0 1 0]/H /I/Border [0 0 0]BorderArrayPatch/Subtype
 /Link/Dest (cite.Lorensen:1987:MCA) cvn H.B /ANN pdfmark end
- 9405 54013 a Fu(])h(describe)h(.)149
-b(.)g(.)g(\224)-2000 55192 y
+ 9405 54013 a Fu(])h(describe)h(.)149 b(.)g(.)g(\224)-2000
+55192 y
 SDict begin H.S end
- -2000 55192 a -2000 55192
-a
-SDict begin 10 H.A end
  -2000 55192 a -2000 55192 a
+SDict begin 10 H.A end
+ -2000 55192 a -2000
+55192 a
 SDict begin [/View [/XYZ H.V]/Dest (section.5) cvn /DEST pdfmark end
- -2000 55192 a -1975 56144
-a Fv(4)1046 b(E)50 b Fw(X)g(A)g(M)g(P)g(L)g(E)321 b Fv(S)50
-b Fw(E)g(C)g(T)g(I)g(O)g(N)-2000 57610 y Fu(Lorem)592
-b(ipsum)g(dolor)g(sit)f(amet,)678 b(consetetur)593 b(sadipscing)f
-(elitr)-40 b(,)678 b(sed)-32676 b Fp(Y)-85 b(ou)1086
-b(can)f(use)-7959 58606 y(the)2053 b(mar)-14 b(gins)-7959
-59602 y(for)1394 b(comments)-7987 60598 y(while)346 b(editing)h(the)
--7959 61595 y(submission,)829 b(b)-15 b(ut)-7959 62591
-y(please)1246 b(remo)-12 b(v)g(e)-7959 63587 y(the)1378
-b(mar)-14 b(ginpar)-7959 64583 y(comments)1408 b(for)-7959
-65580 y(submission.)-2000 58716 y Fu(diam)367 b(nonumy)h(eirmod)f
-(tempor)g(in)-40 b(vidunt)368 b(ut)f(labore)g(et)g(dolore)h(magna)-2000
-59823 y(aliquyam)288 b(erat,)296 b(sed)287 b(diam)g(v)-20
-b(oluptua.)423 b(At)287 b(v)-15 b(ero)287 b(eos)g(et)g(accusam)h(et)f
-(justo)-2000 60930 y(duo)250 b(dolores)f(et)h(ea)g(reb)-20
-b(um.)311 b(Stet)249 b(clita)h(kasd)g(guber)-18 b(gren,)250
-b(no)g(sea)g(takimata)-2000 62037 y(sanctus)384 b(est)g(Lorem)h(ipsum)f
-(dolor)g(sit)g(amet.)715 b(Lorem)385 b(ipsum)f(dolor)g(sit)-2000
-63144 y(amet,)274 b(consetetur)269 b(sadipscing)g(elitr)-40
-b(,)273 b(sed)268 b(diam)h(nonumy)g(eirmod)g(tempor)-2000
-64251 y(in)-40 b(vidunt)301 b(ut)g(labore)g(et)g(dolore)f(magna)i
-(aliquyam)g(erat,)313 b(sed)301 b(diam)g(v)-20 b(olup-)-2000
-65358 y(tua)272 b([)-179 65372 y
+ -2000 55192 a -1975 56144 a Fv(4)1046 b(E)50
+b Fw(X)g(A)g(M)g(P)g(L)g(E)321 b Fv(S)50 b Fw(E)g(C)g(T)g(I)g(O)g(N)
+-2000 57610 y Fu(Lorem)592 b(ipsum)g(dolor)g(sit)f(amet,)678
+b(consetetur)593 b(sadipscing)f(elitr)-40 b(,)678 b(sed)-32676
+b Fp(Y)-85 b(ou)1086 b(can)f(use)-7959 58606 y(the)2053
+b(mar)-14 b(gins)-7959 59602 y(for)1394 b(comments)-7987
+60598 y(while)346 b(editing)h(the)-7959 61595 y(submission,)829
+b(b)-15 b(ut)-7959 62591 y(please)1246 b(remo)-12 b(v)g(e)-7959
+63587 y(the)1378 b(mar)-14 b(ginpar)-7959 64583 y(comments)1408
+b(for)-7959 65580 y(submission.)-2000 58716 y Fu(diam)367
+b(nonumy)h(eirmod)f(tempor)g(in)-40 b(vidunt)368 b(ut)f(labore)g(et)g
+(dolore)h(magna)-2000 59823 y(aliquyam)288 b(erat,)296
+b(sed)287 b(diam)g(v)-20 b(oluptua.)423 b(At)287 b(v)-15
+b(ero)287 b(eos)g(et)g(accusam)h(et)f(justo)-2000 60930
+y(duo)250 b(dolores)f(et)h(ea)g(reb)-20 b(um.)311 b(Stet)249
+b(clita)h(kasd)g(guber)-18 b(gren,)250 b(no)g(sea)g(takimata)-2000
+62037 y(sanctus)384 b(est)g(Lorem)h(ipsum)f(dolor)g(sit)g(amet.)715
+b(Lorem)385 b(ipsum)f(dolor)g(sit)-2000 63144 y(amet,)274
+b(consetetur)269 b(sadipscing)g(elitr)-40 b(,)273 b(sed)268
+b(diam)h(nonumy)g(eirmod)g(tempor)-2000 64251 y(in)-40
+b(vidunt)301 b(ut)g(labore)g(et)g(dolore)f(magna)i(aliquyam)g(erat,)313
+b(sed)301 b(diam)g(v)-20 b(olup-)-2000 65358 y(tua)272
+b([)-179 65372 y
 SDict begin H.S end
- -179 65372 a -14 x Fu(3)319
-64679 y
+ -179 65372 a 0 TeXcolorgray -14 x Fu(3)p
+0 TeXcolorgray 319 64679 a
 SDict begin H.R end
  319 64679 a 319 65358 a
 SDict begin [/Color [0 1 0]/H /I/Border [0 0 0]BorderArrayPatch/Subtype
 /Link/Dest (cite.Kitware:2003) cvn H.B /ANN pdfmark end
- 319 65358 a Fu(,)712
-65372 y
+ 319
+65358 a Fu(,)712 65372 y
 SDict begin H.S end
- 712 65372 a -14 x Fu(5)1210 64679 y
+ 712 65372 a 0 TeXcolorgray -14
+x Fu(5)p 0 TeXcolorgray 1210 64679 a
 SDict begin H.R end
- 1210 64679
-a 1210 65358 a
+ 1210 64679 a 1210
+65358 a
 SDict begin [/Color [0 1 0]/H /I/Border [0 0 0]BorderArrayPatch/Subtype
 /Link/Dest (cite.Max:1995:OMF) cvn H.B /ANN pdfmark end
- 1210 65358 a Fu(].)376 b(At)272 b(v)-15
-b(ero)272 b(eos)g(et)f(accusam)i(et)f(justo)f(duo)h(dolores)f(et)h(ea)g
-(reb)-20 b(um.)-2000 66465 y(Stet)248 b(clita)g(kasd)g(guber)-18
+ 1210 65358 a Fu(].)376 b(At)272 b(v)-15 b(ero)272
+b(eos)g(et)f(accusam)i(et)f(justo)f(duo)h(dolores)f(et)h(ea)g(reb)-20
+b(um.)-2000 66465 y(Stet)248 b(clita)g(kasd)g(guber)-18
 b(gren,)249 b(no)g(sea)f(takimata)g(sanctus)g(est)g(Lorem)g(ipsum)-2000
 67572 y(dolor)295 b(sit)g(amet.)447 b(Lorem)295 b(ipsum)g(dolor)g(sit)g
 (amet,)307 b(consetetur)295 b(sadipscing)-2000 68679
@@ -4236,51 +4313,53 @@ y(magna)311 b(aliquyam)h(erat,)325 b(sed)311 b(diam)f(v)-20
 b(oluptua.)494 b(At)310 b(v)-15 b(ero)311 b(eos)f(et)h(accusam)-2000
 70893 y(et)287 b(justo)e(duo)i(dolores)f(et)h(ea)g(reb)-20
 b(um.)421 b(Stet)286 b(clita)h(kasd)f(guber)-18 b(gren,)297
-b(no)286 b(sea)-2000 72000 y(takimata)250 b(sanctus)f(est.)27328
--2000 y
+b(no)286 b(sea)-2000 72000 y(takimata)250 b(sanctus)f(est.)p
+0 TeXcolorgray 0 TeXcolorgray 27328 -2000 a
 SDict begin H.S end
- 27328 -2000 a 27328 -2000 a
+ 27328 -2000
+a 27328 -2000 a
 SDict begin 10 H.A end
- 27328 -2000 a 27328
--2000 a
+ 27328 -2000 a 27328 -2000 a
 SDict begin [/View [/XYZ H.V]/Dest (section.6) cvn /DEST pdfmark end
- 27328 -2000 a 27353 -893 a Fv(5)1046 b(E)50 b
-Fw(X)g(P)g(O)g(S)g(I)g(T)g(I)g(O)g(N)27328 666 y Fu(Duis)264
-b(autem)h(v)-15 b(el)265 b(eum)g(iriure)f(dolor)g(in)g(hendrerit)g(in)h
-(vulputate)g(v)-15 b(elit)264 b(esse)27328 1773 y(molestie)194
-b(consequat,)206 b(v)-15 b(el)194 b(illum)g(dolore)g(eu)g(feugiat)g
-(nulla)g(f)-10 b(acilisis)193 b(at)h(v)-15 b(ero)27328
-2879 y(eros)254 b(et)h(accumsan)g(et)f(iusto)g(odio)h(dignissim)e(qui)i
-(blandit)f(praesent)h(lupta-)27328 3986 y(tum)285 b(zzril)g(delenit)g
-(augue)g(duis)f(dolore)h(te)g(feug)-5 b(ait)285 b(nulla)f(f)-10
+ 27328 -2000
+a 27353 -893 a Fv(5)1046 b(E)50 b Fw(X)g(P)g(O)g(S)g(I)g(T)g(I)g(O)g(N)
+27328 666 y Fu(Duis)264 b(autem)h(v)-15 b(el)265 b(eum)g(iriure)f
+(dolor)g(in)g(hendrerit)g(in)h(vulputate)g(v)-15 b(elit)264
+b(esse)27328 1773 y(molestie)194 b(consequat,)206 b(v)-15
+b(el)194 b(illum)g(dolore)g(eu)g(feugiat)g(nulla)g(f)-10
+b(acilisis)193 b(at)h(v)-15 b(ero)27328 2879 y(eros)254
+b(et)h(accumsan)g(et)f(iusto)g(odio)h(dignissim)e(qui)i(blandit)f
+(praesent)h(lupta-)27328 3986 y(tum)285 b(zzril)g(delenit)g(augue)g
+(duis)f(dolore)h(te)g(feug)-5 b(ait)285 b(nulla)f(f)-10
 b(acilisi.)415 b(Lorem)27328 5093 y(ipsum)374 b(dolor)g(sit)f(amet,)406
 b(consectetuer)375 b(adipiscing)g(elit,)405 b(sed)374
 b(diam)g(non-)27328 6200 y(ummy)228 b(nibh)f(euismod)h(tincidunt)g(ut)f
 (laoreet)h(dolore)f(magna)i(aliquam)f(erat)27303 7307
 y(v)-20 b(olutpat)250 b([)31130 7307 y
 SDict begin H.S end
- 31130 7307 a Fu(2)31628
-6628 y
+ 31130 7307 a 0
+TeXcolorgray Fu(2)p 0 TeXcolorgray 31628 6628 a
 SDict begin H.R end
- 31628 6628 a 31628 7307 a
+ 31628
+6628 a 31628 7307 a
 SDict begin [/Color [0 1 0]/H /I/Border [0 0 0]BorderArrayPatch/Subtype
 /Link/Dest (cite.Kindlmann:1999:SAG) cvn H.B /ANN pdfmark end
- 31628 7307 a Fu(].)37423
-10231 y
+ 31628 7307 a Fu(].)37423 10231 y
 SDict begin H.S end
- 37423 10231 a 37943 9167 a Fl(z)37582 10444 y
-Fi(\345)37539 11283 y Fl(j)19 b Fg(=)p Fp(1)39023 10231
-y Fe(j)247 b Fd(=)40675 9557 y Fe(z)p Fd(\()p Fe(z)138
-b Fd(+)g Fu(1)p Fd(\))p 40675 10002 3098 40 v 41975 10915
-a Fu(2)43905 10231 y
+
+37423 10231 a 37943 9167 a Fl(z)37582 10444 y Fi(\345)37539
+11283 y Fl(j)19 b Fg(=)p Fp(1)39023 10231 y Fe(j)247
+b Fd(=)40675 9557 y Fe(z)p Fd(\()p Fe(z)138 b Fd(+)g
+Fu(1)p Fd(\))p 40675 10002 3098 40 v 41975 10915 a Fu(2)43905
+10231 y
 SDict begin 10 H.A end
  43905 10231 a 43905 10231 a
 SDict begin [/View [/XYZ H.V]/Dest (equation.7) cvn /DEST pdfmark end
- 43905
-10231 a 8933 w Fu(\(1\))28435 13205 y(Lorem)462 b(ipsum)f(dolor)h(sit)f
-(amet,)516 b(consetetur)462 b(sadipscing)g(elitr)-40
-b(,)515 b(sed)27328 14312 y(diam)368 b(nonumy)f(eirmod)g(tempor)h(in)
--40 b(vidunt)367 b(ut)g(labore)h(et)f(dolore)g(magna)27328
+ 43905 10231 a 0 TeXcolorgray
+8933 w Fu(\(1\))p 0 TeXcolorgray 28435 13205 a(Lorem)462
+b(ipsum)f(dolor)h(sit)f(amet,)516 b(consetetur)462 b(sadipscing)g
+(elitr)-40 b(,)515 b(sed)27328 14312 y(diam)368 b(nonumy)f(eirmod)g
+(tempor)h(in)-40 b(vidunt)367 b(ut)g(labore)h(et)f(dolore)g(magna)27328
 15419 y(aliquyam)288 b(erat,)297 b(sed)286 b(diam)i(v)-20
 b(oluptua.)423 b(At)287 b(v)-15 b(ero)287 b(eos)f(et)h(accusam)h(et)f
 (justo)27328 16525 y(duo)250 b(dolores)g(et)f(ea)h(reb)-20
@@ -4308,17 +4387,17 @@ a 1147 x Fv(5.1)996 b(Lorem)276 b(ipsum)27328 26899 y
 Fu(Lorem)377 b(ipsum)g(dolor)h(sit)e(amet)i(\(see)41268
 26910 y
 SDict begin H.S end
- 41268 26910 a -11 x Fu(T)-80 b(able)378 b(1)44332
-26220 y
+ 41268 26910 a 0 TeXcolorgray -11 x Fu(T)-80 b(able)378
+b(1)p 0 TeXcolorgray 44332 26220 a
 SDict begin H.R end
- 44332 26220 a 44332 26899 a
+ 44332 26220 a 44332
+26899 a
 SDict begin [/Color [1 0 0]/H /I/Border [0 0 0]BorderArrayPatch/Subtype
 /Link/Dest (table.9) cvn H.B /ANN pdfmark end
- 44332 26899 a Fu(\),)409
-b(consetetur)378 b(sadipscing)27328 28006 y(elitr)-40
-b(,)289 b(sed)281 b(diam)g(nonumy)h(eirmod)f(tempor)g(in)-40
-b(vidunt)281 b(ut)g(labore)h(et)f(dolore)27328 29113
-y(magna)312 b(aliquyam)f(erat,)326 b(sed)310 b(diam)h(v)-20
+ 44332 26899 a Fu(\),)409 b(consetetur)378 b(sadipscing)27328
+28006 y(elitr)-40 b(,)289 b(sed)281 b(diam)g(nonumy)h(eirmod)f(tempor)g
+(in)-40 b(vidunt)281 b(ut)g(labore)h(et)f(dolore)27328
+29113 y(magna)312 b(aliquyam)f(erat,)326 b(sed)310 b(diam)h(v)-20
 b(oluptua.)493 b(At)311 b(v)-15 b(ero)310 b(eos)g(et)h(accusam)27328
 30220 y(et)287 b(justo)f(duo)h(dolores)f(et)g(ea)h(reb)-20
 b(um.)421 b(Stet)287 b(clita)f(kasd)h(guber)-18 b(gren,)296
@@ -4351,43 +4430,44 @@ end
 b(Mezcal)277 b(Head)27328 43915 y Fu(Lorem)235 b(ipsum)f(dolor)h(sit)e
 (amet)j(\(see)40412 44131 y
 SDict begin H.S end
- 40412 44131 a -216 x Fu(Fig.)e(1)42722
-43235 y
+ 40412 44131 a 0 TeXcolorgray
+-216 x Fu(Fig.)e(1)p 0 TeXcolorgray 42722 43235 a
 SDict begin H.R end
- 42722 43235 a 42722 43915 a
+ 42722
+43235 a 42722 43915 a
 SDict begin [/Color [1 0 0]/H /I/Border [0 0 0]BorderArrayPatch/Subtype
 /Link/Dest (figure.12) cvn H.B /ANN pdfmark end
- 42722 43915 a Fu(\),)k(consetetur)d
-(sadipscing)f(elitr)-40 b(,)27328 45022 y(sed)198 b(diam)g(nonumy)g
-(eirmod)f(tempor)h(in)-40 b(vidunt)198 b(ut)g(labore)g(et)f(dolore)h
-(magna)27328 46129 y(aliquyam)288 b(erat,)297 b(sed)286
-b(diam)i(v)-20 b(oluptua.)423 b(At)287 b(v)-15 b(ero)287
-b(eos)f(et)h(accusam)h(et)f(justo)27328 47236 y(duo)250
-b(dolores)g(et)f(ea)h(reb)-20 b(um.)311 b(Stet)250 b(clita)g(kasd)f
-(guber)-18 b(gren,)251 b(no)e(sea)h(takimata)27328 48343
-y(sanctus)385 b(est)f(Lorem)g(ipsum)g(dolor)h(sit)e(amet.)716
-b(Lorem)384 b(ipsum)g(dolor)h(sit)27328 49450 y(amet,)274
-b(consetetur)269 b(sadipscing)g(elitr)-40 b(,)273 b(sed)c(diam)g
-(nonumy)g(eirmod)g(tempor)27328 50557 y(in)-40 b(vidunt)302
-b(ut)e(labore)h(et)g(dolore)g(magna)g(aliquyam)h(erat,)314
-b(sed)300 b(diam)h(v)-20 b(olup-)27328 51664 y(tua.)417
-b(At)285 b(v)-15 b(ero)285 b(eos)f(et)h(accusam)h(et)f(justo)f(duo)i
-(dolores)e(et)h(ea)h(reb)-20 b(um.)416 b(Stet)27328 52771
-y(clita)287 b(kasd)e(guber)-18 b(gren,)296 b(no)286 b(sea)g(takimata)h
-(sanctus)f(est)f(Lorem)h(ipsum)f(do-)27328 53877 y(lor)249
-b(sit)g(amet.)27328 54904 y
+ 42722 43915 a Fu(\),)k(consetetur)d(sadipscing)f
+(elitr)-40 b(,)27328 45022 y(sed)198 b(diam)g(nonumy)g(eirmod)f(tempor)
+h(in)-40 b(vidunt)198 b(ut)g(labore)g(et)f(dolore)h(magna)27328
+46129 y(aliquyam)288 b(erat,)297 b(sed)286 b(diam)i(v)-20
+b(oluptua.)423 b(At)287 b(v)-15 b(ero)287 b(eos)f(et)h(accusam)h(et)f
+(justo)27328 47236 y(duo)250 b(dolores)g(et)f(ea)h(reb)-20
+b(um.)311 b(Stet)250 b(clita)g(kasd)f(guber)-18 b(gren,)251
+b(no)e(sea)h(takimata)27328 48343 y(sanctus)385 b(est)f(Lorem)g(ipsum)g
+(dolor)h(sit)e(amet.)716 b(Lorem)384 b(ipsum)g(dolor)h(sit)27328
+49450 y(amet,)274 b(consetetur)269 b(sadipscing)g(elitr)-40
+b(,)273 b(sed)c(diam)g(nonumy)g(eirmod)g(tempor)27328
+50557 y(in)-40 b(vidunt)302 b(ut)e(labore)h(et)g(dolore)g(magna)g
+(aliquyam)h(erat,)314 b(sed)300 b(diam)h(v)-20 b(olup-)27328
+51664 y(tua.)417 b(At)285 b(v)-15 b(ero)285 b(eos)f(et)h(accusam)h(et)f
+(justo)f(duo)i(dolores)e(et)h(ea)h(reb)-20 b(um.)416
+b(Stet)27328 52771 y(clita)287 b(kasd)e(guber)-18 b(gren,)296
+b(no)286 b(sea)g(takimata)h(sanctus)f(est)f(Lorem)h(ipsum)f(do-)27328
+53877 y(lor)249 b(sit)g(amet.)27328 54904 y
 SDict begin H.S end
- 27328 54904 a 27328 54904
-a
+ 27328 54904
+a 27328 54904 a
 SDict begin 10 H.A end
  27328 54904 a 27328 54904 a
 SDict begin [/View [/XYZ H.V]/Dest (subsubsection.11) cvn /DEST pdfmark
 end
- 27328 54904 a 1147 x Fc(5.2.1)996
-b(Duis)278 b(A)-30 b(utem)27328 57610 y Fu(Lorem)592
-b(ipsum)g(dolor)g(sit)f(amet,)679 b(consetetur)592 b(sadipscing)g
-(elitr)-40 b(,)678 b(sed)27328 58716 y(diam)368 b(nonumy)f(eirmod)g
-(tempor)h(in)-40 b(vidunt)367 b(ut)g(labore)h(et)f(dolore)g(magna)27328
+ 27328 54904
+a 1147 x Fc(5.2.1)996 b(Duis)278 b(A)-30 b(utem)27328
+57610 y Fu(Lorem)592 b(ipsum)g(dolor)g(sit)f(amet,)679
+b(consetetur)592 b(sadipscing)g(elitr)-40 b(,)678 b(sed)27328
+58716 y(diam)368 b(nonumy)f(eirmod)g(tempor)h(in)-40
+b(vidunt)367 b(ut)g(labore)h(et)f(dolore)g(magna)27328
 59823 y(aliquyam)288 b(erat,)297 b(sed)286 b(diam)i(v)-20
 b(oluptua.)423 b(At)287 b(v)-15 b(ero)287 b(eos)f(et)h(accusam)h(et)f
 (justo)27328 60930 y(duo)250 b(dolores)g(et)f(ea)h(reb)-20
@@ -4411,31 +4491,34 @@ b(oluptua.)493 b(At)311 b(v)-15 b(ero)310 b(eos)g(et)h(accusam)27328
 70893 y(et)287 b(justo)f(duo)h(dolores)f(et)g(ea)h(reb)-20
 b(um.)421 b(Stet)287 b(clita)f(kasd)h(guber)-18 b(gren,)296
 b(no)287 b(sea)27328 72000 y(takimata)250 b(sanctus)g(est.)308
-b(Lorem)249 b(ipsum)g(dolor)g(sit)g(amet.)p eop end
+b(Lorem)249 b(ipsum)g(dolor)g(sit)g(amet.)p 0 TeXcolorgray
+0 TeXcolorgray eop end
 %%Page: 3 3
-TeXDict begin 3 2 bop 0 0 a
+TeXDict begin 3 2 bop 0 TeXcolorgray 0 0 a
 SDict begin /product where{pop product(Distiller)search{pop pop pop
 version(.)search{exch pop exch pop(3011)eq{gsave newpath 0 0 moveto
 closepath clip/Courier findfont 10 scalefont setfont 72 72 moveto(.)show
 grestore}if}{pop}ifelse}{pop}ifelse}if end
- 0 0 a -2111 -5711 a
+ 0 0 a -2111
+-5711 a
 SDict begin H.S end
- -2111
--5711 a -2111 -5711 a
-SDict begin H.R end
  -2111 -5711 a -2111 -5711 a
-SDict begin [/View [/XYZ H.V]/Dest (page.3) cvn /DEST pdfmark end
- -2111
--5711 a -1027 -1347 a Fx(T)-106 b(ab)-18 b(le)247 b(1:)2353
--1162 y
-SDict begin H.S end
- 2353 -1162 a -185 x Fx(VIS/VisW)-27 b(eek)246
-b(accepted/presented)k(papers:)306 b(1990\2262016.)23696
--2000 y
 SDict begin H.R end
- 23696 -2000 a 23696 -1347 a
+ -2111 -5711 a -2111
+-5711 a
+SDict begin [/View [/XYZ H.V]/Dest (page.3) cvn /DEST pdfmark end
+ -2111 -5711 a 0 TeXcolorgray 0 TeXcolorgray 0
+TeXcolorgray 0 TeXcolorgray -1027 -1347 a Fx(T)-106 b(ab)-18
+b(le)247 b(1:)2353 -1162 y
+SDict begin H.S end
+ 2353 -1162 a 0 TeXcolorgray
+-185 x Fx(VIS/VisW)-27 b(eek)246 b(accepted/presented)k(papers:)306
+b(1990\2262016.)p 0 TeXcolorgray 23696 -2000 a
+SDict begin H.R end
+ 23696
+-2000 a 23696 -1347 a
 SDict begin [/View [/XYZ H.V]/Dest (table.9) cvn /DEST pdfmark end
- 23696 -1347 a -2000
+ 23696 -1347 a 0 TeXcolorgray -2000
 -410 26741 89 v -1089 6939 a Fn(year)2945 6939 y
  gsave currentpoint currentpoint translate 90 neg rotate neg exch neg
 exch translate
@@ -4537,51 +4620,52 @@ y(1992)1770 b(53)16999 b(53)2214 b(53)-1336 34837 y(1991)1770
 b(50)16999 b(50)2214 b(50)-1336 35888 y(1990)1770 b(53)16999
 b(53)2214 b(53)p -2000 36450 V -1139 37496 a Fb(sum)1329
 b(1545)1414 b(9)h(632)1328 b(310)f(50)h(123)g(25)g(2694)f(2546)p
--2000 38090 26741 89 v -2000 40361 a
+-2000 38090 26741 89 v 0 TeXcolorgray -2000 40361 a
 SDict begin H.S end
- -2000 40361 a -2000
-40361 a
+ -2000
+40361 a -2000 40361 a
 SDict begin 10 H.A end
  -2000 40361 a -2000 40361 a
 SDict begin [/View [/XYZ H.V]/Dest (subsubsection.13) cvn /DEST pdfmark
 end
- -2000 40361 a 1107
-x Fc(5.2.2)996 b(Ejector)276 b(Seat)g(Reser)30 b(v)-25
-b(ation)-2000 42985 y Fu(Duis)269 b(autem)h([)3187 42985
-y
+ -2000
+40361 a 1107 x Fc(5.2.2)996 b(Ejector)276 b(Seat)g(Reser)30
+b(v)-25 b(ation)-2000 42985 y Fu(Duis)269 b(autem)h([)3187
+42985 y
 SDict begin H.S end
- 3187 42985 a Fu(4)3685 42306 y
+ 3187 42985 a 0 TeXcolorgray Fu(4)p 0 TeXcolorgray
+3685 42306 a
 SDict begin H.R end
- 3685 42306 a 3685 42985
-a
+ 3685 42306 a 3685 42985 a
 SDict begin [/Color [0 1 0]/H /I/Border [0 0 0]BorderArrayPatch/Subtype
 /Link/Dest (cite.Lorensen:1987:MCA) cvn H.B /ANN pdfmark end
- 3685 42985 a Fu(])4017 42985 y
+ 3685 42985 a Fu(])4017
+42985 y
 SDict begin H.S end
- 4017 42985 a -361 x
-Fp(1)4459 42985 y
+ 4017 42985 a -361 x Fp(1)4459 42985 y
 SDict begin 10 H.L end
- 4459 42985 a 4459 42985 a
+ 4459 42985
+a 4459 42985 a
 SDict begin [/Subtype /Link/Dest (Hfootnote.14) cvn/H /I/Border [0
 0 0]BorderArrayPatch/Color [1 0 0] H.B /ANN pdfmark end
- 4459 42985
-a 270 w Fu(v)-15 b(el)269 b(eum)h(iriure)f(dolor)g(in)g(hendrerit)h(in)
-f(vulputate)h(v)-15 b(elit)-2000 44092 y(esse)257 b(molestie)h
-(consequat,)7783 44092 y
+ 4459 42985 a 270 w Fu(v)-15 b(el)269 b(eum)h(iriure)f
+(dolor)g(in)g(hendrerit)h(in)f(vulputate)h(v)-15 b(elit)-2000
+44092 y(esse)257 b(molestie)h(consequat,)7783 44092 y
 SDict begin H.S end
- 7783 44092 a -361 x Fp(2)8227
-44092 y
+
+7783 44092 a -361 x Fp(2)8227 44092 y
 SDict begin 10 H.L end
- 8227 44092 a 8227 44092 a
+ 8227 44092 a 8227
+44092 a
 SDict begin [/Subtype /Link/Dest (Hfootnote.15) cvn/H /I/Border [0
 0 0]BorderArrayPatch/Color [1 0 0] H.B /ANN pdfmark end
- 8227 44092 a 259 w
-Fu(v)-15 b(el)258 b(illum)g(dolore)f(eu)h(feugiat)g(nulla)g(f)-10
-b(acilisis)-2000 45199 y(at)333 b(v)-15 b(ero)334 b(eros)f(et)g
-(accumsan)i(et)e(iusto)g(odio)g(dignissim)g(qui)g(blandit)h(prae-)-2000
-46306 y(sent)221 b(luptatum)g(zzril)g(delenit)g(augue)h(duis)f(dolore)g
-(te)g(feug)-5 b(ait)221 b(nulla)g(f)-10 b(acilisi.)-2000
-47413 y(Lorem)269 b(ipsum)g(dolor)g(sit)g(amet,)275 b(consectetuer)270
+ 8227 44092 a 259 w Fu(v)-15 b(el)258 b(illum)g(dolore)f(eu)h
+(feugiat)g(nulla)g(f)-10 b(acilisis)-2000 45199 y(at)333
+b(v)-15 b(ero)334 b(eros)f(et)g(accumsan)i(et)e(iusto)g(odio)g
+(dignissim)g(qui)g(blandit)h(prae-)-2000 46306 y(sent)221
+b(luptatum)g(zzril)g(delenit)g(augue)h(duis)f(dolore)g(te)g(feug)-5
+b(ait)221 b(nulla)g(f)-10 b(acilisi.)-2000 47413 y(Lorem)269
+b(ipsum)g(dolor)g(sit)g(amet,)275 b(consectetuer)270
 b(adipiscing)g(elit,)k(sed)269 b(diam)-2000 48520 y(nonummy)256
 b(nibh)g(euismod)g(tincidunt)g(ut)f(laoreet)h(dolore)g(magna)h(aliquam)
 -2000 49627 y(erat)249 b(v)-20 b(olutpat.)-2000 51326
@@ -4600,30 +4684,31 @@ b(x)g(erci)233 b(tation)g(ullamcorper)h(suscipit)e(lobortis)g(nisl)
 -2000 53540 y(ut)338 b(aliquip)g(e)-15 b(x)338 b(ea)g(commodo)g
 (consequat)h([)13679 53554 y
 SDict begin H.S end
- 13679 53554 a -14 x Fu(6)14177
-52860 y
+ 13679 53554 a 0 TeXcolorgray
+-14 x Fu(6)p 0 TeXcolorgray 14177 52860 a
 SDict begin H.R end
- 14177 52860 a 14177 53540 a
+ 14177 52860
+a 14177 53540 a
 SDict begin [/Color [0 1 0]/H /I/Border [0 0 0]BorderArrayPatch/Subtype
 /Link/Dest (cite.Nielson:1991:TAD) cvn H.B /ANN pdfmark end
- 14177 53540 a Fu(].)574
-b(Duis)337 b(autem)h(v)-15 b(el)338 b(eum)g(ir)-20 b(-)-2000
-54647 y(iure)363 b(dolor)g(in)f(hendrerit)h(in)g(vulputate)h(v)-15
-b(elit)363 b(esse)f(molestie)h(consequat,)-2025 55754
-y(v)-15 b(el)298 b(illum)g(dolore)g(eu)g(feugiat)g(nulla)g(f)-10
-b(acilisis)297 b(at)h(v)-15 b(ero)298 b(eros)g(et)f(accumsan)-2000
-56861 y(et)332 b(iusto)f(odio)h(dignissim)e(qui)i(blandit)g(praesent)g
-(luptatum)g(zzril)g(delenit)-2000 57968 y(augue)250 b(duis)f(dolore)g
-(te)h(feug)-5 b(ait)249 b(nulla)h(f)-10 b(acilisi.)-2000
-59666 y
+ 14177 53540 a Fu(].)574 b(Duis)337 b(autem)h(v)-15
+b(el)338 b(eum)g(ir)-20 b(-)-2000 54647 y(iure)363 b(dolor)g(in)f
+(hendrerit)h(in)g(vulputate)h(v)-15 b(elit)363 b(esse)f(molestie)h
+(consequat,)-2025 55754 y(v)-15 b(el)298 b(illum)g(dolore)g(eu)g
+(feugiat)g(nulla)g(f)-10 b(acilisis)297 b(at)h(v)-15
+b(ero)298 b(eros)g(et)f(accumsan)-2000 56861 y(et)332
+b(iusto)f(odio)h(dignissim)e(qui)i(blandit)g(praesent)g(luptatum)g
+(zzril)g(delenit)-2000 57968 y(augue)250 b(duis)f(dolore)g(te)h(feug)-5
+b(ait)249 b(nulla)h(f)-10 b(acilisi.)-2000 59666 y
 SDict begin H.S end
- -2000 59666 a -2000 59666 a
+ -2000
+59666 a -2000 59666 a
 SDict begin 10 H.A end
- -2000 59666 a -2000
-59666 a
+ -2000 59666 a -2000 59666 a
 SDict begin [/View [/XYZ H.V]/Dest (section*.17) cvn /DEST pdfmark
 end
- -2000 59666 a 996 w Fc(Rejected)317 b(Ejector)e(Seat)g(Reser)30
+ -2000
+59666 a 996 w Fc(Rejected)317 b(Ejector)e(Seat)g(Reser)30
 b(v)-25 b(ation)997 b Fu(Ut)284 b(wisi)h(enim)g(ad)f(minim)-2025
 60773 y(v)-15 b(eniam,)237 b(quis)232 b(nostrud)h(e)-15
 b(x)g(erci)233 b(tation)g(ullamcorper)h(suscipit)e(lobortis)g(nisl)
@@ -4642,48 +4727,52 @@ a -1975 65134 a Fv(6)1046 b(C)50 b Fw(O)g(N)g(C)g(L)g(U)g(S)g(I)g(O)g
 (N)-2000 66651 y Fu(Lorem)592 b(ipsum)g(dolor)g(sit)f(amet,)678
 b(consetetur)593 b(sadipscing)f(elitr)-40 b(,)678 b(sed)-2000
 67758 y(diam)367 b(nonumy)h(eirmod)f(tempor)g(in)-40
-b(vidunt)368 b(ut)f(labore)g(et)g(dolore)h(magna)p 6000
-68796 12003 45 v -793 69537 a Fo(1)-406 70050 y
+b(vidunt)368 b(ut)f(labore)g(et)g(dolore)h(magna)p 0
+TeXcolorgray 6000 68796 12003 45 v -793 69537 a Fo(1)-406
+70050 y
 SDict begin H.S end
- -406
-70050 a -192 x Fn(The)245 b(algorithm)g(behind)g(Marching)g(Cubes)g([)
-14003 69858 y
+ -406 70050 a 0 TeXcolorgray -192 x Fn(The)245
+b(algorithm)g(behind)g(Marching)g(Cubes)g([)14003 69858
+y
 SDict begin H.S end
- 14003 69858 a Fn(4)14446 69255 y
+ 14003 69858 a 0 TeXcolorgray Fn(4)p 0 TeXcolorgray
+14446 69255 a
 SDict begin H.R end
- 14446
-69255 a 14446 69858 a
+ 14446 69255 a 14446 69858 a
 SDict begin [/Color [0 1 0]/H /I/Border [0 0 0]BorderArrayPatch/Subtype
 /Link/Dest (cite.Lorensen:1987:MCA) cvn H.B /ANN pdfmark end
- 14446 69858 a Fn(])g(had)g(already)g(been)g
-(described)-2000 70910 y(by)221 b(W)-65 b(yvill)222 b(et)g(al.)g([)3962
-70917 y
+ 14446 69858
+a Fn(])g(had)g(already)g(been)g(described)-2000 70910
+y(by)221 b(W)-65 b(yvill)222 b(et)g(al.)g([)3962 70917
+y
 SDict begin H.S end
- 3962 70917 a -7 x Fn(7)4405 70319 y
+ 3962 70917 a 0 TeXcolorgray -7 x Fn(7)p 0 TeXcolorgray
+4405 70319 a
 SDict begin H.R end
- 4405 70319
-a 4405 70910 a
+ 4405 70319 a 4405 70910 a
 SDict begin [/Color [0 1 0]/H /I/Border [0 0 0]BorderArrayPatch/Subtype
 /Link/Dest (cite.Wyvill:1986:DSS) cvn H.B /ANN pdfmark end
- 4405 70910 a Fn(])f(a)g(year)h(earlier)-49
-b(.)9714 70306 y
+ 4405 70910 a Fn(])f(a)g(year)h
+(earlier)-49 b(.)p 0 TeXcolorgray 9714 70306 a
 SDict begin H.R end
- 9714 70306 a 9714 70910 a
+ 9714 70306
+a 9714 70910 a
 SDict begin [/View [/XYZ H.V]/Dest (Hfootnote.14) cvn /DEST pdfmark
 end
- 9714 70910
-a -793 71679 a Fo(2)-406 72192 y
+ 9714 70910 a -793 71679 a Fo(2)-406 72192
+y
 SDict begin H.S end
- -406 72192 a -192 x
-Fn(F)-13 b(ootnotes)222 b(appear)f(at)h(the)f(bottom)g(of)h(the)f
-(column.)15913 71396 y
+ -406 72192 a 0 TeXcolorgray -192 x Fn(F)-13 b(ootnotes)222
+b(appear)f(at)h(the)f(bottom)g(of)h(the)f(column.)p 0
+TeXcolorgray 15913 71396 a
 SDict begin H.R end
- 15913 71396 a 15913 72000 a
+ 15913 71396 a 15913 72000
+a
 SDict begin [/View [/XYZ H.V]/Dest (Hfootnote.15) cvn /DEST pdfmark
 end
- 15913
-72000 a 27328 11303 a @beginspecial 0 @llx 0 @lly 830
-@urx 414 @ury 2400 @rwi @setspecial
+ 15913 72000 a 0 TeXcolorgray 0 TeXcolorgray 0 TeXcolorgray
+0 TeXcolorgray 27328 11303 a @beginspecial 0 @llx 0 @lly
+830 @urx 414 @ury 2400 @rwi @setspecial
 %%BeginDocument: pictures/paper-count-w-2015-new.eps
 %!PS-Adobe-3.1 EPSF-3.0
 %ADO_DSC_Encoding: Windows Roman
@@ -18463,38 +18552,40 @@ userdict /ai9_skip_data get exec
  @endspecial 2159 x Fx(Figure)314 b(1:)31328 13659 y
 SDict begin H.S end
 
-31328 13659 a -197 x Fx(A)e(visualization)h(of)g(the)h(1990\2262015)j
-(data)d(from)48827 13477 y
+31328 13659 a 0 TeXcolorgray -197 x Fx(A)e(visualization)h(of)g(the)h
+(1990\2262015)j(data)d(from)48827 13477 y
 SDict begin H.S end
- 48827 13477 a -15 x Fx(T)-106
-b(ab)-18 b(le)314 b(1)51723 12822 y
+ 48827 13477
+a 0 TeXcolorgray -15 x Fx(T)-106 b(ab)-18 b(le)314 b(1)p
+0 TeXcolorgray 51723 12822 a
 SDict begin H.R end
- 51723 12822 a 51723
-13462 a
+ 51723 12822 a 51723 13462
+a
 SDict begin [/Color [1 0 0]/H /I/Border [0 0 0]BorderArrayPatch/Subtype
 /Link/Dest (table.9) cvn H.B /ANN pdfmark end
  51723 13462 a Fx(.)505 b(The)27328 14513 y(image)247
 b(is)e(from)i([)33135 14513 y
 SDict begin H.S end
- 33135 14513 a Fx(1)33627
-13889 y
+ 33135 14513 a 0 TeXcolorgray
+Fx(1)p 0 TeXcolorgray 33627 13889 a
 SDict begin H.R end
- 33627 13889 a 33627 14513 a
+ 33627 13889 a 33627
+14513 a
 SDict begin [/Color [0 1 0]/H /I/Border [0 0 0]BorderArrayPatch/Subtype
 /Link/Dest (cite.Isenberg:2017:VMC) cvn H.B /ANN pdfmark end
- 33627 14513 a Fx(])g(and)g(is)f(in)
-g(the)h(pub)-18 b(lic)246 b(domain.)44831 13866 y
+ 33627 14513 a Fx(])g(and)g(is)f(in)g(the)h(pub)-18
+b(lic)246 b(domain.)p 0 TeXcolorgray 44831 13866 a
 SDict begin H.R end
  44831
 13866 a 44831 14513 a
 SDict begin [/View [/XYZ H.V]/Dest (figure.12) cvn /DEST pdfmark end
- 44831 14513 a 27328 18031 a Fu(aliquyam)288
-b(erat,)297 b(sed)286 b(diam)i(v)-20 b(oluptua.)423 b(At)287
-b(v)-15 b(ero)287 b(eos)f(et)h(accusam)h(et)f(justo)27328
-19138 y(duo)250 b(dolores)g(et)f(ea)h(reb)-20 b(um.)311
-b(Stet)250 b(clita)g(kasd)f(guber)-18 b(gren,)251 b(no)e(sea)h
-(takimata)27328 20245 y(sanctus)385 b(est)f(Lorem)g(ipsum)g(dolor)h
-(sit)e(amet.)716 b(Lorem)384 b(ipsum)g(dolor)h(sit)27328
+ 44831 14513 a 0 TeXcolorgray 27328
+18031 a Fu(aliquyam)288 b(erat,)297 b(sed)286 b(diam)i(v)-20
+b(oluptua.)423 b(At)287 b(v)-15 b(ero)287 b(eos)f(et)h(accusam)h(et)f
+(justo)27328 19138 y(duo)250 b(dolores)g(et)f(ea)h(reb)-20
+b(um.)311 b(Stet)250 b(clita)g(kasd)f(guber)-18 b(gren,)251
+b(no)e(sea)h(takimata)27328 20245 y(sanctus)385 b(est)f(Lorem)g(ipsum)g
+(dolor)h(sit)e(amet.)716 b(Lorem)384 b(ipsum)g(dolor)h(sit)27328
 21352 y(amet,)274 b(consetetur)269 b(sadipscing)g(elitr)-40
 b(,)273 b(sed)c(diam)g(nonumy)g(eirmod)g(tempor)27328
 22459 y(in)-40 b(vidunt)302 b(ut)e(labore)h(et)g(dolore)g(magna)g
@@ -18540,43 +18631,45 @@ SDict begin 9.5 H.A end
 a 27328 36056 a
 SDict begin [/View [/XYZ H.V]/Dest (cite.Isenberg:2017:VMC) cvn /DEST
 pdfmark end
- 27328 36056 a 1035 x Fn([1])553 b(P)-98
-b(.)188 b(Isenber)-16 b(g,)194 b(F)-71 b(.)187 b(Heimerl,)195
-b(S.)188 b(K)-31 b(och,)194 b(T)-66 b(.)188 b(Isenber)-16
-b(g,)194 b(P)-98 b(.)187 b(Xu,)194 b(C.)187 b(Stolper)-35
-b(,)194 b(M.)188 b(Sedl-)28914 38143 y(mair)-35 b(,)324
-b(J.)304 b(Chen,)323 b(T)-66 b(.)304 b(M)36191 38139
-y(\250)36117 38143 y(oller)-35 b(,)324 b(and)303 b(J.)h(Stask)-9
-b(o.)581 b(vispubdata.or)-16 b(g:)438 b(A)304 b(Metadata)28914
-39194 y(Collection)277 b(about)f(IEEE)g(V)-53 b(isualization)278
-b(\(VIS\))f(Publications.)496 b Fa(IEEE)276 b(T)-49 b(r)-13
-b(ans-)28914 40246 y(actions)237 b(on)f(V)-66 b(isualization)238
-b(and)e(Computer)h(Gr)-13 b(aphics)p Fn(,)242 b(23,)e(2017.)367
-b(T)-71 b(o)236 b(appear)-49 b(.)28914 41297 y(doi:)275
-b(10)11 b(.)44 b(1109/TVCG)11 b(.)44 b(2016)11 b(.)44
-b(2615308)27328 41316 y
+ 27328 36056 a 0 TeXcolorgray 1035 x Fn([1])p
+0 TeXcolorgray 553 w(P)-98 b(.)188 b(Isenber)-16 b(g,)194
+b(F)-71 b(.)187 b(Heimerl,)195 b(S.)188 b(K)-31 b(och,)194
+b(T)-66 b(.)188 b(Isenber)-16 b(g,)194 b(P)-98 b(.)187
+b(Xu,)194 b(C.)187 b(Stolper)-35 b(,)194 b(M.)188 b(Sedl-)28914
+38143 y(mair)-35 b(,)324 b(J.)304 b(Chen,)323 b(T)-66
+b(.)304 b(M)36191 38139 y(\250)36117 38143 y(oller)-35
+b(,)324 b(and)303 b(J.)h(Stask)-9 b(o.)581 b(vispubdata.or)-16
+b(g:)438 b(A)304 b(Metadata)28914 39194 y(Collection)277
+b(about)f(IEEE)g(V)-53 b(isualization)278 b(\(VIS\))f(Publications.)496
+b Fa(IEEE)276 b(T)-49 b(r)-13 b(ans-)28914 40246 y(actions)237
+b(on)f(V)-66 b(isualization)238 b(and)e(Computer)h(Gr)-13
+b(aphics)p Fn(,)242 b(23,)e(2017.)367 b(T)-71 b(o)236
+b(appear)-49 b(.)28914 41297 y(doi:)275 b(10)11 b(.)44
+b(1109/TVCG)11 b(.)44 b(2016)11 b(.)44 b(2615308)27328
+41316 y
 SDict begin H.S end
  27328 41316 a 27328 41316 a
 SDict begin 9.5 H.A end
- 27328
-41316 a 27328 41316 a
+ 27328 41316 a 27328
+41316 a
 SDict begin [/View [/XYZ H.V]/Dest (cite.Kindlmann:1999:SAG) cvn /DEST
 pdfmark end
- 27328 41316 a 1033 x Fn([2])553
-b(G.)242 b(Kindlmann.)381 b(Semi-automatic)241 b(generation)g(of)f
-(transfer)h(functions)g(for)f(di-)28914 43401 y(rect)221
-b(v)-18 b(olume)221 b(rendering.)317 b(Master')-49 b(s)223
-b(thesis,)f(Cornell)e(Uni)-22 b(v)-13 b(ersity)-58 b(,)222
-b(USA,)g(1999.)27328 43593 y
+ 27328 41316 a 0 TeXcolorgray 1033 x Fn([2])p
+0 TeXcolorgray 553 w(G.)242 b(Kindlmann.)381 b(Semi-automatic)241
+b(generation)g(of)f(transfer)h(functions)g(for)f(di-)28914
+43401 y(rect)221 b(v)-18 b(olume)221 b(rendering.)317
+b(Master')-49 b(s)223 b(thesis,)f(Cornell)e(Uni)-22 b(v)-13
+b(ersity)-58 b(,)222 b(USA,)g(1999.)27328 43593 y
 SDict begin H.S end
- 27328 43593 a 27328 43593
-a
+ 27328
+43593 a 27328 43593 a
 SDict begin 9.5 H.A end
  27328 43593 a 27328 43593 a
 SDict begin [/View [/XYZ H.V]/Dest (cite.Kitware:2003) cvn /DEST pdfmark
 end
- 27328 43593 a 859 x Fn([3])553
-b(Kitw)-9 b(are,)224 b(Inc.)319 b Fa(The)222 b(V)-66
+ 27328
+43593 a 0 TeXcolorgray 859 x Fn([3])p 0 TeXcolorgray
+553 w(Kitw)-9 b(are,)224 b(Inc.)319 b Fa(The)222 b(V)-66
 b(isualization)222 b(T)-81 b(oolkit)222 b(User')-35 b(s)223
 b(Guide)p Fn(,)f(January)f(2003.)27328 44644 y
 SDict begin H.S end
@@ -18587,22 +18680,23 @@ SDict begin 9.5 H.A end
 SDict begin [/View [/XYZ H.V]/Dest (cite.Lorensen:1987:MCA) cvn /DEST
 pdfmark end
  27328
-44644 a 860 x Fn([4])553 b(W)-81 b(.)289 b(E.)h(Lorensen)f(and)g(H.)h
-(E.)g(Cline.)536 b(Marching)289 b(cubes:)411 b(A)289
-b(high)g(resolution)28914 46555 y(3D)316 b(surf)-9 b(ace)316
-b(construction)g(algorithm.)620 b Fa(SIGGRAPH)317 b(Computer)f(Gr)-13
-b(aphics)p Fn(,)28914 47607 y(21\(4\):163\226169,)220
-b(Aug.)i(1987.)f(doi:)274 b(10)11 b(.)44 b(1145/37402)11
-b(.)44 b(37422)27328 47799 y
+44644 a 0 TeXcolorgray 860 x Fn([4])p 0 TeXcolorgray
+553 w(W)-81 b(.)289 b(E.)h(Lorensen)f(and)g(H.)h(E.)g(Cline.)536
+b(Marching)289 b(cubes:)411 b(A)289 b(high)g(resolution)28914
+46555 y(3D)316 b(surf)-9 b(ace)316 b(construction)g(algorithm.)620
+b Fa(SIGGRAPH)317 b(Computer)f(Gr)-13 b(aphics)p Fn(,)28914
+47607 y(21\(4\):163\226169,)220 b(Aug.)i(1987.)f(doi:)274
+b(10)11 b(.)44 b(1145/37402)11 b(.)44 b(37422)27328 47799
+y
 SDict begin H.S end
+ 27328 47799 a 27328 47799 a
+SDict begin 9.5 H.A end
  27328 47799 a 27328 47799
 a
-SDict begin 9.5 H.A end
- 27328 47799 a 27328 47799 a
 SDict begin [/View [/XYZ H.V]/Dest (cite.Max:1995:OMF) cvn /DEST pdfmark
 end
- 27328 47799 a 860 x Fn([5])553
-b(N.)284 b(Max.)514 b(Optical)284 b(models)f(for)f(direct)g(v)-18
+ 27328 47799 a 0 TeXcolorgray 860 x Fn([5])p 0 TeXcolorgray
+553 w(N.)284 b(Max.)514 b(Optical)284 b(models)f(for)f(direct)g(v)-18
 b(olume)283 b(rendering.)514 b Fa(IEEE)282 b(T)-49 b(r)-13
 b(ansac-)28914 49710 y(tions)178 b(on)e(V)-66 b(isualization)178
 b(and)f(Computer)g(Gr)-13 b(aphics)p Fn(,)187 b(1\(2\):99\226108,)d
@@ -18616,11 +18710,12 @@ SDict begin 9.5 H.A end
 SDict begin [/View [/XYZ H.V]/Dest (cite.Nielson:1991:TAD) cvn /DEST
 pdfmark end
  27328 50781
-a 1032 x Fn([6])553 b(G.)214 b(M.)g(Nielson)f(and)g(B.)g(Hamann.)301
-b(The)213 b(asymptotic)g(decider:)271 b(Remo)-13 b(ving)212
-b(the)28914 52865 y(ambiguity)239 b(in)g(marching)g(cubes.)375
-b(In)239 b Fa(Pr)-40 b(oc.)240 b(V)-66 b(isualization)p
-Fn(,)245 b(pp.)239 b(83\22691.)f(IEEE)28914 53917 y(Computer)309
+a 0 TeXcolorgray 1032 x Fn([6])p 0 TeXcolorgray 553 w(G.)214
+b(M.)g(Nielson)f(and)g(B.)g(Hamann.)301 b(The)213 b(asymptotic)g
+(decider:)271 b(Remo)-13 b(ving)212 b(the)28914 52865
+y(ambiguity)239 b(in)g(marching)g(cubes.)375 b(In)239
+b Fa(Pr)-40 b(oc.)240 b(V)-66 b(isualization)p Fn(,)245
+b(pp.)239 b(83\22691.)f(IEEE)28914 53917 y(Computer)309
 b(Society)-58 b(,)332 b(Los)310 b(Alamitos,)332 b(1991.)309
 b(doi:)450 b(10)11 b(.)44 b(1109/VISU)-35 b(AL)11 b(.)44
 b(1991)11 b(.)28848 54968 y(175782)27328 54980 y
@@ -18632,13 +18727,13 @@ SDict begin 9.5 H.A end
 SDict begin [/View [/XYZ H.V]/Dest (cite.Wyvill:1986:DSS) cvn /DEST
 pdfmark end
  27328
-54980 a 1040 x Fn([7])553 b(G.)297 b(W)-65 b(yvill,)316
-b(C.)296 b(McPheeters,)316 b(and)296 b(B.)g(W)-65 b(yvill.)558
-b(Data)297 b(structure)g(for)e Fa(soft)313 b Fn(ob-)28914
-57072 y(jects.)523 b Fa(The)285 b(V)-66 b(isual)286 b(Computer)p
-Fn(,)301 b(2\(4\):227\226234,)e(Aug.)285 b(1986.)f(doi:)401
-b(10)11 b(.)44 b(1007/)28914 58123 y(BF01900346)p eop
-end
+54980 a 0 TeXcolorgray 1040 x Fn([7])p 0 TeXcolorgray
+553 w(G.)297 b(W)-65 b(yvill,)316 b(C.)296 b(McPheeters,)316
+b(and)296 b(B.)g(W)-65 b(yvill.)558 b(Data)297 b(structure)g(for)e
+Fa(soft)313 b Fn(ob-)28914 57072 y(jects.)523 b Fa(The)285
+b(V)-66 b(isual)286 b(Computer)p Fn(,)301 b(2\(4\):227\226234,)e(Aug.)
+285 b(1986.)f(doi:)401 b(10)11 b(.)44 b(1007/)28914 58123
+y(BF01900346)p 0 TeXcolorgray 0 TeXcolorgray eop end
 %%Trailer
 
 userdict /end-hook known{end-hook}if

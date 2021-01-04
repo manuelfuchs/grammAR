@@ -1,4 +1,9 @@
 % `vgtc' LaTeX class.
+% - modifications by Cagatay Turkay and Soumya Dutta on 2019/09/11
+%   - modified the preprint article style to contain the IEEE copyright notices to produce IEEE compliant OA preprints.
+%   - included two different statements for journal and conference papers
+%   - added a new command \ieeedoi for authors to set IEEE generated DOIs on their preprints
+%   - added comments on the template.tex for preprint guidance
 % - modifications by Tobias Isenberg on 2017/07/05
 %   - updated the instructions for author footer in template.tex for the journal template
 % - modifications by Tobias Isenberg on 2017/06/14
@@ -175,6 +180,7 @@
 \ifpdf%                    % if we use pdflatex
  \renewcommand{\vgtcinsertpkg}{%
   \usepackage{hyperref}
+  \usepackage{xcolor}
   \hypersetup{pdftex,
    pagebackref=true,
    pdfpagemode=UseNone,
@@ -210,6 +216,7 @@
 \else%                     % else we use pure latex
  \renewcommand{\vgtcinsertpkg}{%
   \usepackage{hyperref}
+  \usepackage{xcolor}
   \hypersetup{dvips,
    pagebackref=true,
    pdfpagemode=UseNone,
@@ -330,8 +337,18 @@
 \newcommand{\vgtc@onlineid}{}
 \newcommand{\onlineid}[1]{\renewcommand{\vgtc@onlineid}{#1}}
 
-\newcommand{\vgtc@preprinttext}{To appear in IEEE Transactions on Visualization and Computer Graphics}
+%\newcommand{\vgtc@preprinttext}{To appear in IEEE Transactions on Visualization and Computer Graphics}
+%\newcommand{\preprinttext}[1]{\renewcommand{\vgtc@preprinttext}{#1}}
+
+\newcommand{\vgtc@DOI}{xx.xxxx/TVCG.201x.xxxxxxx/}
+
+\newcommand{\vgtc@preprinttext}{\parbox{0.9\textwidth}{$\copyright$ \the\year~IEEE. This is the author's version of the article that has been published in the proceedings of IEEE Visualization conference. The final version of this record is available at: \href{https://doi.org/\vgtc@DOI}{\color{blue}\vgtc@DOI}}}
+
+
+
 \newcommand{\preprinttext}[1]{\renewcommand{\vgtc@preprinttext}{#1}}
+\newcommand{\ieeedoi}[1]{\renewcommand{\vgtc@DOI}{#1}}
+
 
 \newcommand{\vgtc@reviewtext}{Online Submission ID: \vgtc@onlineid}
 \newcommand{\reviewtext}[1]{\renewcommand{\vgtc@reviewtext}{#1}}
@@ -428,7 +445,7 @@ Manuscript received xx xxx. 201x; accepted xx xxx. 201x. Date of Publication xx 
    \renewcommand{\@oddfoot}{}%
 
    \ifvgtc@preprint%
-     \renewcommand{\@oddhead}{\hfil\textit{\large\vgtc@preprinttext}\hfil}%
+     \renewcommand{\@oddhead}{\hfil\textit{\vgtc@preprinttext}\hfil}%
      \renewcommand{\@oddfoot}{\hfil\textrm{\thepage}\hfil}%
    \fi%
 
