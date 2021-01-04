@@ -24,10 +24,10 @@
 #adjust the following for your purpose
 
 #set the a .dvi name that corresponds to your main .tex file
-DVIFILES = template.dvi
+DVIFILES = main.dvi
 MAINTEXFILE = $(DVIFILES:.dvi=.tex)
 SUBTEXFILES = 
-BIBFILES = template.bib
+BIBFILES = references.bib
 
 #switch = to # when using ps2pdf in win32 (mingw/msys), i.e. uncomment 2nd line
 #E=\=
@@ -130,7 +130,7 @@ $(MAINTEXFILE) : $(SUBTEXFILES) $(BIBFILES)
 	"-dColorImageFilter$E/FlateEncode" \
 	"-dGrayImageFilter$E/FlateEncode" \
 	"-dMonoImageFilter$E/FlateEncode" \
-	$< template.pdf
+	$< main.pdf
 
 #				$(PDFLATEX) $<
 
@@ -146,12 +146,12 @@ $(MAINTEXFILE) : $(SUBTEXFILES) $(BIBFILES)
 	"-dMonoImageFilter=/FlateEncode" \
 	"-dDownsampleGrayImages=false" \
 	"-dDownsampleColorImages=false" \
-	$< template.pdf
+	$< main.pdf
 #                               $(PDFLATEX) $<
 
 # cleans anything that can be re-generated automatically, plus emacs backups
 clean: 
 				rm -f *.aux *.log *.bbl *.blg *.brf *.cb *.ind *.idx *.ilg	\
-				*.inx *.toc *.out $(DVIFILES) $(PSFILES) template.pdf *~
+				*.inx *.toc *.out $(DVIFILES) $(PSFILES) main.pdf *~
 
 .PHONY : all pdf ps dvi clean $(MAINTEXFILE)
