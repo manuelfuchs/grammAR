@@ -1,21 +1,21 @@
 # GrammAR
 
-## Vision
+_grammAR_ is a prototypical AR application that helps to detect spelling mistakes on physical paper.
 
-The user writes something on a piece of paper and wants to validate, if he misspelled something. To do this he can use the AR Application by positioning the camera above the text. The application applies OCR and extracts the written text and positional information (if this is not possible with a given OCR Library, marker based tracking is used to locate the text  and position the hints).
-Afterward a simple spell check is performed by looking up several selected word libraries (english, german, spanish, italien).
-Then based on the spell check results, the written text is annotated with corrections/hints.
+## Prerequisites
+
+* Unity (Version 2019.2.4f1)
+* Vuforia (Version 8.5.9)
 
 ## Feature Roadmap
 
+- [x] Spell check and and annotate misspelled words
+- [x] Detect text changes and only refresh results if different sheet is shown
+- [x] Audio cues for results loading/no errors/errors detected
+- [x] Virtual Button for language selection (with a marker)
+- [x] Curseword bleep 
+- [ ] Extract text with OCR library
+- [ ] Replace sheet tracking through markers with actual sheet-detection
 - [ ] Loading Spinner while loading the results
-- [ ] Audio cues for results loading/no errors/errors detected
 - [ ] Error message if text could not be detected
-- [ ] Spell check and and annotate misspelled words
-- [ ] Detect text changes and only refresh results if different sheet is shown
-- [ ] Virtual Button for language selection (with a marker)
-
-### Optional Features
-
-- [ ] Curseword bleep 
 - [ ] Enhanced Error Message (based on threshold e.g. if 50% could not be detected an error is shown, otherwise words will be ignored)
