@@ -1,5 +1,9 @@
 # GrammAR
 
+![Annotations](.github/annotations.jpg)
+![Settings buttons](.github/settings-buttons.jpg)
+![Settings screen](.github/settings-screen.jpg)
+
 _grammAR_ is a prototypical AR application that helps to detect spelling mistakes on physical paper.
 
 ## Prerequisites
