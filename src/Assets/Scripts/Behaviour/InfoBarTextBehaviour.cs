@@ -1,10 +1,10 @@
-﻿using Assets.Scripts;
-using Assets.Scripts.Components.CurseWordChecker;
+﻿using Assets.Scripts.Components.CurseWordChecker;
 using Assets.Scripts.Components.SettingsComponent;
 using Assets.Scripts.Components.SpellChecker;
 using Assets.Scripts.Types;
 using System.Collections.Generic;
 using System.Linq;
+using Assets.Scripts.Components.TextExtractor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,10 +25,12 @@ namespace Assets.Scripts.Behaviour
             var settingsComponent = ComponentConfig.Instance.GetService<ISettingsComponent>();
             var spellChecker = ComponentConfig.Instance.GetService<ISpellChecker>();
             var curseWordChecker = ComponentConfig.Instance.GetService<ICurseWordChecker>();
+            var textExtractor = ComponentConfig.Instance.GetService<ITextExtractor>();
 
             spellChecker.OnMistakesFound +=
                 mistakes =>
                 {
+                    if (!mistakes.Any()) return;
                     this.UpdateSpellingMistakeInfoText(mistakes);
                     this.RealignInfoTexts();
                 };
@@ -50,6 +52,19 @@ namespace Assets.Scripts.Behaviour
 
                     this.RealignInfoTexts();
                 };
+
+            textExtractor.OnTextLost += () =>
+            {
+                if (this.cwbInfoText != null)
+                {
+                    this.cwbInfoText.Value.Text.text = "";
+                }
+
+                if (this.mistakesInfoText != null)
+                {
+                    this.mistakesInfoText.Value.Text.text = "";
+                }
+            };
         }
 
         private void UpdateSpellingMistakeInfoText(IEnumerable<SpellingMistake> mistakes)

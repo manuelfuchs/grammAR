@@ -24,9 +24,9 @@ namespace Assets.Scripts.Components.CurseWordChecker
 
         private void ExtractCurseWords(IEnumerable<string> text)
         {
-            if (this.settingsComponent.IsCurseWordBleepingEnabled)
+            if (this.settingsComponent.IsCurseWordBleepingEnabled && text.Any())
             {
-                var curseWords = mockedCurseWords[this.settingsComponent.Language];
+                var curseWords = mockedCurseWords[this.settingsComponent.Language].ToList();
 
                 var foundCurseWords = new List<CurseWord>();
 
