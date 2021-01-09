@@ -1,4 +1,5 @@
 ﻿using JetBrains.Annotations;
+using Newtonsoft.Json;
 
 namespace Assets.Scripts.Types
 {
@@ -10,7 +11,8 @@ namespace Assets.Scripts.Types
         {
             Severity = severity;
         }
-
+        
+        [JsonConstructor]
         public SpellingMistake(int line, int textStart, int textEnd, SpellingSeverity severity,
             string suggestedCorrection) : base(line, textStart, textEnd)
         {

@@ -51,7 +51,7 @@ namespace Assets.Scripts
             }
         }
 
-        public void RegisterService<TService>(object component)
+        public void RegisterService<TService>(TService component)
         {
             serviceCollection[typeof(TService)] = new Lazy<object>(() => component);
         }

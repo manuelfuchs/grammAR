@@ -1,0 +1,97 @@
+{
+    "GermanSpellingMistakes": [
+        {
+            "line": 2,
+            "textStart": 1,
+            "textEnd": 6,
+            "severity": "Minor",
+            "suggestedCorrection": "lassen"
+        },
+        {
+            "line": 10,
+            "textStart": 16,
+            "textEnd": 21,
+            "severity": "Fatal",
+            "suggestedCorrection": "neues"
+        },
+        {
+            "line": 15,
+            "textStart": 20,
+            "textEnd": 26,
+            "severity": "Fatal",
+            "suggestedCorrection": "zurecht"
+        },
+        {
+            "line": 31,
+            "textStart": 13,
+            "textEnd": 18,
+            "severity": "Minor",
+            "suggestedCorrection": "Bank"
+        },
+        {
+            "line": 39,
+            "textStart": 20,
+            "textEnd": 25,
+            "severity": "Fatal",
+            "suggestedCorrection": "sagen"
+        },
+        {
+            "line": 46,
+            "textStart": 1,
+            "textEnd": 6,
+            "severity": "Minor",
+            "suggestedCorrection": "unter"
+        }
+    ],
+    "EnglishSpellingMistakes": [
+        {
+            "line": 7,
+            "textStart": 1,
+            "textEnd": 10,
+            "severity": "Fatal",
+            "suggestedCorrection": "DualSense"
+        },
+        {
+            "line": 8,
+            "textStart": 14,
+            "textEnd": 20,
+            "severity": "Fatal",
+            "suggestedCorrection": "leaves"
+        },
+        {
+            "line": 14,
+            "textStart": 40,
+            "textEnd": 45,
+            "severity": "Fatal"
+        },
+        {
+            "line": 21,
+            "textStart": 20,
+            "textEnd": 29,
+            "severity": "Fatal",
+            "suggestedCorrection": "leaves"
+        }
+    ],
+    "EnglishErrorsAndCurseWordsSpellingMistakes": [
+        {
+            "line": 8,
+            "textStart": 45,
+            "textEnd": 51,
+            "severity": "Fatal",
+            "suggestedCorrection": "palms"
+        },
+        {
+            "line": 4,
+            "textStart": 11,
+            "textEnd": 19,
+            "severity": "Minor",
+            "suggestedCorrection": "Thursday"
+        },
+        {
+            "line": 9,
+            "textStart": 1,
+            "textEnd": 9,
+            "severity": "Fatal"
+        }
+    ]
+}
